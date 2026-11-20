@@ -1,0 +1,290 @@
+{
+ "bpm": 128.0,
+ "meter": 4,
+ "key": "Am",
+ "sections": [
+  {
+   "name": "イントロ",
+   "start": 0.0,
+   "end": 7.5
+  },
+  {
+   "name": "Aメロ",
+   "start": 7.5,
+   "end": 22.5
+  },
+  {
+   "name": "Bメロ",
+   "start": 22.5,
+   "end": 30.0
+  },
+  {
+   "name": "サビ",
+   "start": 30.0,
+   "end": 45.0
+  },
+  {
+   "name": "Aメロ",
+   "start": 45.0,
+   "end": 60.0
+  },
+  {
+   "name": "Bメロ",
+   "start": 60.0,
+   "end": 67.5
+  },
+  {
+   "name": "サビ",
+   "start": 67.5,
+   "end": 82.5
+  },
+  {
+   "name": "アウトロ",
+   "start": 82.5,
+   "end": 90.0
+  }
+ ],
+ "bars": [
+  {
+   "t": 0.0,
+   "chord": "Am",
+   "section": "イントロ"
+  },
+  {
+   "t": 1.875,
+   "chord": "F",
+   "section": "イントロ"
+  },
+  {
+   "t": 3.75,
+   "chord": "C",
+   "section": "イントロ"
+  },
+  {
+   "t": 5.625,
+   "chord": "G",
+   "section": "イントロ"
+  },
+  {
+   "t": 7.5,
+   "chord": "Am",
+   "section": "Aメロ"
+  },
+  {
+   "t": 9.375,
+   "chord": "F",
+   "section": "Aメロ"
+  },
+  {
+   "t": 11.25,
+   "chord": "C",
+   "section": "Aメロ"
+  },
+  {
+   "t": 13.125,
+   "chord": "G",
+   "section": "Aメロ"
+  },
+  {
+   "t": 15.0,
+   "chord": "Am",
+   "section": "Aメロ"
+  },
+  {
+   "t": 16.875,
+   "chord": "F",
+   "section": "Aメロ"
+  },
+  {
+   "t": 18.75,
+   "chord": "C",
+   "section": "Aメロ"
+  },
+  {
+   "t": 20.625,
+   "chord": "G",
+   "section": "Aメロ"
+  },
+  {
+   "t": 22.5,
+   "chord": "Dm",
+   "section": "Bメロ"
+  },
+  {
+   "t": 24.375,
+   "chord": "Em",
+   "section": "Bメロ"
+  },
+  {
+   "t": 26.25,
+   "chord": "F",
+   "section": "Bメロ"
+  },
+  {
+   "t": 28.125,
+   "chord": "E",
+   "section": "Bメロ"
+  },
+  {
+   "t": 30.0,
+   "chord": "F",
+   "section": "サビ"
+  },
+  {
+   "t": 31.875,
+   "chord": "G",
+   "section": "サビ"
+  },
+  {
+   "t": 33.75,
+   "chord": "Em",
+   "section": "サビ"
+  },
+  {
+   "t": 35.625,
+   "chord": "Am",
+   "section": "サビ"
+  },
+  {
+   "t": 37.5,
+   "chord": "F",
+   "section": "サビ"
+  },
+  {
+   "t": 39.375,
+   "chord": "G",
+   "section": "サビ"
+  },
+  {
+   "t": 41.25,
+   "chord": "Em",
+   "section": "サビ"
+  },
+  {
+   "t": 43.125,
+   "chord": "Am",
+   "section": "サビ"
+  },
+  {
+   "t": 45.0,
+   "chord": "Am",
+   "section": "Aメロ"
+  },
+  {
+   "t": 46.875,
+   "chord": "F",
+   "section": "Aメロ"
+  },
+  {
+   "t": 48.75,
+   "chord": "C",
+   "section": "Aメロ"
+  },
+  {
+   "t": 50.625,
+   "chord": "G",
+   "section": "Aメロ"
+  },
+  {
+   "t": 52.5,
+   "chord": "Am",
+   "section": "Aメロ"
+  },
+  {
+   "t": 54.375,
+   "chord": "F",
+   "section": "Aメロ"
+  },
+  {
+   "t": 56.25,
+   "chord": "C",
+   "section": "Aメロ"
+  },
+  {
+   "t": 58.125,
+   "chord": "G",
+   "section": "Aメロ"
+  },
+  {
+   "t": 60.0,
+   "chord": "Dm",
+   "section": "Bメロ"
+  },
+  {
+   "t": 61.875,
+   "chord": "Em",
+   "section": "Bメロ"
+  },
+  {
+   "t": 63.75,
+   "chord": "F",
+   "section": "Bメロ"
+  },
+  {
+   "t": 65.625,
+   "chord": "E",
+   "section": "Bメロ"
+  },
+  {
+   "t": 67.5,
+   "chord": "F",
+   "section": "サビ"
+  },
+  {
+   "t": 69.375,
+   "chord": "G",
+   "section": "サビ"
+  },
+  {
+   "t": 71.25,
+   "chord": "Em",
+   "section": "サビ"
+  },
+  {
+   "t": 73.125,
+   "chord": "Am",
+   "section": "サビ"
+  },
+  {
+   "t": 75.0,
+   "chord": "F",
+   "section": "サビ"
+  },
+  {
+   "t": 76.875,
+   "chord": "G",
+   "section": "サビ"
+  },
+  {
+   "t": 78.75,
+   "chord": "Em",
+   "section": "サビ"
+  },
+  {
+   "t": 80.625,
+   "chord": "Am",
+   "section": "サビ"
+  },
+  {
+   "t": 82.5,
+   "chord": "Am",
+   "section": "アウトロ"
+  },
+  {
+   "t": 84.375,
+   "chord": "F",
+   "section": "アウトロ"
+  },
+  {
+   "t": 86.25,
+   "chord": "C",
+   "section": "アウトロ"
+  },
+  {
+   "t": 88.125,
+   "chord": "G",
+   "section": "アウトロ"
+  }
+ ],
+ "duration": 91.5
+}

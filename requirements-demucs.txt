@@ -1,0 +1,4 @@
+# 音源分離（Demucs）。大きい（数GB）ので、必要なときだけ入れる:
+#   pip install -r requirements-demucs.txt
+# 初回の解析でモデル（約80MB）を dl.fbaipublicfiles.com からダウンロードします。
+demucs>=4.0

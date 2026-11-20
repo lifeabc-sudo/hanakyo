@@ -1,0 +1,6 @@
+# 曲解析ツール
+work/
+input/*
+!input/.gitkeep
+__pycache__/
+*.pyc
