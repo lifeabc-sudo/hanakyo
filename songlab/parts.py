@@ -148,7 +148,18 @@ def synth_presence(y, beat_times, sr=SR):
     cvs = [np.std(rms[i:i + win]) / (np.mean(rms[i:i + win]) + 1e-9)
            for i in range(0, len(rms) - win, win) if active[i:i + win].mean() > 0.5]
     steadiness = float(np.clip(1 - np.median(cvs) / 0.6, 0, 1)) if cvs else 0.0
-    pad_score = float(np.clip(0.5 * sustain / 0.6 + 0.5 * steadiness, 0, 1))
+    # 伸ばしている音が「澄んだ音（シンセ・ストリングスなど）」か「ノイズっぽい音（歪んだギター）」か。
+    # 歪んだギターをのばしても音の変化は少ないので、のばし方だけではシンセと区別できない。
+    freqs = librosa.fft_frequencies(sr=sr, n_fft=2048)
+    band = (freqs >= 200) & (freqs <= 6000)
+    Sb = S[band] + 1e-10
+    flat = np.exp(np.mean(np.log(Sb), axis=0)) / np.mean(Sb, axis=0)
+    sus = stable & active
+    n_act = max(1, int(active.sum()))
+    tonal_sustain = float(np.sum(sus & (flat < 0.12)) / n_act)     # 澄んだ音をのばしている割合
+    noisy_sustain = float(np.sum(sus & (flat >= 0.2)) / n_act)     # 歪んだ音をのばしている割合
+    pad_score = float(np.clip(0.5 * tonal_sustain / 0.25 + 0.5 * steadiness, 0, 1)) * float(
+        np.clip(1 - (noisy_sustain - tonal_sustain) / 0.3, 0, 1))
 
     # アルペジオ: 8分・16分の規則的な発音 + 1音ごとに音程が変わる
     onset = librosa.onset.onset_strength(y=y, sr=sr, hop_length=HOP)
@@ -163,15 +174,18 @@ def synth_presence(y, beat_times, sr=SR):
         top = np.argmax(chroma[:, np.clip(on_frames + 2, 0, chroma.shape[1] - 1)], axis=0)
         change = float(np.mean(top[1:] != top[:-1]))
         arp_score = float(np.clip(regular / 0.6, 0, 1) * np.clip(change / 0.6, 0, 1))
-    if arp_score >= 0.5:
+    if arp_score >= 0.5 and float(np.median(flat[active])) < 0.15:
         kind = "細かく規則的に並ぶ音（アルペジオ・シーケンス系）が目立つ"
     elif pad_score >= 0.6:
-        kind = "伸ばす音（パッド・ストリングス・ブラス系）が目立つ"
+        kind = "澄んだ音をのばすパート（シンセパッド・ストリングス・オルガンなど）が目立つ"
     elif pad_score >= 0.4:
-        kind = "伸ばす音が少しある"
+        kind = "澄んだ音をのばすパートが少しある（シンセ・鍵盤の可能性）"
+    elif noisy_sustain > tonal_sustain + 0.05:
+        kind = "シンセ・鍵盤らしい音は目立たない。のばしている音は歪んだギター（パワーコードなど）の可能性が高い"
     else:
-        kind = "シンセ・キーボードらしい音は目立たない（ギターなどが中心の可能性）"
+        kind = "シンセ・鍵盤らしい音は目立たない（ギターなどが中心の可能性）"
     return {"available": True, "pad_score": round(pad_score, 2), "arpeggio_score": round(arp_score, 2),
+            "tonal_sustain": round(tonal_sustain, 2), "noisy_sustain": round(noisy_sustain, 2),
             "sustain_ratio": round(sustain, 2), "steadiness": round(steadiness, 2),
             "regular_onsets": round(regular, 2), "pitch_change_per_note": round(change, 2), "kind": kind}
 
@@ -283,3 +297,71 @@ def find_shouts(voc, db, vprob, sr=SR):
             out.append(round(a / fps, 1))
     return {"count": len(out), "times": out[:20],
             "note": "短く強い、前後が静かな声を数えた推定です。ドラムの音が混ざると誤検出することがあります。"}
+
+
+# ------------------------------------------------------------------ 編成とイントロの入り方
+
+PART_JA = {"vocals": "歌", "drums": "ドラム", "bass": "ベース", "other": "ギターなど上物"}
+
+
+def intro_entry(stems, beat_times, intro_end, sr=SR):
+    """イントロで、どのパートがどの順番で入ってくるか。上物がリフっぽいかも調べる。"""
+    end = max(4.0, min(intro_end if intro_end else 15.0, 25.0))
+    step = 0.25
+    entries = {}
+    for k, v in stems.items():
+        n = int(len(v) / sr / step)
+        lv = np.array([10 * np.log10(np.mean(v[int(i * step * sr):int((i + 1) * step * sr)] ** 2) + 1e-12)
+                       for i in range(n)])
+        ref = np.percentile(lv, 75)               # その曲でふつうに鳴っているときの音量
+        on = np.where(lv[: int(end / step)] > ref - 12)[0]
+        entries[k] = round(float(on[0] * step), 2) if len(on) else None
+    order = sorted([(t, k) for k, t in entries.items() if t is not None])
+    first = order[0][1] if order else None
+
+    # 上物（other）がイントロでリフ（音程が動く短いフレーズのくり返し）か、コードを鳴らしているか
+    seg = stems["other"][: int(end * sr)]
+    riff = None
+    if np.sqrt(np.mean(seg ** 2)) > 1e-4:
+        on = librosa.onset.onset_detect(y=seg, sr=sr, hop_length=HOP, units="frames")
+        chroma = librosa.feature.chroma_cqt(y=seg, sr=sr, hop_length=HOP)
+        if len(on) > 4:
+            top = np.argmax(chroma[:, np.clip(on + 2, 0, chroma.shape[1] - 1)], axis=0)
+            change = float(np.mean(top[1:] != top[:-1]))
+            rate = len(on) / end
+            bt = np.array([b for b in beat_times if b < end])
+            bar_sec = 4 * float(np.median(np.diff(bt))) if len(bt) > 2 else 2.0
+            per_bar = rate * bar_sec
+            # 歪んだギターは音がのびるので発音が拾いにくい。曲のテンポに対して
+            # 「1小節に1.5回以上、音程が動きながら鳴る」ならリフとみなす
+            riff = {"notes_per_sec": round(rate, 2), "notes_per_bar": round(per_bar, 2),
+                    "pitch_change": round(change, 2),
+                    "is_riff": bool(change >= 0.45 and per_bar >= 1.5)}
+
+    lines = []
+    if order:
+        t0 = order[0][0]
+        same = [PART_JA[k] for t, k in order if t - t0 < 0.6]
+        later = [(t, PART_JA[k]) for t, k in order if t - t0 >= 0.6]
+        lines.append("・".join(same) + " から始まる")
+        for t, nm in later:
+            lines.append(f"{t:.1f}秒ごろに{nm}が入る")
+    if entries.get("vocals") is None:
+        lines.append(f"最初の{end:.0f}秒に歌は入らない")
+    if riff:
+        lines.append("上物は音程の動くフレーズ（リフ）を弾いている可能性が高い" if riff["is_riff"]
+                     else "上物はコードを鳴らしている（リフではない）可能性が高い")
+    return {"entries_sec": entries, "first": first, "riff": riff, "text": "、".join(lines), "checked_until": end}
+
+
+def lineup(synth, timbre, balance):
+    """編成の推定: バンドだけか、シンセ・鍵盤が入っているか。"""
+    has_synth = bool(synth.get("available") and (
+        synth["pad_score"] >= 0.5 or (synth["arpeggio_score"] >= 0.5 and synth.get("tonal_sustain", 0) >= 0.1)))
+    dist = timbre.get("distortion_score", 0) if timbre.get("available") else 0
+    gtr = "歪んだエレキギター" if dist >= 0.55 else "軽く歪んだギター" if dist >= 0.4 else "クリーンなギター（または鍵盤）"
+    if has_synth:
+        text = f"バンド（歌・{gtr}・ベース・ドラム）に、シンセ・鍵盤などの澄んだ音が加わっている可能性"
+    else:
+        text = f"バンドだけの編成（歌・{gtr}・ベース・ドラム）の可能性が高い。シンセ・鍵盤は目立たない"
+    return {"band_only": not has_synth, "has_synth": has_synth, "guitar": gtr, "text": text}

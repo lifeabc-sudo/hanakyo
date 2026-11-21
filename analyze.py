@@ -92,9 +92,15 @@ def run(src, reports_dir, work_root, use_demucs=True, log=print):
             return -120.0
         return float(10 * np.log10(np.mean(st["vocals"][ia:ib] ** 2) + 1e-12))
 
+    def stem_level(a, b):
+        """区間ごとの各パートの音量（dB）。"""
+        ia, ib = int(a * SR), int(b * SR)
+        return {k: float(10 * np.log10(np.mean(v[ia:ib] ** 2) + 1e-12)) for k, v in st.items()}
+
     key = analysis.refine_relative_key(key, bars)
     sections = analysis.name_sections(segs, bars, bar_energy, duration,
-                                      vocal_ratio=None if sep["approximate"] else vocal_ratio)
+                                      vocal_ratio=None if sep["approximate"] else vocal_ratio,
+                                      stem_level=None if sep["approximate"] else stem_level)
     balance = stems.section_balance(st, sections)
     overall = stems.section_balance(st, [{"start": 0, "end": duration}])[0]
 
@@ -106,6 +112,10 @@ def run(src, reports_dir, work_root, use_demucs=True, log=print):
     intro = parts.intro_detail(st["other"], beats)
     syn = parts.synth_presence(st["other"], beats)
     voc = parts.vocal_analysis(st["vocals"], sections)
+    first_vocal = next((s for s in sections if s["name"] != "イントロ"), None)
+    intro_end = first_vocal["start"] if first_vocal else 15.0
+    ientry = parts.intro_entry(st, beats, intro_end)
+    lineup = parts.lineup(syn, tim_chorus if tim_chorus.get("available") else tim, overall)
 
     log("[7/7] レポートを書く")
     res = {
@@ -126,6 +136,8 @@ def run(src, reports_dir, work_root, use_demucs=True, log=print):
         "timbre_chorus": tim_chorus,
         "intro_detail": intro,
         "synth": syn,
+        "lineup": lineup,
+        "intro_entry": ientry,
         "vocal": voc,
         "energy_per_sec": {"time": energy["times"], "score": energy["score"], "db": energy["db"]},
     }

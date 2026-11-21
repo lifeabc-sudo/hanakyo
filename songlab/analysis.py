@@ -409,42 +409,58 @@ def segment_song(feats, energies, bars, duration):
     bounds = sorted(set(refined))
 
     segs = [{"start_bar": a, "end_bar": b} for a, b in zip(bounds, bounds[1:] + [n])]
-    # 区間どうしの似かた: 特徴の並び（ずらして比較）とコード列
+    # 区間どうしの似かた。
+    # 実際の曲は、同じサビでも小節が少しずれたり、最後のサビで転調（キーが上がる）したりするので、
+    # 「数小節ずらす」「和音の高さをずらす」の両方を試して、一番似ている値を使う。
     chords = [b["chord"] for b in bars]
+
+    def bar_sim(a, b, k):
+        bb = b.copy()
+        bb[:, :12] = np.roll(b[:, :12], k, axis=1)
+        return np.sum(a * bb, axis=1)
 
     def seg_sim(s1, s2):
         a = F[s1["start_bar"]:s1["end_bar"]]
         b = F[s2["start_bar"]:s2["end_bar"]]
-        m = min(len(a), len(b))
-        if m == 0:
+        if len(a) == 0 or len(b) == 0:
             return 0.0
-        feat_sim = float(np.mean(np.sum(a[:m] * b[:m], axis=1)))
+        best = -1.0
+        for off in range(-2, 3):
+            aa = a[max(0, off):]
+            bb = b[max(0, -off):]
+            m = min(len(aa), len(bb))
+            if m < max(2, min(len(a), len(b)) // 2):
+                continue
+            for k in range(12):
+                pen = 0.0 if k == 0 else 0.05
+                v = float(np.mean(bar_sim(aa[:m], bb[:m], k))) - pen
+                best = max(best, v)
         ca = chords[s1["start_bar"]:s1["end_bar"]]
         cb = chords[s2["start_bar"]:s2["end_bar"]]
         chord_sim = difflib.SequenceMatcher(None, ca, cb).ratio()
-        len_ratio = m / max(len(a), len(b))
-        return (0.5 * feat_sim + 0.5 * chord_sim) * (0.7 + 0.3 * len_ratio)
+        len_ratio = min(len(a), len(b)) / max(len(a), len(b))
+        return (0.85 * best + 0.15 * chord_sim) * (0.8 + 0.2 * len_ratio)
 
     groups = []
     letters = "ABCDEFGHIJKLMNOP"
-    for s in segs:
+    for idx, s in enumerate(segs):
         best, best_sim = None, 0.0
         for gi, g in enumerate(groups):
             sim = max(seg_sim(s, segs[m]) for m in g)
             if sim > best_sim:
                 best, best_sim = gi, sim
-        if best is not None and best_sim >= 0.62:
-            groups[best].append(segs.index(s))
+        if best is not None and best_sim >= 0.45:
+            groups[best].append(idx)
             s["group"] = letters[best % len(letters)]
             s["group_sim"] = round(best_sim, 2)
         else:
-            groups.append([segs.index(s)])
+            groups.append([idx])
             s["group"] = letters[(len(groups) - 1) % len(letters)]
             s["group_sim"] = None
     return segs
 
 
-def name_sections(segs, bars, energies, duration, vocal_ratio=None):
+def name_sections(segs, bars, energies, duration, vocal_ratio=None, stem_level=None):
     """グループと音量から、イントロ / Aメロ / Bメロ / サビ などの名前を推定する。"""
     edges = [b["t"] for b in bars] + [duration]
     for s in segs:
@@ -453,6 +469,7 @@ def name_sections(segs, bars, energies, duration, vocal_ratio=None):
         s["bars"] = s["end_bar"] - s["start_bar"]
         s["energy_db"] = float(np.mean(energies[s["start_bar"]:s["end_bar"]]))
         s["vocal"] = None if vocal_ratio is None else vocal_ratio(s["start"], s["end"])
+        s["parts_db"] = None if stem_level is None else stem_level(s["start"], s["end"])
 
     loud = max((s["vocal"] for s in segs if s["vocal"] is not None), default=None)
 
@@ -471,11 +488,13 @@ def name_sections(segs, bars, energies, duration, vocal_ratio=None):
     if rep:
         chorus = max(rep, key=lambda g: g_energy[g])
     else:
-        chorus = segs[int(np.argmax([s["energy_db"] for s in segs]))]["group"]
+        voc = [i for i, s in enumerate(segs) if has_vocal(s)] or list(range(len(segs)))
+        chorus = segs[max(voc, key=lambda i: segs[i]["energy_db"])]["group"]
 
     names = [None] * len(segs)
     for i, s in enumerate(segs):
-        if s["group"] == chorus:
+        # 歌のない区間はサビにしない（イントロがサビと同じコードでも、歌がなければイントロ）
+        if s["group"] == chorus and has_vocal(s):
             names[i] = "サビ"
     first, last = 0, len(segs) - 1
     body = [s["energy_db"] for i, s in enumerate(segs) if i not in (first, last)] or [s["energy_db"] for s in segs]
@@ -491,9 +510,25 @@ def name_sections(segs, bars, energies, duration, vocal_ratio=None):
         names[first] = "イントロ"
     if last > first and names[last] is None and edge_like(last):
         names[last] = "アウトロ"
+    # パートの音量の中央値（落ちサビ・ソロの判定用）
+    med = {}
+    if all(s["parts_db"] for s in segs):
+        for k in ("vocals", "drums", "bass", "other"):
+            med[k] = float(np.median([s["parts_db"][k] for s in segs]))
     for i, s in enumerate(segs):
         if names[i] is None and s["vocal"] is not None and not has_vocal(s):
-            names[i] = "間奏"
+            p = s["parts_db"]
+            if p and med and p["other"] >= med["other"] + 2 and 0 < i < len(segs) - 1:
+                names[i] = "間奏（ギターソロなど）"
+            else:
+                names[i] = "間奏"
+    # 歌はあるのに、ベースかドラムが大きく抜ける区間 → 落ちサビ・ブレイク
+    if med:
+        for i, s in enumerate(segs):
+            p = s["parts_db"]
+            if names[i] in (None, "サビ") and has_vocal(s) and i > 0 and (
+                    p["bass"] < med["bass"] - 12 or p["drums"] < med["drums"] - 12):
+                names[i] = "落ちサビ・ブレイク（ベースやドラムが抜ける）"
 
     # サビの直前に来ることが多いグループを Bメロ にする
     before = {}
@@ -511,6 +546,7 @@ def name_sections(segs, bars, energies, duration, vocal_ratio=None):
         # サビの前にしか歌のパートがない → それは Aメロ
         a_group, b_group = b_group, None
     first_chorus = next((i for i, nm in enumerate(names) if nm == "サビ"), len(segs))
+    last_chorus = max((i for i, nm in enumerate(names) if nm == "サビ"), default=-1)
     for i, s in enumerate(segs):
         if names[i]:
             continue
@@ -518,6 +554,8 @@ def name_sections(segs, bars, energies, duration, vocal_ratio=None):
             names[i] = "Aメロ"
         elif s["group"] == b_group:
             names[i] = "Bメロ"
+        elif i > last_chorus >= 0 and has_vocal(s):
+            names[i] = "サビの後（エンディング）"
         elif len(groups[s["group"]]) == 1 and i > first_chorus:
             names[i] = "Cメロ（大サビ前など）"
         else:

@@ -22,22 +22,34 @@ def mood(key, bars, sections, energy):
         c = b["chord"].split("/")[0].split(" ")[0]
         if c == "N":
             continue
-        if c.endswith("m") or "m7" in c and "maj7" not in c:
+        if c.endswith("m") or ("m7" in c and "maj7" not in c):
             qual["minor"] += 1
         else:
             qual["major"] += 1
     tot = qual["major"] + qual["minor"]
     minor_ratio = qual["minor"] / tot if tot else 0.5
     mode = key["candidates"][0]["mode"]
-    dark = (1 if mode == "minor" else 0) * 0.6 + minor_ratio * 0.4
+    # キーの確からしさが低いとき（平行調と区別しきれないとき）は、キーの長短より和音の割合を重く見る
+    w_mode = 0.6 if key["confidence"] >= 0.4 else 0.2
+    dark = (1 if mode == "minor" else 0) * w_mode + minor_ratio * (1 - w_mode)
     if dark >= 0.6:
         tone = "暗め・シリアス（短調で、マイナーの和音が多い）"
-    elif dark >= 0.4:
-        tone = "明暗が混ざっている（切ない・かっこいい系になりやすい）"
+        color = "minor key, dark and serious"
+    elif dark >= 0.3:
+        if key["confidence"] < 0.4:
+            # 長調か短調か言い切れないときは、キーを断定しない言い方にする
+            tone = "明暗が混ざっている（メジャーとマイナーの和音が混ざった、切なくて熱い響き）"
+            color = "bittersweet mix of major and minor chords"
+        elif mode == "major":
+            tone = "明暗が混ざっている（明るいキーに、マイナーの和音を多く混ぜた切ない響き）"
+            color = "major key with bittersweet minor chords"
+        else:
+            tone = "明暗が混ざっている（短調だけど、メジャーの和音で前向きに聞こえる響き）"
+            color = "minor key with uplifting major chords"
     else:
         tone = "明るめ（長調で、メジャーの和音が多い）"
+        color = "bright major key"
 
-    # 盛り上がる場所
     sc = energy["score"]
     peaks = []
     for s in sections:
@@ -47,7 +59,6 @@ def mood(key, bars, sections, energy):
     for s in top:
         peaks.append(f"{fmt_time(s['start'])}〜（{s['name']}）")
 
-    # イントロからサビへの入り方
     first_chorus = next((s for s in sections if s["name"] == "サビ"), None)
     entry = "サビを見つけられませんでした"
     if first_chorus:
@@ -62,89 +73,93 @@ def mood(key, bars, sections, energy):
                  f"直前の4秒と比べてエネルギーが {jump:+.0f} 点 → {how}")
         if len(sections) > 1 and first_chorus is sections[1]:
             entry += "。イントロのすぐ後にサビが来る構成"
-    return {"tone": tone, "minor_chord_ratio": round(minor_ratio, 2), "darkness": round(dark, 2),
+    return {"tone": tone, "color": color, "minor_chord_ratio": round(minor_ratio, 2), "darkness": round(dark, 2),
             "peaks": peaks, "intro_to_chorus": entry}
 
 
 # ------------------------------------------------------------------ Suno
 
 def suno_hints(res):
-    words, why = [], []
+    """Style は「音の事実」だけで作る。ジャンル名（アニソン・J-POP など）は入れない。
+    ジャンル名を入れると、Suno がそのジャンルのありがちな音（シンセ入りのアニソンなど）に寄せてしまうため。"""
+    axes, why = [], []
     bpm = res["tempo"]["bpm"]
-    mode = res["key"]["candidates"][0]["mode"]
     m = res["mood"]
-    # 曲の印象を決めるのはサビなので、サビの音色があればそちらを使う
     t = res["timbre_chorus"] if res.get("timbre_chorus", {}).get("available") else res["timbre"]
     syn = res["synth"]
     voc = res["vocal"]
+    lu = res["lineup"]
+    intro = res.get("intro_entry") or {}
+    names = [s["name"] for s in res["sections"]]
 
-    # 軸1: 雰囲気とキー
-    if m["darkness"] >= 0.6:
-        a1 = "dark minor key, serious and dramatic"
-    elif m["darkness"] >= 0.4:
-        a1 = "minor key, bittersweet and heroic"
-    else:
-        a1 = "major key, bright and uplifting"
-    words.append(a1)
-    why.append(f"雰囲気: {m['tone']}")
-
-    # 軸2: テンポとリズム
-    speed = "driving" if bpm >= 135 else "mid-tempo" if bpm >= 100 else "slow"
-    a2 = f"{speed} {int(round(bpm))} BPM"
-    if t.get("available") and (t.get("cutting_score") or 0) >= 0.6:
-        a2 += ", tight 16th-note guitar cutting"
-    words.append(a2)
-    why.append(f"テンポ: {bpm} BPM（推定）")
-
-    # 軸3: 上物の音色
-    parts = []
+    # 軸1: 編成と音（いちばん大事なので先頭）
+    inst = []
+    if lu["band_only"]:
+        inst.append("raw live band sound")
     if t.get("available"):
         if t["distortion_score"] >= 0.55:
-            parts.append("overdriven electric guitar")
+            inst.append("overdriven electric guitars")
         elif t["distortion_score"] >= 0.40:
-            parts.append("crunchy lightly overdriven guitar")
-        elif t["distortion_score"] <= 0.30:
-            parts.append("clean electric guitar")
-        if t["centroid_hz"] >= 2500:
-            parts.append("bright crisp tone")
-    if syn.get("available"):
-        if syn["arpeggio_score"] >= 0.5:
-            parts.append("synth arpeggios")
-        elif syn["pad_score"] >= 0.6:
-            parts.append("lush synth pads and brass")
-    bal = res.get("overall_balance") or {}
-    if bal.get("bass", 0) >= 30:
-        parts.append("prominent bass")
-    if parts:
-        words.append(", ".join(parts))
-        why.append("音色: " + "、".join([t.get("distortion", "")] + ([syn.get("kind")] if syn.get("kind") else [])))
+            inst.append("crunchy electric guitars")
+        else:
+            inst.append("clean electric guitars")
+        if (t.get("cutting_score") or 0) >= 0.6:
+            inst.append("tight 16th-note guitar cutting")
+    inst += ["bass", "live drums"]
+    if lu["has_synth"]:
+        inst.append("synth arpeggios" if syn.get("arpeggio_score", 0) >= 0.5 else "synth pads")
+    axes.append(", ".join(inst))
+    why.append(f"編成: {lu['text']}")
+
+    # 軸2: テンポと響き
+    axes.append(f"{int(round(bpm))} BPM, {m['color']}")
+    why.append(f"テンポ {bpm} BPM（推定）、響き: {m['tone']}")
+
+    # 軸3: 曲の組み立て（事実として見つかったものだけ）
+    arr = []
+    if intro.get("first") == "other" and (intro.get("riff") or {}).get("is_riff"):
+        arr.append("opens with a guitar riff")
+    elif intro.get("first") == "drums":
+        arr.append("opens with drums")
+    elif intro.get("first") == "vocals":
+        arr.append("opens with vocals")
+    if any("ソロ" in n for n in names):
+        arr.append("guitar solo")
+    if any("落ちサビ" in n for n in names):
+        arr.append("quiet breakdown before final chorus")
+    if arr:
+        axes.append(", ".join(arr))
+        why.append("組み立て: " + (intro.get("text") or ""))
 
     # 軸4: ボーカル
     if voc.get("available") and voc.get("range"):
         r = voc["range"]
-        pitch = "high-pitched powerful vocal" if "ハイトーン寄り" in r.get("high_tone", "") else "strong mid-range vocal"
+        v = "high-pitched powerful vocal" if "ハイトーン寄り" in r.get("high_tone", "") else "strong mid-range vocal"
         if voc.get("dynamic_spread_db") is not None and voc["dynamic_spread_db"] < 3:
-            pitch += ", belting throughout"
+            v += ", belting throughout"
         if voc["shouts"]["count"] >= 3:
-            pitch += ", shouted backing calls"
-        words.append(pitch)
+            v += ", shouted backing calls"
+        axes.append(v)
         why.append(f"ボーカル: 音域 {r['lowest']}〜{r['highest']}、{voc['steadiness']}")
 
     exclude = []
-    if m["darkness"] >= 0.5:
-        exclude += ["cheerful", "happy", "idol pop"]
-    else:
+    if lu["band_only"]:
+        exclude += ["synth", "synthesizer", "keyboard", "piano", "strings", "brass", "orchestral", "electronic", "EDM"]
+    if m["darkness"] >= 0.6:
+        exclude += ["cheerful", "idol pop"]
+    elif m["darkness"] < 0.3:
         exclude += ["dark", "gloomy"]
+    else:
+        exclude += ["idol pop"]
     if bpm >= 120:
         exclude += ["ballad", "slow"]
-    else:
-        exclude += ["fast", "EDM"]
     if t.get("available") and t["distortion_score"] >= 0.55:
         exclude += ["acoustic", "lo-fi"]
-    exclude += ["trap", "autotune"]
-    return {"style": ", ".join(words), "axes": words, "reasons": why,
+    exclude += ["autotune"]
+    return {"style": ", ".join(axes), "axes": axes, "reasons": why,
             "exclude": ", ".join(dict.fromkeys(exclude)),
-            "note": "男性か女性かは自動で判定していないので、Style の先頭に male vocal / female vocal を足してください。"}
+            "note": ("ジャンル名（アニソン・J-POP など）はわざと入れていません。入れると Suno がそのジャンルのありがちな音に寄せるためです。"
+                     "男性か女性かは自動で判定していないので、Style の先頭に male vocal / female vocal を足してください。")}
 
 
 # ------------------------------------------------------------------ グラフ
@@ -292,6 +307,11 @@ def to_markdown(res):
 
     # 楽器バランス
     L.append("## 4. 楽器のバランス" + ("（概算）" if approx else ""))
+    L.append("")
+    L.append(f"- **編成（推定）**: {res['lineup']['text']}")
+    ie = res.get("intro_entry") or {}
+    if ie.get("text"):
+        L.append(f"- **イントロの入り方（最初の{ie['checked_until']:.0f}秒）**: {ie['text']}")
     L.append("")
     if approx:
         L.append(f"> Demucs（AIでパートを分ける道具）が使えなかったので、**概算**です。理由: {res['separation']['note']}。"

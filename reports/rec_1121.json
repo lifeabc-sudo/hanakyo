@@ -3722,9 +3722,9 @@
   },
   {
    "t": 97.59,
-   "chord": "A",
+   "chord": "A/G",
    "conf": 0.36,
-   "display": "A?"
+   "display": "A/G?"
   },
   {
    "t": 99.01,
@@ -3950,9 +3950,9 @@
   },
   {
    "t": 151.86,
-   "chord": "A",
+   "chord": "A/G",
    "conf": 0.39,
-   "display": "A?"
+   "display": "A/G?"
   },
   {
    "t": 153.27,
@@ -3986,9 +3986,9 @@
   },
   {
    "t": 160.45,
-   "chord": "A",
+   "chord": "A/G",
    "conf": 0.46,
-   "display": "A"
+   "display": "A/G"
   },
   {
    "t": 161.87,
@@ -4134,7 +4134,13 @@
    "bars": 11,
    "energy_db": -22.708,
    "vocal": -77.4881,
-   "name": "サビ",
+   "parts_db": {
+    "vocals": -77.4881,
+    "drums": -25.167,
+    "bass": -24.484,
+    "other": -25.2754
+   },
+   "name": "イントロ",
    "energy_score": 46.0
   },
   {
@@ -4147,214 +4153,316 @@
    "bars": 8,
    "energy_db": -19.3402,
    "vocal": -25.8582,
+   "parts_db": {
+    "vocals": -25.8582,
+    "drums": -24.1135,
+    "bass": -24.8377,
+    "other": -31.7013
+   },
    "name": "Aメロ",
    "energy_score": 42.0
   },
   {
    "start_bar": 19,
    "end_bar": 28,
-   "group": "C",
-   "group_sim": null,
+   "group": "B",
+   "group_sim": 0.62,
    "start": 26.87,
    "end": 39.54,
    "bars": 9,
    "energy_db": -19.2822,
    "vocal": -25.6393,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -25.6393,
+    "drums": -24.1244,
+    "bass": -24.7439,
+    "other": -31.9012
+   },
+   "name": "Aメロ",
    "energy_score": 44.0
   },
   {
    "start_bar": 28,
    "end_bar": 34,
-   "group": "D",
+   "group": "C",
    "group_sim": null,
    "start": 39.54,
    "end": 47.95,
    "bars": 6,
    "energy_db": -19.2121,
    "vocal": -25.0905,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -25.0905,
+    "drums": -25.793,
+    "bass": -23.986,
+    "other": -30.0587
+   },
+   "name": "Bメロ",
    "energy_score": 47.0
   },
   {
    "start_bar": 34,
    "end_bar": 42,
-   "group": "E",
+   "group": "D",
    "group_sim": null,
    "start": 47.95,
    "end": 59.35,
    "bars": 8,
    "energy_db": -17.7459,
    "vocal": -22.6474,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -22.6474,
+    "drums": -25.4193,
+    "bass": -25.0683,
+    "other": -26.6564
+   },
+   "name": "サビ",
    "energy_score": 73.0
   },
   {
    "start_bar": 42,
    "end_bar": 48,
-   "group": "F",
-   "group_sim": null,
+   "group": "D",
+   "group_sim": 0.52,
    "start": 59.35,
    "end": 67.94,
    "bars": 6,
    "energy_db": -17.8103,
    "vocal": -24.0145,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -24.0145,
+    "drums": -24.9759,
+    "bass": -24.5524,
+    "other": -26.3204
+   },
+   "name": "サビ",
    "energy_score": 78.0
   },
   {
    "start_bar": 48,
    "end_bar": 53,
-   "group": "G",
+   "group": "E",
    "group_sim": null,
    "start": 67.94,
    "end": 75.05,
    "bars": 5,
    "energy_db": -18.7141,
    "vocal": -74.8881,
+   "parts_db": {
+    "vocals": -74.8881,
+    "drums": -24.6377,
+    "bass": -22.8796,
+    "other": -25.7829
+   },
    "name": "間奏",
    "energy_score": 63.0
   },
   {
    "start_bar": 53,
    "end_bar": 63,
-   "group": "H",
-   "group_sim": null,
+   "group": "B",
+   "group_sim": 0.61,
    "start": 75.05,
    "end": 89.16,
    "bars": 10,
    "energy_db": -19.1444,
    "vocal": -25.7533,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -25.7533,
+    "drums": -23.8824,
+    "bass": -24.7091,
+    "other": -31.1674
+   },
+   "name": "Aメロ",
    "energy_score": 47.0
   },
   {
    "start_bar": 63,
    "end_bar": 68,
-   "group": "I",
-   "group_sim": null,
+   "group": "C",
+   "group_sim": 0.69,
    "start": 89.16,
    "end": 96.15,
    "bars": 5,
    "energy_db": -18.7343,
    "vocal": -24.5913,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -24.5913,
+    "drums": -25.1108,
+    "bass": -23.7433,
+    "other": -29.9463
+   },
+   "name": "Bメロ",
    "energy_score": 59.0
   },
   {
    "start_bar": 68,
    "end_bar": 79,
-   "group": "J",
-   "group_sim": null,
+   "group": "D",
+   "group_sim": 0.64,
    "start": 96.15,
    "end": 111.85,
    "bars": 11,
    "energy_db": -17.7942,
    "vocal": -22.8125,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -22.8125,
+    "drums": -25.8398,
+    "bass": -24.8141,
+    "other": -26.415
+   },
+   "name": "サビ",
    "energy_score": 78.0
   },
   {
    "start_bar": 79,
    "end_bar": 90,
-   "group": "K",
+   "group": "F",
    "group_sim": null,
    "start": 111.85,
    "end": 127.59,
    "bars": 11,
    "energy_db": -18.2111,
    "vocal": -28.9497,
+   "parts_db": {
+    "vocals": -28.9497,
+    "drums": -23.6648,
+    "bass": -25.4028,
+    "other": -23.962
+   },
    "name": "Cメロ（大サビ前など）",
    "energy_score": 69.0
   },
   {
    "start_bar": 90,
    "end_bar": 94,
-   "group": "L",
+   "group": "G",
    "group_sim": null,
    "start": 127.59,
    "end": 133.28,
    "bars": 4,
    "energy_db": -17.8017,
    "vocal": -79.4178,
-   "name": "間奏",
+   "parts_db": {
+    "vocals": -79.4178,
+    "drums": -24.6584,
+    "bass": -23.3834,
+    "other": -22.6815
+   },
+   "name": "間奏（ギターソロなど）",
    "energy_score": 76.0
   },
   {
    "start_bar": 94,
    "end_bar": 98,
-   "group": "M",
-   "group_sim": null,
+   "group": "G",
+   "group_sim": 0.6,
    "start": 133.28,
    "end": 138.97,
    "bars": 4,
    "energy_db": -17.6471,
    "vocal": -31.1102,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -31.1102,
+    "drums": -24.6286,
+    "bass": -23.2352,
+    "other": -23.2615
+   },
+   "name": "その他",
    "energy_score": 80.0
   },
   {
    "start_bar": 98,
    "end_bar": 105,
-   "group": "N",
+   "group": "H",
    "group_sim": null,
    "start": 138.97,
    "end": 149.03,
    "bars": 7,
    "energy_db": -19.7518,
    "vocal": -23.5138,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -23.5138,
+    "drums": -24.2618,
+    "bass": -49.7659,
+    "other": -28.253
+   },
+   "name": "落ちサビ・ブレイク（ベースやドラムが抜ける）",
    "energy_score": 38.0
   },
   {
    "start_bar": 105,
    "end_bar": 110,
-   "group": "O",
-   "group_sim": null,
+   "group": "D",
+   "group_sim": 0.62,
    "start": 149.03,
    "end": 156.15,
    "bars": 5,
    "energy_db": -17.4896,
    "vocal": -22.2242,
-   "name": "Cメロ（大サビ前など）",
+   "parts_db": {
+    "vocals": -22.2242,
+    "drums": -26.0133,
+    "bass": -23.7718,
+    "other": -27.3123
+   },
+   "name": "サビ",
    "energy_score": 84.0
   },
   {
    "start_bar": 110,
    "end_bar": 124,
-   "group": "P",
-   "group_sim": null,
+   "group": "D",
+   "group_sim": 0.65,
    "start": 156.15,
    "end": 176.15,
    "bars": 14,
    "energy_db": -17.4964,
    "vocal": -22.702,
-   "name": "Bメロ",
+   "parts_db": {
+    "vocals": -22.702,
+    "drums": -26.2029,
+    "bass": -24.8463,
+    "other": -25.5096
+   },
+   "name": "サビ",
    "energy_score": 85.0
   },
   {
    "start_bar": 124,
    "end_bar": 133,
-   "group": "A",
+   "group": "I",
    "group_sim": null,
    "start": 176.15,
    "end": 188.78,
    "bars": 9,
    "energy_db": -18.4234,
    "vocal": -22.8186,
-   "name": "サビ",
+   "parts_db": {
+    "vocals": -22.8186,
+    "drums": -27.3597,
+    "bass": -25.385,
+    "other": -25.811
+   },
+   "name": "サビの後（エンディング）",
    "energy_score": 70.0
   },
   {
    "start_bar": 133,
    "end_bar": 136,
-   "group": "B",
-   "group_sim": null,
+   "group": "A",
+   "group_sim": 0.63,
    "start": 188.78,
    "end": 192.31,
    "bars": 3,
    "energy_db": -75.3977,
    "vocal": -87.7256,
+   "parts_db": {
+    "vocals": -87.7256,
+    "drums": -37.2136,
+    "bass": -36.8953,
+    "other": -30.2502
+   },
    "name": "アウトロ",
    "energy_score": 0.0
   }
@@ -4495,16 +4603,16 @@
   "available": true,
   "distortion_score": 0.8,
   "distortion": "歪み寄り（ディストーション／オーバードライブ系の可能性が高い）",
-  "spectral_flatness": 0.5059,
-  "high_band_ratio": 1.608,
-  "crest_factor": 5.02,
-  "centroid_hz": 2456,
+  "spectral_flatness": 0.4667,
+  "high_band_ratio": 1.935,
+  "crest_factor": 5.17,
+  "centroid_hz": 2343,
   "brightness": "明るめ",
   "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
-  "cutting_score": 0.14,
-  "hits_on_16th_offbeats": 0.13,
-  "hits_on_8th_offbeats": 0.71,
-  "hits_on_beats": 0.14,
+  "cutting_score": 0.07,
+  "hits_on_16th_offbeats": 0.07,
+  "hits_on_8th_offbeats": 0.33,
+  "hits_on_beats": 0.03,
   "short_note_score": 0.0
  },
  "intro_detail": {
@@ -4601,13 +4709,38 @@
  },
  "synth": {
   "available": true,
-  "pad_score": 0.69,
+  "pad_score": 0.0,
   "arpeggio_score": 0.03,
+  "tonal_sustain": 0.0,
+  "noisy_sustain": 0.35,
   "sustain_ratio": 0.35,
   "steadiness": 0.79,
   "regular_onsets": 0.02,
   "pitch_change_per_note": 0.76,
-  "kind": "伸ばす音（パッド・ストリングス・ブラス系）が目立つ"
+  "kind": "シンセ・鍵盤らしい音は目立たない。のばしている音は歪んだギター（パワーコードなど）の可能性が高い"
+ },
+ "lineup": {
+  "band_only": true,
+  "has_synth": false,
+  "guitar": "歪んだエレキギター",
+  "text": "バンドだけの編成（歌・歪んだエレキギター・ベース・ドラム）の可能性が高い。シンセ・鍵盤は目立たない"
+ },
+ "intro_entry": {
+  "entries_sec": {
+   "vocals": null,
+   "drums": 1.75,
+   "bass": 1.75,
+   "other": 0.0
+  },
+  "first": "other",
+  "riff": {
+   "notes_per_sec": 1.36,
+   "notes_per_bar": 1.9,
+   "pitch_change": 0.7,
+   "is_riff": true
+  },
+  "text": "ギターなど上物 から始まる、1.8秒ごろにベースが入る、1.8秒ごろにドラムが入る、最初の15秒に歌は入らない、上物は音程の動くフレーズ（リフ）を弾いている可能性が高い",
+  "checked_until": 15.39
  },
  "vocal": {
   "available": true,
@@ -4624,7 +4757,7 @@
   },
   "per_section": [
    {
-    "name": "サビ",
+    "name": "イントロ",
     "start": 0.09,
     "vocal_db": null,
     "singing_ratio": 0.0
@@ -4636,25 +4769,25 @@
     "singing_ratio": 0.83
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "Aメロ",
     "start": 26.87,
     "vocal_db": -8.7,
     "singing_ratio": 0.85
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "Bメロ",
     "start": 39.54,
     "vocal_db": -9.1,
     "singing_ratio": 0.98
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "サビ",
     "start": 47.95,
     "vocal_db": -6.4,
     "singing_ratio": 0.96
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "サビ",
     "start": 59.35,
     "vocal_db": -7.5,
     "singing_ratio": 0.97
@@ -4666,19 +4799,19 @@
     "singing_ratio": 0.0
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "Aメロ",
     "start": 75.05,
     "vocal_db": -8.6,
     "singing_ratio": 0.83
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "Bメロ",
     "start": 89.16,
     "vocal_db": -8.7,
     "singing_ratio": 0.98
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "サビ",
     "start": 96.15,
     "vocal_db": -6.5,
     "singing_ratio": 0.98
@@ -4690,37 +4823,37 @@
     "singing_ratio": 0.32
    },
    {
-    "name": "間奏",
+    "name": "間奏（ギターソロなど）",
     "start": 127.59,
     "vocal_db": null,
     "singing_ratio": 0.0
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "その他",
     "start": 133.28,
     "vocal_db": -5.9,
     "singing_ratio": 0.12
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "落ちサビ・ブレイク（ベースやドラムが抜ける）",
     "start": 138.97,
     "vocal_db": -7.0,
     "singing_ratio": 0.98
    },
    {
-    "name": "Cメロ（大サビ前など）",
+    "name": "サビ",
     "start": 149.03,
     "vocal_db": -5.7,
     "singing_ratio": 1.0
    },
    {
-    "name": "Bメロ",
+    "name": "サビ",
     "start": 156.15,
     "vocal_db": -6.2,
     "singing_ratio": 0.98
    },
    {
-    "name": "サビ",
+    "name": "サビの後（エンディング）",
     "start": 176.15,
     "vocal_db": -6.5,
     "singing_ratio": 0.8
@@ -4732,7 +4865,7 @@
     "singing_ratio": 0.0
    }
   ],
-  "a_vs_chorus_db": 2.6,
+  "a_vs_chorus_db": 2.3,
   "dynamic_spread_db": 3.5,
   "steadiness": "やや強弱をつけている",
   "shouts": {
@@ -5332,32 +5465,33 @@
   ]
  },
  "mood": {
-  "tone": "暗め・シリアス（短調で、マイナーの和音が多い）",
+  "tone": "明暗が混ざっている（メジャーとマイナーの和音が混ざった、切なくて熱い響き）",
+  "color": "bittersweet mix of major and minor chords",
   "minor_chord_ratio": 0.35,
-  "darkness": 0.74,
+  "darkness": 0.48,
   "peaks": [
-   "2:36〜（Bメロ）",
-   "2:29〜（Cメロ（大サビ前など））",
-   "2:13〜（Cメロ（大サビ前など））"
+   "2:36〜（サビ）",
+   "2:29〜（サビ）",
+   "2:13〜（その他）"
   ],
-  "intro_to_chorus": "最初のサビは 0:00 から（曲の始まりから約0秒）。直前の4秒と比べてエネルギーが +0 点 → なだらかに入る（前から盛り上がっている）"
+  "intro_to_chorus": "最初のサビは 0:47 から（曲の始まりから約47秒）。直前の4秒と比べてエネルギーが +14 点 → はっきり一段上がる"
  },
  "suno": {
-  "style": "dark minor key, serious and dramatic, driving 172 BPM, overdriven electric guitar, lush synth pads and brass, high-pitched powerful vocal",
+  "style": "raw live band sound, overdriven electric guitars, bass, live drums, 172 BPM, bittersweet mix of major and minor chords, opens with a guitar riff, guitar solo, quiet breakdown before final chorus, high-pitched powerful vocal",
   "axes": [
-   "dark minor key, serious and dramatic",
-   "driving 172 BPM",
-   "overdriven electric guitar, lush synth pads and brass",
+   "raw live band sound, overdriven electric guitars, bass, live drums",
+   "172 BPM, bittersweet mix of major and minor chords",
+   "opens with a guitar riff, guitar solo, quiet breakdown before final chorus",
    "high-pitched powerful vocal"
   ],
   "reasons": [
-   "雰囲気: 暗め・シリアス（短調で、マイナーの和音が多い）",
-   "テンポ: 172.3 BPM（推定）",
-   "音色: 歪み寄り（ディストーション／オーバードライブ系の可能性が高い）、伸ばす音（パッド・ストリングス・ブラス系）が目立つ",
+   "編成: バンドだけの編成（歌・歪んだエレキギター・ベース・ドラム）の可能性が高い。シンセ・鍵盤は目立たない",
+   "テンポ 172.3 BPM（推定）、響き: 明暗が混ざっている（メジャーとマイナーの和音が混ざった、切なくて熱い響き）",
+   "組み立て: ギターなど上物 から始まる、1.8秒ごろにベースが入る、1.8秒ごろにドラムが入る、最初の15秒に歌は入らない、上物は音程の動くフレーズ（リフ）を弾いている可能性が高い",
    "ボーカル: 音域 G3〜A4、やや強弱をつけている"
   ],
-  "exclude": "cheerful, happy, idol pop, ballad, slow, acoustic, lo-fi, trap, autotune",
-  "note": "男性か女性かは自動で判定していないので、Style の先頭に male vocal / female vocal を足してください。"
+  "exclude": "synth, synthesizer, keyboard, piano, strings, brass, orchestral, electronic, EDM, idol pop, ballad, slow, acoustic, lo-fi, autotune",
+  "note": "ジャンル名（アニソン・J-POP など）はわざと入れていません。入れると Suno がそのジャンルのありがちな音に寄せるためです。男性か女性かは自動で判定していないので、Style の先頭に male vocal / female vocal を足してください。"
  },
  "plot": "/home/user/hanakyo/reports/rec_1121_energy.png"
 }
