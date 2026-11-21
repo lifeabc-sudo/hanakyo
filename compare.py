@@ -93,8 +93,10 @@ def compare(orig, suno):
             fixes.append("ギターが左右に広がっていない → twin guitars panned hard left and right を前のほうに書く")
     ba, bb = g(orig, "details", "bass"), g(suno, "details", "bass")
     row("ベース", ba, bb, ba == bb)
-    if ba != bb and g(orig, "details", "bass_melodic"):
+    if ba != bb and g(orig, "details", "bass_melodic") and not g(suno, "details", "bass_melodic"):
         fixes.append("ベースが動かない → busy melodic running bass を前のほうに書く")
+    elif ba != bb and g(orig, "details", "bass_eighths") and not g(suno, "details", "bass_eighths"):
+        fixes.append("ベースの刻み方がちがう → eighth-note bass と書く（テンポの倍・半分の読みちがいでも起きるので、耳でも確認）")
     ka2, kb2 = g(orig, "details", "kick_every_beat"), g(suno, "details", "kick_every_beat")
     row("バスドラを毎拍踏むか", ka2, kb2, ka2 == kb2)
 
