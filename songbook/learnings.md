@@ -17,6 +17,12 @@
 | early 2000s soft visual kei rock | V系に寄った（Aランク） | ◎ |
 | twin guitars panned wide left and right / melodic running bass / wide fast vibrato | V系らしさが出た（上と同時に使用） | ○ |
 | Exclude: J-pop, pop punk | ポップ寄りを防げた（推定） | ○ |
+| fast 178 BPM, driving drums with kick on every beat, intense emotional delivery, soaring high choruses（まとめて使用） | X のようなスピードメタル寄り。Aメロからずっと全力、最高音が上がりすぎ | ✗ 速さ・激しさを言葉で足さない。BPM の数字だけにする |
+| early 2000s visual kei rock（soft なし） | メタル寄りに振れやすい | △ メロディアス・メインストリームなどで方向を決める |
+
+## 原曲とSuno版の比較でわかったこと
+- Suno は放っておくと、Aメロからサビまで同じ強さで歌う。原曲に強弱があるなら、Style と歌詞の見出しの両方に「Aメロは静か・単声」「サビは声を重ねる」と書く
+- 原曲のAメロのボーカルは左右の相関 1.0（真ん中に1本）、サビは 0.94（重ねた声が左右に広がる）。こういう「声の重ね方の変化」もオマージュの大事な要素
 
 ## 作詞の技法チェック（出す前に lyric_check.py で確認）
 - 1番と2番、サビどうしの行ごとの音数の差は2音以内（同じメロディに乗せるため）
