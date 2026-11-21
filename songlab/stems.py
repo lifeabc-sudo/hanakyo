@@ -97,7 +97,8 @@ def separate(wav_path, y, work_dir, use_demucs=True, log=print):
     if use_demucs:
         paths, err = run_demucs(wav_path, os.path.join(work_dir, "demucs"), log=log)
         if paths:
-            return load_stems_demucs(paths), {"method": "demucs", "approximate": False, "note": None}
+            return load_stems_demucs(paths), {"method": "demucs", "approximate": False, "note": None,
+                                              "paths": paths}
         note = err
     else:
         note = "--no-demucs が指定されました"

@@ -105,7 +105,16 @@ def suno_hints(res):
             inst.append("clean electric guitars")
         if (t.get("cutting_score") or 0) >= 0.6:
             inst.append("tight 16th-note guitar cutting")
-    inst += ["bass", "live drums"]
+    det = res.get("details") or {}
+    if det.get("guitar_lr_corr") is not None and det["guitar_lr_corr"] < 0.5:
+        inst.append("twin guitars panned wide left and right")
+    if det.get("bass_melodic") and det.get("bass_eighths"):
+        inst.append("melodic running eighth-note bass")
+    elif det.get("bass_melodic"):
+        inst.append("melodic moving bass")
+    else:
+        inst.append("bass")
+    inst.append("driving drums with kick on every beat" if det.get("kick_every_beat") else "live drums")
     if lu["has_synth"]:
         inst.append("synth arpeggios" if syn.get("arpeggio_score", 0) >= 0.5 else "synth pads")
     axes.append(", ".join(inst))
@@ -135,6 +144,11 @@ def suno_hints(res):
     if voc.get("available") and voc.get("range"):
         r = voc["range"]
         v = "high-pitched powerful vocal" if "ハイトーン寄り" in r.get("high_tone", "") else "strong mid-range vocal"
+        vib = voc.get("vibrato") or {}
+        if vib.get("available") and vib["extent_semitones"] >= 0.9 and vib["rate_hz"] >= 5.5:
+            v += " with wide fast vibrato, dramatic emotional delivery"
+        elif vib.get("available") and vib["extent_semitones"] >= 0.6:
+            v += " with clear vibrato"
         if voc.get("dynamic_spread_db") is not None and voc["dynamic_spread_db"] < 3:
             v += ", belting throughout"
         if voc["shouts"]["count"] >= 3:
@@ -309,6 +323,13 @@ def to_markdown(res):
     L.append("## 4. 楽器のバランス" + ("（概算）" if approx else ""))
     L.append("")
     L.append(f"- **編成（推定）**: {res['lineup']['text']}")
+    det = res.get("details") or {}
+    if det.get("guitar_width"):
+        L.append(f"- **ギターの左右の広がり（サビ）**: {det['guitar_width']}（左右の相関 {det['guitar_lr_corr']}。1に近いほど同じ音、0に近いほど別々の音）")
+    if det.get("bass"):
+        L.append(f"- **ベース（サビ）**: {det['bass']}（1拍に{det['bass_notes_per_beat']}音、音の高さ{det['bass_pitches']}種類）")
+    if det.get("drums"):
+        L.append(f"- **ドラム（サビ）**: {det['drums']}（バスドラ 1拍に{det['kick_per_beat']}回、ハイハット {det['hat_per_beat']}回）")
     ie = res.get("intro_entry") or {}
     if ie.get("text"):
         L.append(f"- **イントロの入り方（最初の{ie['checked_until']:.0f}秒）**: {ie['text']}")
@@ -389,6 +410,9 @@ def to_markdown(res):
         if voc["a_vs_chorus_db"] is not None:
             L.append(f"- Aメロ→サビの声の強さの差: **{voc['a_vs_chorus_db']:+.1f} dB**（3dBで「少し強い」、6dBで「はっきり強い」くらい）")
         L.append(f"- 歌い方: {voc['steadiness']}（セクション間の差 {voc['dynamic_spread_db']} dB）")
+        vib = voc.get("vibrato") or {}
+        if vib.get("available"):
+            L.append(f"- ビブラート（のばした音の声のゆれ）: **{vib['label']}**（幅 {vib['extent_semitones']} 半音、1秒に {vib['rate_hz']} 回）")
         sh = voc["shouts"]
         times = "、".join(fmt_time(x) for x in sh["times"][:10])
         L.append(f"- 掛け声の候補: {sh['count']}か所" + (f"（{times}）" if sh["count"] else "") + f"　※{sh['note']}")

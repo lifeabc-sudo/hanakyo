@@ -116,6 +116,7 @@ def run(src, reports_dir, work_root, use_demucs=True, log=print):
     intro_end = first_vocal["start"] if first_vocal else 15.0
     ientry = parts.intro_entry(st, beats, intro_end)
     lineup = parts.lineup(syn, tim_chorus if tim_chorus.get("available") else tim, overall)
+    details = parts.playing_details(st, sep.get("paths"), beats, chorus_secs[0] if chorus_secs else None)
 
     log("[7/7] レポートを書く")
     res = {
@@ -137,6 +138,7 @@ def run(src, reports_dir, work_root, use_demucs=True, log=print):
         "intro_detail": intro,
         "synth": syn,
         "lineup": lineup,
+        "details": details,
         "intro_entry": ientry,
         "vocal": voc,
         "energy_per_sec": {"time": energy["times"], "score": energy["score"], "db": energy["db"]},

@@ -257,7 +257,9 @@ def vocal_analysis(voc, sections, sr=SR):
         steady = "はっきり強弱をつけている（Aメロは抑えめ→サビで張る、など）"
 
     shouts = find_shouts(voc, db, vprob[:n] if vprob is not None else None, sr)
+    vib = vibrato(f0, voiced & active_f, sr)
     return {
+        "vibrato": vib,
         "available": True,
         "range": rng,
         "per_section": per,
@@ -365,3 +367,98 @@ def lineup(synth, timbre, balance):
     else:
         text = f"バンドだけの編成（歌・{gtr}・ベース・ドラム）の可能性が高い。シンセ・鍵盤は目立たない"
     return {"band_only": not has_synth, "has_synth": has_synth, "guitar": gtr, "text": text}
+
+
+# ------------------------------------------------------------------ 演奏の細かい特徴
+
+def vibrato(f0, ok, sr=SR):
+    """のばした音のビブラート（声のゆれ）の幅と速さ。"""
+    fps = sr / HOP
+    midi = librosa.hz_to_midi(f0)
+    runs, i, n = [], 0, len(ok)
+    while i < n:
+        if ok[i]:
+            j = i
+            while j < n and ok[j]:
+                j += 1
+            if (j - i) / fps >= 0.4:
+                runs.append((i, j))
+            i = j
+        else:
+            i += 1
+    ext, rate = [], []
+    for a, b in runs:
+        m = midi[a:b]
+        w = max(3, int(fps * 0.16) | 1)   # ビブラート1周期（約0.15秒）くらいの幅でならす
+        d = m - np.convolve(m, np.ones(w) / w, mode="same")
+        d = d[w // 2: len(d) - w // 2]
+        if len(d) < 8 or np.any(np.isnan(d)):
+            continue
+        ext.append(float(np.percentile(d, 95) - np.percentile(d, 5)))
+        rate.append(float(np.sum(np.diff(np.sign(d)) != 0) / 2 / (len(d) / fps)))
+    if len(ext) < 5:
+        return {"available": False}
+    e, r = float(np.median(ext)), float(np.median(rate))
+    if e >= 0.9 and r >= 5.5:
+        label = "幅が広く速いビブラート（ねっとり・ドラマチックな歌い方）"
+    elif e >= 0.6:
+        label = "はっきりしたビブラート"
+    else:
+        label = "ビブラートは控えめ（まっすぐ歌う）"
+    return {"available": True, "extent_semitones": round(e, 2), "rate_hz": round(r, 1),
+            "notes_checked": len(ext), "label": label}
+
+
+def playing_details(stems, stereo_paths, beat_times, chorus, sr=SR):
+    """ギターの左右の広がり、ベースの動き、ドラムの踏み方（サビで調べる）。"""
+    out = {}
+    ibi = float(np.median(np.diff(beat_times))) if len(beat_times) > 2 else 0.5
+    a, b = (chorus["start"], chorus["end"]) if chorus else (0, len(stems["other"]) / sr)
+    n_beats = max(1.0, (b - a) / ibi)
+
+    # ギター（上物）の左右の広がり: 左右の相関が低いほど、別々のギターを左右に振っている
+    if stereo_paths and stereo_paths.get("other"):
+        import soundfile as sf
+        y, ssr = sf.read(stereo_paths["other"])
+        if y.ndim == 2:
+            seg = y[int(a * ssr):int(b * ssr)]
+            corr = float(np.corrcoef(seg[:, 0], seg[:, 1])[0, 1])
+            out["guitar_lr_corr"] = round(corr, 2)
+            out["guitar_width"] = ("左右に大きく広がっている（2本のギターを左右に振り分けている可能性が高い）" if corr < 0.5
+                                   else "やや広がっている" if corr < 0.8 else "真ん中に集まっている")
+
+    # ベース: 1拍あたりの発音数と、音の動き
+    seg = stems["bass"][int(a * sr):int(b * sr)]
+    if np.sqrt(np.mean(seg ** 2)) > 1e-4:
+        on = librosa.onset.onset_detect(y=seg, sr=sr, hop_length=HOP, units="frames")
+        per_beat = len(on) / n_beats
+        C = np.abs(librosa.cqt(seg, sr=sr, hop_length=HOP, fmin=librosa.note_to_hz("E1"), n_bins=36))
+        top = np.argmax(C[:, np.clip(on + 2, 0, C.shape[1] - 1)], axis=0) if len(on) else np.array([])
+        change = float(np.mean(np.diff(top) != 0)) if len(top) > 1 else 0.0
+        kinds = len(set(top.tolist()))
+        out["bass_notes_per_beat"] = round(per_beat, 2)
+        out["bass_pitch_change"] = round(change, 2)
+        out["bass_pitches"] = kinds
+        rhythm = "8分音符で刻む" if 1.5 <= per_beat < 3 else "16分音符で細かく刻む" if per_beat >= 3 else "のばし気味"
+        move = "メロディのように動き回る" if change >= 0.4 and kinds >= 8 else "ルート（コードの一番下の音）中心"
+        out["bass"] = f"{rhythm}・{move}"
+        out["bass_melodic"] = bool(change >= 0.4 and kinds >= 8)
+        out["bass_eighths"] = bool(1.5 <= per_beat < 3)
+
+    # ドラム: バスドラ（低音）とハイハット（高音）の1拍あたりの数
+    seg = stems["drums"][int(a * sr):int(b * sr)]
+    if np.sqrt(np.mean(seg ** 2)) > 1e-4:
+        S = np.abs(librosa.stft(seg, n_fft=2048, hop_length=HOP))
+        fr = librosa.fft_frequencies(sr=sr, n_fft=2048)
+        res = {}
+        for name, mask in (("kick", fr < 150), ("hat", fr > 6000)):
+            e = librosa.onset.onset_strength(S=librosa.amplitude_to_db(S[mask]), sr=sr, hop_length=HOP)
+            pk = librosa.util.peak_pick(e, pre_max=3, post_max=3, pre_avg=5, post_avg=5,
+                                        delta=float(np.std(e)) * 0.8, wait=3)
+            res[name] = len(pk) / n_beats
+        out["kick_per_beat"] = round(res["kick"], 2)
+        out["hat_per_beat"] = round(res["hat"], 2)
+        out["drums"] = ("バスドラを毎拍踏む、勢いのある刻み" if res["kick"] >= 0.85
+                        else "バスドラは要所だけ（ふつうの8ビート）")
+        out["kick_every_beat"] = bool(res["kick"] >= 0.85)
+    return out

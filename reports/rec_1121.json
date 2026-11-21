@@ -9,7 +9,13 @@
  "separation": {
   "method": "demucs",
   "approximate": false,
-  "note": null
+  "note": null,
+  "paths": {
+   "vocals": "/home/user/hanakyo/work/rec_1121/demucs/htdemucs/rec_1121/vocals.wav",
+   "drums": "/home/user/hanakyo/work/rec_1121/demucs/htdemucs/rec_1121/drums.wav",
+   "bass": "/home/user/hanakyo/work/rec_1121/demucs/htdemucs/rec_1121/bass.wav",
+   "other": "/home/user/hanakyo/work/rec_1121/demucs/htdemucs/rec_1121/other.wav"
+  }
  },
  "tempo": {
   "bpm": 172.3,
@@ -4725,6 +4731,20 @@
   "guitar": "歪んだエレキギター",
   "text": "バンドだけの編成（歌・歪んだエレキギター・ベース・ドラム）の可能性が高い。シンセ・鍵盤は目立たない"
  },
+ "details": {
+  "guitar_lr_corr": -0.04,
+  "guitar_width": "左右に大きく広がっている（2本のギターを左右に振り分けている可能性が高い）",
+  "bass_notes_per_beat": 2.14,
+  "bass_pitch_change": 0.43,
+  "bass_pitches": 11,
+  "bass": "8分音符で刻む・メロディのように動き回る",
+  "bass_melodic": true,
+  "bass_eighths": true,
+  "kick_per_beat": 1.07,
+  "hat_per_beat": 1.04,
+  "drums": "バスドラを毎拍踏む、勢いのある刻み",
+  "kick_every_beat": true
+ },
  "intro_entry": {
   "entries_sec": {
    "vocals": null,
@@ -4743,6 +4763,13 @@
   "checked_until": 15.39
  },
  "vocal": {
+  "vibrato": {
+   "available": true,
+   "extent_semitones": 1.48,
+   "rate_hz": 5.7,
+   "notes_checked": 79,
+   "label": "幅が広く速いビブラート（ねっとり・ドラマチックな歌い方）"
+  },
   "available": true,
   "range": {
    "lowest": "G3",
@@ -5477,12 +5504,12 @@
   "intro_to_chorus": "最初のサビは 0:47 から（曲の始まりから約47秒）。直前の4秒と比べてエネルギーが +14 点 → はっきり一段上がる"
  },
  "suno": {
-  "style": "raw live band sound, overdriven electric guitars, bass, live drums, 172 BPM, bittersweet mix of major and minor chords, opens with a guitar riff, guitar solo, quiet breakdown before final chorus, high-pitched powerful vocal",
+  "style": "raw live band sound, overdriven electric guitars, twin guitars panned wide left and right, melodic running eighth-note bass, driving drums with kick on every beat, 172 BPM, bittersweet mix of major and minor chords, opens with a guitar riff, guitar solo, quiet breakdown before final chorus, high-pitched powerful vocal with wide fast vibrato, dramatic emotional delivery",
   "axes": [
-   "raw live band sound, overdriven electric guitars, bass, live drums",
+   "raw live band sound, overdriven electric guitars, twin guitars panned wide left and right, melodic running eighth-note bass, driving drums with kick on every beat",
    "172 BPM, bittersweet mix of major and minor chords",
    "opens with a guitar riff, guitar solo, quiet breakdown before final chorus",
-   "high-pitched powerful vocal"
+   "high-pitched powerful vocal with wide fast vibrato, dramatic emotional delivery"
   ],
   "reasons": [
    "編成: バンドだけの編成（歌・歪んだエレキギター・ベース・ドラム）の可能性が高い。シンセ・鍵盤は目立たない",

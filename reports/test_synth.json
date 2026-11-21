@@ -7,9 +7,15 @@
  },
  "duration": 91.51,
  "separation": {
-  "method": "approx",
-  "approximate": true,
-  "note": "--no-demucs が指定されました"
+  "method": "demucs",
+  "approximate": false,
+  "note": null,
+  "paths": {
+   "vocals": "/home/user/hanakyo/work/test_synth/demucs/htdemucs/test_synth/vocals.wav",
+   "drums": "/home/user/hanakyo/work/test_synth/demucs/htdemucs/test_synth/drums.wav",
+   "bass": "/home/user/hanakyo/work/test_synth/demucs/htdemucs/test_synth/bass.wav",
+   "other": "/home/user/hanakyo/work/test_synth/demucs/htdemucs/test_synth/other.wav"
+  }
  },
  "tempo": {
   "bpm": 129.2,
@@ -32,29 +38,30 @@
     "name": "A minor（短調）",
     "tonic": 9,
     "mode": "minor",
-    "score": 0.636
+    "score": 0.611
    },
    {
     "key": "C",
     "name": "C major（長調）",
     "tonic": 0,
     "mode": "major",
-    "score": 0.565
+    "score": 0.646
    },
    {
     "key": "Em",
     "name": "E minor（短調）",
     "tonic": 4,
     "mode": "minor",
-    "score": 0.424
+    "score": 0.516
    }
   ],
-  "confidence": 0.32,
+  "confidence": 0.16,
   "confidence_label": "低い",
   "relative_check": {
-   "top": 16.0,
-   "relative": 6.0
-  }
+   "top": 6.0,
+   "relative": 16.0
+  },
+  "note": "音の分布だけだと平行調と区別しにくいので、コードの使われ方で順位を入れ替えました"
  },
  "beat_chords": [
   {
@@ -107,25 +114,25 @@
   },
   {
    "t": 3.8081,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
    "root": 0
   },
   {
    "t": 4.2725,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
    "root": 0
   },
   {
    "t": 4.7369,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
    "root": 0
   },
   {
    "t": 5.2013,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
    "root": 0
   },
@@ -192,7 +199,7 @@
   {
    "t": 10.3561,
    "chord": "F",
-   "conf": 0.97,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -222,7 +229,7 @@
   {
    "t": 12.6781,
    "chord": "C",
-   "conf": 0.97,
+   "conf": 1.0,
    "root": 0
   },
   {
@@ -240,7 +247,7 @@
   {
    "t": 14.0945,
    "chord": "G",
-   "conf": 0.99,
+   "conf": 1.0,
    "root": 7
   },
   {
@@ -288,7 +295,7 @@
   {
    "t": 17.8329,
    "chord": "F",
-   "conf": 0.95,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -318,7 +325,7 @@
   {
    "t": 20.1781,
    "chord": "C",
-   "conf": 0.97,
+   "conf": 1.0,
    "root": 0
   },
   {
@@ -348,7 +355,7 @@
   {
    "t": 22.5234,
    "chord": "Dm",
-   "conf": 0.77,
+   "conf": 1.0,
    "root": 2
   },
   {
@@ -408,7 +415,7 @@
   {
    "t": 27.2138,
    "chord": "F",
-   "conf": 0.95,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -444,25 +451,25 @@
   {
    "t": 30.0234,
    "chord": "F",
-   "conf": 0.95,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 30.511,
    "chord": "F",
-   "conf": 0.99,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 30.9754,
    "chord": "F",
-   "conf": 0.93,
+   "conf": 0.99,
    "root": 5
   },
   {
    "t": 31.4398,
    "chord": "F",
-   "conf": 0.73,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -480,13 +487,13 @@
   {
    "t": 32.8562,
    "chord": "G",
-   "conf": 0.98,
+   "conf": 0.97,
    "root": 7
   },
   {
    "t": 33.3206,
    "chord": "G",
-   "conf": 0.95,
+   "conf": 0.96,
    "root": 7
   },
   {
@@ -540,25 +547,25 @@
   {
    "t": 37.5467,
    "chord": "F",
-   "conf": 0.97,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 38.0111,
    "chord": "F",
-   "conf": 0.91,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 38.4755,
    "chord": "F",
-   "conf": 0.93,
+   "conf": 0.99,
    "root": 5
   },
   {
    "t": 38.9399,
    "chord": "F",
-   "conf": 0.74,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -570,7 +577,7 @@
   {
    "t": 39.8687,
    "chord": "G",
-   "conf": 0.96,
+   "conf": 0.98,
    "root": 7
   },
   {
@@ -672,7 +679,7 @@
   {
    "t": 47.8563,
    "chord": "F",
-   "conf": 0.97,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -690,7 +697,7 @@
   {
    "t": 49.2495,
    "chord": "C",
-   "conf": 0.99,
+   "conf": 1.0,
    "root": 0
   },
   {
@@ -702,7 +709,7 @@
   {
    "t": 50.1783,
    "chord": "C",
-   "conf": 0.97,
+   "conf": 1.0,
    "root": 0
   },
   {
@@ -720,7 +727,7 @@
   {
    "t": 51.5947,
    "chord": "G",
-   "conf": 0.99,
+   "conf": 1.0,
    "root": 7
   },
   {
@@ -762,13 +769,13 @@
   {
    "t": 54.8688,
    "chord": "F",
-   "conf": 0.99,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 55.3332,
    "chord": "F",
-   "conf": 0.95,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -798,7 +805,7 @@
   {
    "t": 57.6784,
    "chord": "C",
-   "conf": 0.97,
+   "conf": 1.0,
    "root": 0
   },
   {
@@ -816,7 +823,7 @@
   {
    "t": 59.0948,
    "chord": "G",
-   "conf": 0.99,
+   "conf": 1.0,
    "root": 7
   },
   {
@@ -828,7 +835,7 @@
   {
    "t": 60.0236,
    "chord": "Dm",
-   "conf": 0.91,
+   "conf": 1.0,
    "root": 2
   },
   {
@@ -888,7 +895,7 @@
   {
    "t": 64.714,
    "chord": "F",
-   "conf": 0.96,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -924,25 +931,25 @@
   {
    "t": 67.5236,
    "chord": "F",
-   "conf": 0.95,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 68.0112,
    "chord": "F",
-   "conf": 0.98,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 68.4756,
    "chord": "F",
-   "conf": 0.93,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 68.94,
    "chord": "F",
-   "conf": 0.76,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -954,19 +961,19 @@
   {
    "t": 69.8688,
    "chord": "G",
-   "conf": 0.96,
+   "conf": 0.97,
    "root": 7
   },
   {
    "t": 70.3565,
    "chord": "G",
-   "conf": 0.97,
+   "conf": 0.99,
    "root": 7
   },
   {
    "t": 70.8209,
    "chord": "G",
-   "conf": 0.95,
+   "conf": 0.97,
    "root": 7
   },
   {
@@ -1020,25 +1027,25 @@
   {
    "t": 75.0469,
    "chord": "F",
-   "conf": 0.96,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 75.5113,
    "chord": "F",
-   "conf": 0.93,
+   "conf": 1.0,
    "root": 5
   },
   {
    "t": 75.9757,
    "chord": "F",
-   "conf": 0.93,
+   "conf": 0.98,
    "root": 5
   },
   {
    "t": 76.4401,
    "chord": "F",
-   "conf": 0.71,
+   "conf": 1.0,
    "root": 5
   },
   {
@@ -1050,19 +1057,19 @@
   {
    "t": 77.3689,
    "chord": "G",
-   "conf": 0.98,
+   "conf": 1.0,
    "root": 7
   },
   {
    "t": 77.8565,
    "chord": "G",
-   "conf": 0.96,
+   "conf": 0.98,
    "root": 7
   },
   {
    "t": 78.3209,
    "chord": "G",
-   "conf": 0.99,
+   "conf": 1.0,
    "root": 7
   },
   {
@@ -1163,25 +1170,25 @@
   },
   {
    "t": 86.2389,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
    "root": 0
   },
   {
    "t": 86.7033,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
    "root": 0
   },
   {
    "t": 87.1677,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
    "root": 0
   },
   {
    "t": 87.6321,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
    "root": 0
   },
@@ -1211,27 +1218,27 @@
   },
   {
    "t": 89.9541,
-   "chord": "G#m7/D#",
-   "conf": 0.2,
-   "root": 8
+   "chord": "D7",
+   "conf": 0.0,
+   "root": 2
   },
   {
    "t": 90.4185,
-   "chord": "G#m7",
-   "conf": 0.0,
-   "root": 8
+   "chord": "D7",
+   "conf": 0.08,
+   "root": 2
   },
   {
    "t": 90.8829,
-   "chord": "G#m7",
-   "conf": 0.08,
-   "root": 8
+   "chord": "D7",
+   "conf": 0.1,
+   "root": 2
   },
   {
    "t": 91.3473,
-   "chord": "G#m7",
-   "conf": 0.0,
-   "root": 8
+   "chord": "D7",
+   "conf": 0.01,
+   "root": 2
   }
  ],
  "bars": [
@@ -1249,9 +1256,9 @@
   },
   {
    "t": 3.81,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
-   "display": "C/G"
+   "display": "C"
   },
   {
    "t": 5.67,
@@ -1268,13 +1275,13 @@
   {
    "t": 9.4,
    "chord": "F",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "F"
   },
   {
    "t": 11.28,
    "chord": "C",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "C"
   },
   {
@@ -1292,13 +1299,13 @@
   {
    "t": 16.9,
    "chord": "F",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "F"
   },
   {
    "t": 18.78,
    "chord": "C",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "C"
   },
   {
@@ -1310,7 +1317,7 @@
   {
    "t": 22.52,
    "chord": "Dm",
-   "conf": 0.94,
+   "conf": 1.0,
    "display": "Dm"
   },
   {
@@ -1322,7 +1329,7 @@
   {
    "t": 26.28,
    "chord": "F",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "F"
   },
   {
@@ -1334,7 +1341,7 @@
   {
    "t": 30.02,
    "chord": "F",
-   "conf": 0.9,
+   "conf": 1.0,
    "display": "F"
   },
   {
@@ -1358,7 +1365,7 @@
   {
    "t": 37.55,
    "chord": "F",
-   "conf": 0.89,
+   "conf": 1.0,
    "display": "F"
   },
   {
@@ -1388,13 +1395,13 @@
   {
    "t": 46.9,
    "chord": "F",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "F"
   },
   {
    "t": 48.79,
    "chord": "C",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "C"
   },
   {
@@ -1412,13 +1419,13 @@
   {
    "t": 54.4,
    "chord": "F",
-   "conf": 0.98,
+   "conf": 1.0,
    "display": "F"
   },
   {
    "t": 56.29,
    "chord": "C",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "C"
   },
   {
@@ -1430,7 +1437,7 @@
   {
    "t": 60.02,
    "chord": "Dm",
-   "conf": 0.98,
+   "conf": 1.0,
    "display": "Dm"
   },
   {
@@ -1442,7 +1449,7 @@
   {
    "t": 63.79,
    "chord": "F",
-   "conf": 0.99,
+   "conf": 1.0,
    "display": "F"
   },
   {
@@ -1454,13 +1461,13 @@
   {
    "t": 67.52,
    "chord": "F",
-   "conf": 0.91,
+   "conf": 1.0,
    "display": "F"
   },
   {
    "t": 69.4,
    "chord": "G",
-   "conf": 0.97,
+   "conf": 0.98,
    "display": "G"
   },
   {
@@ -1478,13 +1485,13 @@
   {
    "t": 75.05,
    "chord": "F",
-   "conf": 0.88,
+   "conf": 0.99,
    "display": "F"
   },
   {
    "t": 76.9,
    "chord": "G",
-   "conf": 0.98,
+   "conf": 0.99,
    "display": "G"
   },
   {
@@ -1513,9 +1520,9 @@
   },
   {
    "t": 86.24,
-   "chord": "C/G",
+   "chord": "C",
    "conf": 1.0,
-   "display": "C/G"
+   "display": "C"
   },
   {
    "t": 88.1,
@@ -1525,9 +1532,9 @@
   },
   {
    "t": 89.95,
-   "chord": "G#m7",
-   "conf": 0.06,
-   "display": "G#m7?"
+   "chord": "D7",
+   "conf": 0.05,
+   "display": "D7?"
   }
  ],
  "sections": [
@@ -1540,8 +1547,13 @@
    "end": 7.52,
    "bars": 4,
    "energy_db": -25.7611,
-   "vocal": null,
-   "parts_db": null,
+   "vocal": -55.6879,
+   "parts_db": {
+    "vocals": -55.6879,
+    "drums": -39.3689,
+    "bass": -46.6614,
+    "other": -25.7508
+   },
    "name": "イントロ",
    "energy_score": 13.0
   },
@@ -1554,8 +1566,13 @@
    "end": 22.52,
    "bars": 8,
    "energy_db": -20.5691,
-   "vocal": null,
-   "parts_db": null,
+   "vocal": -36.5827,
+   "parts_db": {
+    "vocals": -36.5827,
+    "drums": -24.5443,
+    "bass": -23.5859,
+    "other": -29.1312
+   },
    "name": "Aメロ",
    "energy_score": 74.0
   },
@@ -1568,8 +1585,13 @@
    "end": 30.02,
    "bars": 4,
    "energy_db": -20.5467,
-   "vocal": null,
-   "parts_db": null,
+   "vocal": -36.6367,
+   "parts_db": {
+    "vocals": -36.6367,
+    "drums": -24.4894,
+    "bass": -23.6532,
+    "other": -28.6961
+   },
    "name": "Bメロ",
    "energy_score": 77.0
   },
@@ -1582,8 +1604,13 @@
    "end": 45.05,
    "bars": 8,
    "energy_db": -19.1001,
-   "vocal": null,
-   "parts_db": null,
+   "vocal": -31.536,
+   "parts_db": {
+    "vocals": -31.536,
+    "drums": -21.4876,
+    "bass": -23.8905,
+    "other": -30.1325
+   },
    "name": "サビ",
    "energy_score": 93.0
   },
@@ -1596,8 +1623,13 @@
    "end": 60.02,
    "bars": 8,
    "energy_db": -20.5868,
-   "vocal": null,
-   "parts_db": null,
+   "vocal": -36.5888,
+   "parts_db": {
+    "vocals": -36.5888,
+    "drums": -24.5956,
+    "bass": -23.5833,
+    "other": -29.124
+   },
    "name": "Aメロ",
    "energy_score": 76.0
   },
@@ -1610,8 +1642,13 @@
    "end": 67.52,
    "bars": 4,
    "energy_db": -20.5455,
-   "vocal": null,
-   "parts_db": null,
+   "vocal": -36.627,
+   "parts_db": {
+    "vocals": -36.627,
+    "drums": -24.5055,
+    "bass": -23.6382,
+    "other": -28.7089
+   },
    "name": "Bメロ",
    "energy_score": 77.0
   },
@@ -1624,8 +1661,13 @@
    "end": 82.52,
    "bars": 8,
    "energy_db": -19.121,
-   "vocal": null,
-   "parts_db": null,
+   "vocal": -31.5959,
+   "parts_db": {
+    "vocals": -31.5959,
+    "drums": -21.553,
+    "bass": -23.9127,
+    "other": -30.2184
+   },
    "name": "サビ",
    "energy_score": 89.0
   },
@@ -1638,8 +1680,13 @@
    "end": 91.51,
    "bars": 5,
    "energy_db": -31.2804,
-   "vocal": null,
-   "parts_db": null,
+   "vocal": -55.9921,
+   "parts_db": {
+    "vocals": -55.9921,
+    "drums": -57.2858,
+    "bass": -56.1645,
+    "other": -26.5671
+   },
    "name": "アウトロ",
    "energy_score": 10.0
   }
@@ -1648,86 +1695,86 @@
   {
    "vocals": 0.0,
    "drums": 0.1,
-   "bass": 0.1,
-   "other": 99.8
+   "bass": 0.0,
+   "other": 99.9
   },
   {
-   "vocals": 0.6,
-   "drums": 20.7,
-   "bass": 28.1,
-   "other": 50.7
+   "vocals": 7.3,
+   "drums": 30.3,
+   "bass": 25.9,
+   "other": 36.5
   },
   {
-   "vocals": 3.1,
-   "drums": 22.0,
-   "bass": 25.0,
-   "other": 49.9
+   "vocals": 7.0,
+   "drums": 30.1,
+   "bass": 23.3,
+   "other": 39.5
   },
   {
-   "vocals": 2.0,
-   "drums": 36.7,
-   "bass": 27.7,
-   "other": 33.7
+   "vocals": 17.0,
+   "drums": 46.0,
+   "bass": 16.1,
+   "other": 20.9
   },
   {
-   "vocals": 0.6,
-   "drums": 20.3,
-   "bass": 28.1,
-   "other": 51.0
+   "vocals": 7.3,
+   "drums": 29.7,
+   "bass": 26.1,
+   "other": 36.8
   },
   {
-   "vocals": 0.6,
-   "drums": 21.7,
-   "bass": 24.7,
-   "other": 53.0
+   "vocals": 7.1,
+   "drums": 30.1,
+   "bass": 23.4,
+   "other": 39.5
   },
   {
-   "vocals": 1.7,
-   "drums": 36.6,
-   "bass": 27.6,
-   "other": 34.0
+   "vocals": 16.9,
+   "drums": 46.2,
+   "bass": 16.2,
+   "other": 20.7
   },
   {
    "vocals": 0.0,
    "drums": 0.0,
-   "bass": 0.1,
-   "other": 99.9
+   "bass": 0.0,
+   "other": 100.0
   }
  ],
  "overall_balance": {
-  "vocals": 1.1,
-  "drums": 23.1,
-  "bass": 22.8,
-  "other": 53.0
+  "vocals": 10.4,
+  "drums": 33.1,
+  "bass": 18.4,
+  "other": 38.1
  },
  "timbre": {
   "available": true,
-  "distortion_score": 0.45,
-  "distortion": "中間（軽い歪み、またはシンセ・ブラスなどと混ざっている）",
-  "spectral_flatness": 0.1214,
-  "high_band_ratio": 0.008,
-  "crest_factor": 4.66,
-  "centroid_hz": 1532,
-  "brightness": "明るめ",
-  "cutting": "細かい刻みが少しある（8分音符中心、またはミュート気味の刻み）",
-  "cutting_score": 0.57,
-  "hits_on_16th_offbeats": 0.52,
-  "hits_on_8th_offbeats": 0.7,
+  "distortion_score": 0.18,
+  "distortion": "クリーン寄り",
+  "spectral_flatness": 0.0598,
+  "high_band_ratio": 0.0,
+  "crest_factor": 4.55,
+  "centroid_hz": 698,
+  "brightness": "こもった・暗め",
+  "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
+  "cutting_score": 0.38,
+  "hits_on_16th_offbeats": 0.35,
+  "hits_on_8th_offbeats": 0.82,
   "hits_on_beats": 0.83,
   "short_note_score": 0.0
  },
  "timbre_chorus": {
   "available": true,
-  "distortion_score": 0.5,
+  "distortion_score": 0.45,
   "distortion": "中間（軽い歪み、またはシンセ・ブラスなどと混ざっている）",
-  "spectral_flatness": 0.306,
-  "high_band_ratio": 0.043,
-  "crest_factor": 4.99,
-  "centroid_hz": 2723,
-  "brightness": "かなり明るい（シャリシャリ・ジャキジャキ）",
+  "spectral_flatness": 0.1517,
+  "high_band_ratio": 0.002,
+  "crest_factor": 4.66,
+  "centroid_hz": 912,
+  "brightness": "ふつう",
   "cutting": "カッティングあり（16分音符で短く刻んでいる可能性が高い）",
-  "cutting_score": 1.0,
-  "hits_on_16th_offbeats": 0.91,
+  "cutting_score": 0.98,
+  "hits_on_16th_offbeats": 0.89,
   "hits_on_8th_offbeats": 1.0,
   "hits_on_beats": 0.97,
   "short_note_score": 0.0
@@ -1735,18 +1782,18 @@
  "intro_detail": {
   "whole": {
    "available": true,
-   "distortion_score": 0.09,
+   "distortion_score": 0.04,
    "distortion": "クリーン寄り",
-   "spectral_flatness": 0.0391,
-   "high_band_ratio": 0.001,
-   "crest_factor": 4.61,
-   "centroid_hz": 660,
+   "spectral_flatness": 0.028,
+   "high_band_ratio": 0.0,
+   "crest_factor": 4.58,
+   "centroid_hz": 636,
    "brightness": "こもった・暗め",
-   "cutting": "細かい刻みが少しある（8分音符中心、またはミュート気味の刻み）",
-   "cutting_score": 0.48,
-   "hits_on_16th_offbeats": 0.44,
-   "hits_on_8th_offbeats": 0.57,
-   "hits_on_beats": 0.69,
+   "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
+   "cutting_score": 0.16,
+   "hits_on_16th_offbeats": 0.14,
+   "hits_on_8th_offbeats": 0.62,
+   "hits_on_beats": 0.71,
    "short_note_score": 0.0
   },
   "windows": [
@@ -1754,51 +1801,51 @@
     "available": true,
     "distortion_score": 0.0,
     "distortion": "クリーン寄り",
-    "spectral_flatness": 0.0022,
+    "spectral_flatness": 0.0068,
     "high_band_ratio": 0.0,
-    "crest_factor": 4.65,
-    "centroid_hz": 630,
+    "crest_factor": 4.6,
+    "centroid_hz": 628,
     "brightness": "こもった・暗め",
     "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
     "cutting_score": 0.17,
     "hits_on_16th_offbeats": 0.15,
-    "hits_on_8th_offbeats": 0.0,
-    "hits_on_beats": 0.3,
+    "hits_on_8th_offbeats": 0.3,
+    "hits_on_beats": 0.5,
     "short_note_score": 0.0,
     "start": 0.0,
     "end": 5.0
    },
    {
     "available": true,
-    "distortion_score": 0.06,
+    "distortion_score": 0.01,
     "distortion": "クリーン寄り",
-    "spectral_flatness": 0.0339,
-    "high_band_ratio": 0.001,
+    "spectral_flatness": 0.0231,
+    "high_band_ratio": 0.0,
     "crest_factor": 4.6,
-    "centroid_hz": 610,
+    "centroid_hz": 602,
     "brightness": "こもった・暗め",
-    "cutting": "細かい刻みが少しある（8分音符中心、またはミュート気味の刻み）",
-    "cutting_score": 0.5,
-    "hits_on_16th_offbeats": 0.45,
+    "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
+    "cutting_score": 0.22,
+    "hits_on_16th_offbeats": 0.2,
     "hits_on_8th_offbeats": 0.5,
-    "hits_on_beats": 0.6,
+    "hits_on_beats": 0.7,
     "short_note_score": 0.0,
     "start": 5.0,
     "end": 10.0
    },
    {
     "available": true,
-    "distortion_score": 0.29,
+    "distortion_score": 0.14,
     "distortion": "クリーン寄り",
-    "spectral_flatness": 0.0835,
-    "high_band_ratio": 0.003,
-    "crest_factor": 4.49,
-    "centroid_hz": 1557,
-    "brightness": "明るめ",
+    "spectral_flatness": 0.052,
+    "high_band_ratio": 0.0,
+    "crest_factor": 4.37,
+    "centroid_hz": 698,
+    "brightness": "こもった・暗め",
     "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
-    "cutting_score": 0.31,
-    "hits_on_16th_offbeats": 0.28,
-    "hits_on_8th_offbeats": 0.56,
+    "cutting_score": 0.12,
+    "hits_on_16th_offbeats": 0.11,
+    "hits_on_8th_offbeats": 1.0,
     "hits_on_beats": 1.0,
     "short_note_score": 0.0,
     "start": 10.0,
@@ -1806,17 +1853,17 @@
    },
    {
     "available": true,
-    "distortion_score": 0.25,
+    "distortion_score": 0.13,
     "distortion": "クリーン寄り",
-    "spectral_flatness": 0.0759,
-    "high_band_ratio": 0.003,
-    "crest_factor": 4.77,
-    "centroid_hz": 1499,
-    "brightness": "ふつう",
+    "spectral_flatness": 0.0486,
+    "high_band_ratio": 0.0,
+    "crest_factor": 4.58,
+    "centroid_hz": 693,
+    "brightness": "こもった・暗め",
     "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
-    "cutting_score": 0.28,
-    "hits_on_16th_offbeats": 0.25,
-    "hits_on_8th_offbeats": 0.5,
+    "cutting_score": 0.06,
+    "hits_on_16th_offbeats": 0.05,
+    "hits_on_8th_offbeats": 0.9,
     "hits_on_beats": 0.9,
     "short_note_score": 0.0,
     "start": 15.0,
@@ -1827,13 +1874,13 @@
  "synth": {
   "available": true,
   "pad_score": 1.0,
-  "arpeggio_score": 0.54,
-  "tonal_sustain": 0.33,
-  "noisy_sustain": 0.01,
+  "arpeggio_score": 0.78,
+  "tonal_sustain": 0.35,
+  "noisy_sustain": 0.0,
   "sustain_ratio": 0.35,
   "steadiness": 0.77,
-  "regular_onsets": 0.86,
-  "pitch_change_per_note": 0.33,
+  "regular_onsets": 0.88,
+  "pitch_change_per_note": 0.47,
   "kind": "細かく規則的に並ぶ音（アルペジオ・シーケンス系）が目立つ"
  },
  "lineup": {
@@ -1842,89 +1889,110 @@
   "guitar": "軽く歪んだギター",
   "text": "バンド（歌・軽く歪んだギター・ベース・ドラム）に、シンセ・鍵盤などの澄んだ音が加わっている可能性"
  },
+ "details": {
+  "guitar_lr_corr": 1.0,
+  "guitar_width": "真ん中に集まっている",
+  "bass_notes_per_beat": 2.01,
+  "bass_pitch_change": 0.14,
+  "bass_pitches": 4,
+  "bass": "8分音符で刻む・ルート（コードの一番下の音）中心",
+  "bass_melodic": false,
+  "bass_eighths": true,
+  "kick_per_beat": 0.99,
+  "hat_per_beat": 3.34,
+  "drums": "バスドラを毎拍踏む、勢いのある刻み",
+  "kick_every_beat": true
+ },
  "intro_entry": {
   "entries_sec": {
    "vocals": null,
-   "drums": 7.25,
+   "drums": null,
    "bass": null,
    "other": 0.0
   },
   "first": "other",
   "riff": {
-   "notes_per_sec": 1.73,
-   "notes_per_bar": 3.21,
-   "pitch_change": 0.33,
+   "notes_per_sec": 3.19,
+   "notes_per_bar": 5.93,
+   "pitch_change": 0.09,
    "is_riff": false
   },
-  "text": "ギターなど上物 から始まる、7.2秒ごろにドラムが入る、最初の8秒に歌は入らない、上物はコードを鳴らしている（リフではない）可能性が高い",
+  "text": "ギターなど上物 から始まる、最初の8秒に歌は入らない、上物はコードを鳴らしている（リフではない）可能性が高い",
   "checked_until": 7.52
  },
  "vocal": {
+  "vibrato": {
+   "available": true,
+   "extent_semitones": 1.74,
+   "rate_hz": 7.3,
+   "notes_checked": 52,
+   "label": "幅が広く速いビブラート（ねっとり・ドラマチックな歌い方）"
+  },
   "available": true,
   "range": {
-   "lowest": "G3",
+   "lowest": "F♯3",
    "highest": "D♯5",
-   "median": "D4",
-   "lowest_hz": 200,
-   "highest_hz": 611,
-   "median_hz": 302,
-   "span_semitones": 19,
-   "voiced_ratio": 0.6,
+   "median": "D♯4",
+   "lowest_hz": 187,
+   "highest_hz": 629,
+   "median_hz": 316,
+   "span_semitones": 21,
+   "voiced_ratio": 0.68,
    "high_tone": "ハイトーン寄り（男性ボーカルならかなり高い。女性ならふつう〜やや高め）"
   },
   "per_section": [
    {
     "name": "イントロ",
     "start": 0.09,
-    "vocal_db": null,
-    "singing_ratio": 0.01
+    "vocal_db": -29.9,
+    "singing_ratio": 0.72
    },
    {
     "name": "Aメロ",
     "start": 7.52,
-    "vocal_db": -19.9,
-    "singing_ratio": 0.89
+    "vocal_db": -13.8,
+    "singing_ratio": 1.0
    },
    {
     "name": "Bメロ",
     "start": 22.52,
-    "vocal_db": -15.2,
-    "singing_ratio": 0.93
+    "vocal_db": -13.8,
+    "singing_ratio": 1.0
    },
    {
     "name": "サビ",
     "start": 30.02,
-    "vocal_db": -14.8,
-    "singing_ratio": 0.98
+    "vocal_db": -9.4,
+    "singing_ratio": 1.0
    },
    {
     "name": "Aメロ",
     "start": 45.05,
-    "vocal_db": -19.8,
-    "singing_ratio": 0.9
+    "vocal_db": -13.8,
+    "singing_ratio": 1.0
    },
    {
     "name": "Bメロ",
     "start": 60.02,
-    "vocal_db": -20.4,
-    "singing_ratio": 0.9
+    "vocal_db": -13.8,
+    "singing_ratio": 1.0
    },
    {
     "name": "サビ",
     "start": 67.52,
-    "vocal_db": -15.8,
-    "singing_ratio": 0.94
+    "vocal_db": -9.5,
+    "singing_ratio": 1.0
    },
    {
     "name": "アウトロ",
     "start": 82.52,
-    "vocal_db": null,
-    "singing_ratio": 0.0
+    "vocal_db": -29.9,
+    "singing_ratio": 0.32
    }
   ],
-  "a_vs_chorus_db": 4.6,
-  "dynamic_spread_db": 5.6,
-  "steadiness": "やや強弱をつけている",
+  "a_vs_chorus_db": 4.4,
+  "dynamic_spread_db": 20.5,
+  "steadiness": "はっきり強弱をつけている（Aメロは抑えめ→サビで張る、など）",
   "shouts": {
    "count": 0,
    "times": [],
@@ -2221,8 +2289,8 @@
  "mood": {
   "tone": "明暗が混ざっている（メジャーとマイナーの和音が混ざった、切なくて熱い響き）",
   "color": "bittersweet mix of major and minor chords",
-  "minor_chord_ratio": 0.39,
-  "darkness": 0.51,
+  "minor_chord_ratio": 0.37,
+  "darkness": 0.49,
   "peaks": [
    "0:30〜（サビ）",
    "1:07〜（サビ）",
@@ -2231,16 +2299,16 @@
   "intro_to_chorus": "最初のサビは 0:30 から（曲の始まりから約30秒）。直前の4秒と比べてエネルギーが +18 点 → はっきり一段上がる"
  },
  "suno": {
-  "style": "crunchy electric guitars, tight 16th-note guitar cutting, bass, live drums, synth arpeggios, 129 BPM, bittersweet mix of major and minor chords, high-pitched powerful vocal",
+  "style": "crunchy electric guitars, tight 16th-note guitar cutting, bass, driving drums with kick on every beat, synth arpeggios, 129 BPM, bittersweet mix of major and minor chords, high-pitched powerful vocal with wide fast vibrato, dramatic emotional delivery",
   "axes": [
-   "crunchy electric guitars, tight 16th-note guitar cutting, bass, live drums, synth arpeggios",
+   "crunchy electric guitars, tight 16th-note guitar cutting, bass, driving drums with kick on every beat, synth arpeggios",
    "129 BPM, bittersweet mix of major and minor chords",
-   "high-pitched powerful vocal"
+   "high-pitched powerful vocal with wide fast vibrato, dramatic emotional delivery"
   ],
   "reasons": [
    "編成: バンド（歌・軽く歪んだギター・ベース・ドラム）に、シンセ・鍵盤などの澄んだ音が加わっている可能性",
    "テンポ 129.2 BPM（推定）、響き: 明暗が混ざっている（メジャーとマイナーの和音が混ざった、切なくて熱い響き）",
-   "ボーカル: 音域 G3〜D♯5、やや強弱をつけている"
+   "ボーカル: 音域 F♯3〜D♯5、はっきり強弱をつけている（Aメロは抑えめ→サビで張る、など）"
   ],
   "exclude": "idol pop, ballad, slow, autotune",
   "note": "ジャンル名（アニソン・J-POP など）はわざと入れていません。入れると Suno がそのジャンルのありがちな音に寄せるためです。男性か女性かは自動で判定していないので、Style の先頭に male vocal / female vocal を足してください。"
