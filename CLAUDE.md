@@ -34,6 +34,13 @@
 - `python3 tests/check_synthetic.py --no-demucs`：概算モードのテスト
 - 合成の声は `espeak-ng` があれば使う（Demucs が歌として認識できるように）。なければ機械的な声になり、Demucs モードのボーカル系のテストは落ちることがある
 
+## 曲づくりの仕組み（作曲・作詞のレベルを上げるため）
+- **作る前に `songbook/learnings.md` と `songbook/history.md` を必ず読む**（ユーザーの好み・Suno語彙辞典・過去の点数）
+- 歌詞を書いたら `songbook/lyrics/<番号>_<曲名>.txt` に保存し、`python3 lyric_check.py <そのファイル>` で確認してから出す。音数のずれ・NGワード・前の曲からの使い回しを直す
+- ユーザーが点数を付けたら、`history.md` に1行足し、効いた言葉・効かなかった言葉を `learnings.md` の Suno 語彙辞典に足して、コミットする
+- Suno で作った曲を送ってもらえたら、`analyze.py` で解析し、`python3 compare.py reports/原曲.json reports/suno版.json` で原曲と比べ、ちがいと Style の直し方を出す（Claude は音を聴けないので、これが耳の代わり）
+- `songbook/lyrics/` には Claude が書いたオリジナル歌詞だけを入れる。原曲の歌詞は入れない
+
 ## Suno 用のプロンプトを作るときのルール（ユーザーのダメ出しから）
 - **解析した曲の音だけに集中する。** 前に作った曲（D-BRAVER 風・王道アニソン風など）の要素を持ち込まない
 - **曲名がわかったら、まずアーティストのジャンルを調べる**（例: FAIRY FORE = ソフトヴィジュアル系）。裏付けの取れた具体的なジャンル名（soft visual kei など）と年代は Style の先頭に入れてよい。ジャンルを外すと、バンドの音でもポップ寄りになる
