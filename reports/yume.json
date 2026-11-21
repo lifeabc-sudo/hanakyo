@@ -1,0 +1,4825 @@
+{
+ "name": "yume",
+ "source": "input/yume.m4a",
+ "file_info": {
+  "size_bytes": 4605950,
+  "duration_sec": 289.4367
+ },
+ "duration": 289.4,
+ "separation": {
+  "method": "demucs",
+  "approximate": false,
+  "note": null,
+  "paths": {
+   "vocals": "/home/user/hanakyo/work/yume/demucs/htdemucs/yume/vocals.wav",
+   "drums": "/home/user/hanakyo/work/yume/demucs/htdemucs/yume/drums.wav",
+   "bass": "/home/user/hanakyo/work/yume/demucs/htdemucs/yume/bass.wav",
+   "other": "/home/user/hanakyo/work/yume/demucs/htdemucs/yume/other.wav"
+  }
+ },
+ "tempo": {
+  "bpm": 89.1,
+  "confidence": 0.6,
+  "confidence_label": "中くらい",
+  "alternatives": [
+   178.2
+  ]
+ },
+ "meter": {
+  "meter": 4,
+  "confidence": 0.4,
+  "confidence_label": "低い",
+  "phase": 0
+ },
+ "key": {
+  "candidates": [
+   {
+    "key": "G#m",
+    "name": "G# minor（短調）",
+    "tonic": 8,
+    "mode": "minor",
+    "score": 0.636
+   },
+   {
+    "key": "B",
+    "name": "B major（長調）",
+    "tonic": 11,
+    "mode": "major",
+    "score": 0.579
+   },
+   {
+    "key": "D#m",
+    "name": "D# minor（短調）",
+    "tonic": 3,
+    "mode": "minor",
+    "score": 0.454
+   }
+  ],
+  "confidence": 0.26,
+  "confidence_label": "低い",
+  "relative_check": {
+   "top": 64.0,
+   "relative": 2.0
+  }
+ },
+ "beat_chords": [
+  {
+   "t": 0.5341,
+   "chord": "D#m",
+   "conf": 0.68,
+   "root": 3
+  },
+  {
+   "t": 1.2074,
+   "chord": "G#m",
+   "conf": 0.2,
+   "root": 8
+  },
+  {
+   "t": 1.8808,
+   "chord": "G#m",
+   "conf": 0.43,
+   "root": 8
+  },
+  {
+   "t": 2.5542,
+   "chord": "G#m",
+   "conf": 0.42,
+   "root": 8
+  },
+  {
+   "t": 3.2276,
+   "chord": "F#",
+   "conf": 0.65,
+   "root": 6
+  },
+  {
+   "t": 3.901,
+   "chord": "F#",
+   "conf": 0.08,
+   "root": 6
+  },
+  {
+   "t": 4.5743,
+   "chord": "Bmaj7",
+   "conf": 0.77,
+   "root": 11
+  },
+  {
+   "t": 5.2477,
+   "chord": "Bmaj7",
+   "conf": 0.81,
+   "root": 11
+  },
+  {
+   "t": 5.9443,
+   "chord": "G#m",
+   "conf": 0.21,
+   "root": 8
+  },
+  {
+   "t": 6.6177,
+   "chord": "G#m",
+   "conf": 0.18,
+   "root": 8
+  },
+  {
+   "t": 7.2911,
+   "chord": "G#m",
+   "conf": 0.44,
+   "root": 8
+  },
+  {
+   "t": 7.9644,
+   "chord": "G#m",
+   "conf": 0.41,
+   "root": 8
+  },
+  {
+   "t": 8.6378,
+   "chord": "F#",
+   "conf": 0.73,
+   "root": 6
+  },
+  {
+   "t": 9.3112,
+   "chord": "F#",
+   "conf": 0.11,
+   "root": 6
+  },
+  {
+   "t": 9.9846,
+   "chord": "Bmaj7",
+   "conf": 0.7,
+   "root": 11
+  },
+  {
+   "t": 10.6347,
+   "chord": "Bmaj7",
+   "conf": 0.58,
+   "root": 11
+  },
+  {
+   "t": 11.3313,
+   "chord": "G#m7",
+   "conf": 0.49,
+   "root": 8
+  },
+  {
+   "t": 11.9118,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 12.5156,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 13.1193,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 13.6998,
+   "chord": "G#m7",
+   "conf": 0.12,
+   "root": 8
+  },
+  {
+   "t": 14.3732,
+   "chord": "G#m7",
+   "conf": 0.11,
+   "root": 8
+  },
+  {
+   "t": 15.0465,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 15.7199,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 16.3933,
+   "chord": "G#m7",
+   "conf": 0.13,
+   "root": 8
+  },
+  {
+   "t": 17.0667,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 17.74,
+   "chord": "G#m7",
+   "conf": 0.13,
+   "root": 8
+  },
+  {
+   "t": 18.4134,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 19.0868,
+   "chord": "G#m7",
+   "conf": 0.04,
+   "root": 8
+  },
+  {
+   "t": 19.7602,
+   "chord": "G#m7",
+   "conf": 0.2,
+   "root": 8
+  },
+  {
+   "t": 20.4336,
+   "chord": "D#m7",
+   "conf": 0.0,
+   "root": 3
+  },
+  {
+   "t": 21.1069,
+   "chord": "D#m7",
+   "conf": 0.22,
+   "root": 3
+  },
+  {
+   "t": 21.7571,
+   "chord": "D#m7",
+   "conf": 0.18,
+   "root": 3
+  },
+  {
+   "t": 22.4305,
+   "chord": "D#m7",
+   "conf": 0.0,
+   "root": 3
+  },
+  {
+   "t": 23.0806,
+   "chord": "D#m7",
+   "conf": 0.4,
+   "root": 3
+  },
+  {
+   "t": 23.7772,
+   "chord": "D#m7",
+   "conf": 0.05,
+   "root": 3
+  },
+  {
+   "t": 24.4506,
+   "chord": "G#maj7",
+   "conf": 0.33,
+   "root": 8
+  },
+  {
+   "t": 25.1472,
+   "chord": "G#maj7",
+   "conf": 0.64,
+   "root": 8
+  },
+  {
+   "t": 25.8206,
+   "chord": "F#7",
+   "conf": 0.09,
+   "root": 6
+  },
+  {
+   "t": 26.494,
+   "chord": "F#7",
+   "conf": 0.04,
+   "root": 6
+  },
+  {
+   "t": 27.1906,
+   "chord": "F#7",
+   "conf": 0.0,
+   "root": 6
+  },
+  {
+   "t": 27.8639,
+   "chord": "F#7",
+   "conf": 0.17,
+   "root": 6
+  },
+  {
+   "t": 28.5605,
+   "chord": "F#7",
+   "conf": 0.14,
+   "root": 6
+  },
+  {
+   "t": 29.3036,
+   "chord": "F#7",
+   "conf": 0.0,
+   "root": 6
+  },
+  {
+   "t": 30.0698,
+   "chord": "G#m",
+   "conf": 0.72,
+   "root": 8
+  },
+  {
+   "t": 30.8129,
+   "chord": "G#m",
+   "conf": 0.78,
+   "root": 8
+  },
+  {
+   "t": 31.5327,
+   "chord": "G#m",
+   "conf": 0.8,
+   "root": 8
+  },
+  {
+   "t": 32.2293,
+   "chord": "G#m",
+   "conf": 0.87,
+   "root": 8
+  },
+  {
+   "t": 32.9027,
+   "chord": "G#m",
+   "conf": 0.94,
+   "root": 8
+  },
+  {
+   "t": 33.5528,
+   "chord": "G#m",
+   "conf": 0.62,
+   "root": 8
+  },
+  {
+   "t": 34.2494,
+   "chord": "G#m",
+   "conf": 0.25,
+   "root": 8
+  },
+  {
+   "t": 34.9228,
+   "chord": "G#m",
+   "conf": 0.39,
+   "root": 8
+  },
+  {
+   "t": 35.5962,
+   "chord": "G#m/F#",
+   "conf": 0.69,
+   "root": 8
+  },
+  {
+   "t": 36.2696,
+   "chord": "G#m/F#",
+   "conf": 0.57,
+   "root": 8
+  },
+  {
+   "t": 36.9429,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 37.6163,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 38.2897,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 38.9631,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 39.6365,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 40.3098,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 40.9832,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 41.6798,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 42.3532,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 43.0266,
+   "chord": "N",
+   "conf": 0.0,
+   "root": null
+  },
+  {
+   "t": 43.7,
+   "chord": "G#maj7",
+   "conf": 0.52,
+   "root": 8
+  },
+  {
+   "t": 44.3733,
+   "chord": "G#maj7",
+   "conf": 0.15,
+   "root": 8
+  },
+  {
+   "t": 45.0467,
+   "chord": "G#maj7",
+   "conf": 0.53,
+   "root": 8
+  },
+  {
+   "t": 45.6969,
+   "chord": "G#maj7",
+   "conf": 0.14,
+   "root": 8
+  },
+  {
+   "t": 46.3702,
+   "chord": "F#7",
+   "conf": 0.15,
+   "root": 6
+  },
+  {
+   "t": 47.0436,
+   "chord": "F#7",
+   "conf": 0.06,
+   "root": 6
+  },
+  {
+   "t": 47.7402,
+   "chord": "F#7",
+   "conf": 0.06,
+   "root": 6
+  },
+  {
+   "t": 48.4136,
+   "chord": "F#7",
+   "conf": 0.11,
+   "root": 6
+  },
+  {
+   "t": 49.1102,
+   "chord": "F#7",
+   "conf": 0.09,
+   "root": 6
+  },
+  {
+   "t": 49.7604,
+   "chord": "F#7",
+   "conf": 0.0,
+   "root": 6
+  },
+  {
+   "t": 50.4337,
+   "chord": "F#7",
+   "conf": 0.0,
+   "root": 6
+  },
+  {
+   "t": 51.1071,
+   "chord": "F#7",
+   "conf": 0.0,
+   "root": 6
+  },
+  {
+   "t": 51.7805,
+   "chord": "E",
+   "conf": 0.27,
+   "root": 4
+  },
+  {
+   "t": 52.4539,
+   "chord": "E",
+   "conf": 0.0,
+   "root": 4
+  },
+  {
+   "t": 53.1273,
+   "chord": "E",
+   "conf": 0.0,
+   "root": 4
+  },
+  {
+   "t": 53.8006,
+   "chord": "E",
+   "conf": 0.15,
+   "root": 4
+  },
+  {
+   "t": 54.4044,
+   "chord": "E",
+   "conf": 0.5,
+   "root": 4
+  },
+  {
+   "t": 54.9616,
+   "chord": "E",
+   "conf": 0.51,
+   "root": 4
+  },
+  {
+   "t": 55.5189,
+   "chord": "F#maj7",
+   "conf": 0.25,
+   "root": 6
+  },
+  {
+   "t": 56.1691,
+   "chord": "F#maj7",
+   "conf": 0.34,
+   "root": 6
+  },
+  {
+   "t": 56.8657,
+   "chord": "G#m",
+   "conf": 0.19,
+   "root": 8
+  },
+  {
+   "t": 57.5158,
+   "chord": "G#m",
+   "conf": 0.54,
+   "root": 8
+  },
+  {
+   "t": 58.1892,
+   "chord": "G#m",
+   "conf": 0.54,
+   "root": 8
+  },
+  {
+   "t": 58.8626,
+   "chord": "G#m",
+   "conf": 0.18,
+   "root": 8
+  },
+  {
+   "t": 59.536,
+   "chord": "Emaj7",
+   "conf": 0.25,
+   "root": 4
+  },
+  {
+   "t": 60.2093,
+   "chord": "Emaj7",
+   "conf": 0.27,
+   "root": 4
+  },
+  {
+   "t": 60.8827,
+   "chord": "F#maj7",
+   "conf": 0.31,
+   "root": 6
+  },
+  {
+   "t": 61.5561,
+   "chord": "F#maj7",
+   "conf": 0.33,
+   "root": 6
+  },
+  {
+   "t": 62.2295,
+   "chord": "D#maj7",
+   "conf": 0.1,
+   "root": 3
+  },
+  {
+   "t": 62.9029,
+   "chord": "D#maj7",
+   "conf": 0.39,
+   "root": 3
+  },
+  {
+   "t": 63.5762,
+   "chord": "D#maj7",
+   "conf": 0.07,
+   "root": 3
+  },
+  {
+   "t": 64.2496,
+   "chord": "D#maj7",
+   "conf": 0.0,
+   "root": 3
+  },
+  {
+   "t": 64.923,
+   "chord": "E",
+   "conf": 0.11,
+   "root": 4
+  },
+  {
+   "t": 65.5964,
+   "chord": "E",
+   "conf": 0.45,
+   "root": 4
+  },
+  {
+   "t": 66.2698,
+   "chord": "A#m7",
+   "conf": 0.04,
+   "root": 10
+  },
+  {
+   "t": 66.9663,
+   "chord": "A#m7",
+   "conf": 0.57,
+   "root": 10
+  },
+  {
+   "t": 67.6397,
+   "chord": "G#",
+   "conf": 0.31,
+   "root": 8
+  },
+  {
+   "t": 68.3131,
+   "chord": "G#",
+   "conf": 0.42,
+   "root": 8
+  },
+  {
+   "t": 68.9865,
+   "chord": "F#",
+   "conf": 0.05,
+   "root": 6
+  },
+  {
+   "t": 69.6366,
+   "chord": "F#",
+   "conf": 0.22,
+   "root": 6
+  },
+  {
+   "t": 70.3332,
+   "chord": "E",
+   "conf": 0.43,
+   "root": 4
+  },
+  {
+   "t": 71.0066,
+   "chord": "E",
+   "conf": 0.26,
+   "root": 4
+  },
+  {
+   "t": 71.68,
+   "chord": "F#",
+   "conf": 0.23,
+   "root": 6
+  },
+  {
+   "t": 72.3534,
+   "chord": "F#",
+   "conf": 0.65,
+   "root": 6
+  },
+  {
+   "t": 73.0268,
+   "chord": "G#7",
+   "conf": 0.11,
+   "root": 8
+  },
+  {
+   "t": 73.7001,
+   "chord": "G#7",
+   "conf": 0.26,
+   "root": 8
+  },
+  {
+   "t": 74.3735,
+   "chord": "G#7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 75.0469,
+   "chord": "G#7/F#",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 75.7203,
+   "chord": "G#7",
+   "conf": 0.07,
+   "root": 8
+  },
+  {
+   "t": 76.3937,
+   "chord": "G#7",
+   "conf": 0.09,
+   "root": 8
+  },
+  {
+   "t": 77.067,
+   "chord": "F#",
+   "conf": 0.12,
+   "root": 6
+  },
+  {
+   "t": 77.7404,
+   "chord": "F#",
+   "conf": 0.32,
+   "root": 6
+  },
+  {
+   "t": 78.4138,
+   "chord": "G#m7",
+   "conf": 0.27,
+   "root": 8
+  },
+  {
+   "t": 79.0872,
+   "chord": "G#m7",
+   "conf": 0.17,
+   "root": 8
+  },
+  {
+   "t": 79.7605,
+   "chord": "G#m7",
+   "conf": 0.01,
+   "root": 8
+  },
+  {
+   "t": 80.4339,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 81.1073,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 81.7807,
+   "chord": "G#m7",
+   "conf": 0.35,
+   "root": 8
+  },
+  {
+   "t": 82.4541,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 83.1274,
+   "chord": "G#m7/F#",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 83.824,
+   "chord": "G#m7",
+   "conf": 0.29,
+   "root": 8
+  },
+  {
+   "t": 84.4974,
+   "chord": "G#m7",
+   "conf": 0.35,
+   "root": 8
+  },
+  {
+   "t": 85.1708,
+   "chord": "G#m7",
+   "conf": 0.43,
+   "root": 8
+  },
+  {
+   "t": 85.821,
+   "chord": "G#m7",
+   "conf": 0.2,
+   "root": 8
+  },
+  {
+   "t": 86.4943,
+   "chord": "G#m7",
+   "conf": 0.01,
+   "root": 8
+  },
+  {
+   "t": 87.1677,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 87.8179,
+   "chord": "F#maj7",
+   "conf": 0.11,
+   "root": 6
+  },
+  {
+   "t": 88.5145,
+   "chord": "F#maj7",
+   "conf": 0.58,
+   "root": 6
+  },
+  {
+   "t": 89.1878,
+   "chord": "G#maj7",
+   "conf": 0.51,
+   "root": 8
+  },
+  {
+   "t": 89.8844,
+   "chord": "G#maj7",
+   "conf": 0.62,
+   "root": 8
+  },
+  {
+   "t": 90.5578,
+   "chord": "G#maj7",
+   "conf": 0.46,
+   "root": 8
+  },
+  {
+   "t": 91.2312,
+   "chord": "F#m",
+   "conf": 0.22,
+   "root": 6
+  },
+  {
+   "t": 91.9046,
+   "chord": "Emaj7",
+   "conf": 0.0,
+   "root": 4
+  },
+  {
+   "t": 92.578,
+   "chord": "Emaj7",
+   "conf": 0.51,
+   "root": 4
+  },
+  {
+   "t": 93.2513,
+   "chord": "F#maj7",
+   "conf": 0.34,
+   "root": 6
+  },
+  {
+   "t": 93.9247,
+   "chord": "F#maj7",
+   "conf": 0.49,
+   "root": 6
+  },
+  {
+   "t": 94.5749,
+   "chord": "G#m7",
+   "conf": 0.25,
+   "root": 8
+  },
+  {
+   "t": 95.2018,
+   "chord": "G#m7",
+   "conf": 0.37,
+   "root": 8
+  },
+  {
+   "t": 95.8288,
+   "chord": "G#m7",
+   "conf": 0.4,
+   "root": 8
+  },
+  {
+   "t": 96.4325,
+   "chord": "F#maj7",
+   "conf": 0.04,
+   "root": 6
+  },
+  {
+   "t": 97.0826,
+   "chord": "F#maj7",
+   "conf": 0.12,
+   "root": 6
+  },
+  {
+   "t": 97.7792,
+   "chord": "F#maj7",
+   "conf": 0.21,
+   "root": 6
+  },
+  {
+   "t": 98.4758,
+   "chord": "F#maj7",
+   "conf": 0.59,
+   "root": 6
+  },
+  {
+   "t": 99.126,
+   "chord": "Fmaj7",
+   "conf": 0.43,
+   "root": 5
+  },
+  {
+   "t": 99.66,
+   "chord": "Fmaj7",
+   "conf": 0.42,
+   "root": 5
+  },
+  {
+   "t": 100.3102,
+   "chord": "Fmaj7",
+   "conf": 0.03,
+   "root": 5
+  },
+  {
+   "t": 100.9836,
+   "chord": "Fmaj7",
+   "conf": 0.0,
+   "root": 5
+  },
+  {
+   "t": 101.6802,
+   "chord": "Fmaj7",
+   "conf": 0.22,
+   "root": 5
+  },
+  {
+   "t": 102.3303,
+   "chord": "Fmaj7",
+   "conf": 0.02,
+   "root": 5
+  },
+  {
+   "t": 103.0269,
+   "chord": "Bmaj7",
+   "conf": 0.14,
+   "root": 11
+  },
+  {
+   "t": 103.7003,
+   "chord": "Bmaj7",
+   "conf": 0.38,
+   "root": 11
+  },
+  {
+   "t": 104.3737,
+   "chord": "G#maj7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 105.0471,
+   "chord": "G#maj7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 105.7205,
+   "chord": "G#maj7",
+   "conf": 0.66,
+   "root": 8
+  },
+  {
+   "t": 106.3706,
+   "chord": "G#maj7",
+   "conf": 0.33,
+   "root": 8
+  },
+  {
+   "t": 107.0672,
+   "chord": "G#maj7",
+   "conf": 0.62,
+   "root": 8
+  },
+  {
+   "t": 107.7406,
+   "chord": "G#maj7",
+   "conf": 0.6,
+   "root": 8
+  },
+  {
+   "t": 108.414,
+   "chord": "F#maj7",
+   "conf": 0.44,
+   "root": 6
+  },
+  {
+   "t": 109.0873,
+   "chord": "F#maj7",
+   "conf": 0.58,
+   "root": 6
+  },
+  {
+   "t": 109.7839,
+   "chord": "F#maj7",
+   "conf": 0.55,
+   "root": 6
+  },
+  {
+   "t": 110.4341,
+   "chord": "F#maj7",
+   "conf": 0.56,
+   "root": 6
+  },
+  {
+   "t": 111.1307,
+   "chord": "Fmaj7",
+   "conf": 0.36,
+   "root": 5
+  },
+  {
+   "t": 111.7809,
+   "chord": "Fmaj7",
+   "conf": 0.36,
+   "root": 5
+  },
+  {
+   "t": 112.2917,
+   "chord": "Fmaj7",
+   "conf": 0.39,
+   "root": 5
+  },
+  {
+   "t": 112.9419,
+   "chord": "Fmaj7",
+   "conf": 0.0,
+   "root": 5
+  },
+  {
+   "t": 113.5456,
+   "chord": "Bmaj7",
+   "conf": 0.54,
+   "root": 11
+  },
+  {
+   "t": 114.1725,
+   "chord": "Bmaj7",
+   "conf": 0.46,
+   "root": 11
+  },
+  {
+   "t": 114.8459,
+   "chord": "C#m7",
+   "conf": 0.04,
+   "root": 1
+  },
+  {
+   "t": 115.4961,
+   "chord": "C#m7",
+   "conf": 0.11,
+   "root": 1
+  },
+  {
+   "t": 116.1462,
+   "chord": "C#m7",
+   "conf": 0.15,
+   "root": 1
+  },
+  {
+   "t": 116.8428,
+   "chord": "C#m7/E",
+   "conf": 0.05,
+   "root": 1
+  },
+  {
+   "t": 117.5162,
+   "chord": "F#maj7",
+   "conf": 0.16,
+   "root": 6
+  },
+  {
+   "t": 118.1896,
+   "chord": "F#maj7",
+   "conf": 0.5,
+   "root": 6
+  },
+  {
+   "t": 118.8629,
+   "chord": "G#m",
+   "conf": 0.23,
+   "root": 8
+  },
+  {
+   "t": 119.5363,
+   "chord": "G#m",
+   "conf": 0.48,
+   "root": 8
+  },
+  {
+   "t": 120.2097,
+   "chord": "G#m",
+   "conf": 0.46,
+   "root": 8
+  },
+  {
+   "t": 120.8831,
+   "chord": "G#m",
+   "conf": 0.15,
+   "root": 8
+  },
+  {
+   "t": 121.5565,
+   "chord": "E",
+   "conf": 0.22,
+   "root": 4
+  },
+  {
+   "t": 122.2298,
+   "chord": "E",
+   "conf": 0.58,
+   "root": 4
+  },
+  {
+   "t": 122.9032,
+   "chord": "F#maj7",
+   "conf": 0.32,
+   "root": 6
+  },
+  {
+   "t": 123.5998,
+   "chord": "F#maj7",
+   "conf": 0.26,
+   "root": 6
+  },
+  {
+   "t": 124.25,
+   "chord": "D#maj7",
+   "conf": 0.09,
+   "root": 3
+  },
+  {
+   "t": 124.9234,
+   "chord": "D#maj7",
+   "conf": 0.37,
+   "root": 3
+  },
+  {
+   "t": 125.5967,
+   "chord": "D#maj7",
+   "conf": 0.04,
+   "root": 3
+  },
+  {
+   "t": 126.2701,
+   "chord": "D#maj7",
+   "conf": 0.17,
+   "root": 3
+  },
+  {
+   "t": 126.9435,
+   "chord": "E",
+   "conf": 0.26,
+   "root": 4
+  },
+  {
+   "t": 127.6169,
+   "chord": "E",
+   "conf": 0.55,
+   "root": 4
+  },
+  {
+   "t": 128.2902,
+   "chord": "F#",
+   "conf": 0.05,
+   "root": 6
+  },
+  {
+   "t": 128.9868,
+   "chord": "F#",
+   "conf": 0.45,
+   "root": 6
+  },
+  {
+   "t": 129.6602,
+   "chord": "G#",
+   "conf": 0.26,
+   "root": 8
+  },
+  {
+   "t": 130.3336,
+   "chord": "G#",
+   "conf": 0.32,
+   "root": 8
+  },
+  {
+   "t": 131.007,
+   "chord": "A#m7",
+   "conf": 0.14,
+   "root": 10
+  },
+  {
+   "t": 131.6804,
+   "chord": "A#m7",
+   "conf": 0.27,
+   "root": 10
+  },
+  {
+   "t": 132.3305,
+   "chord": "E",
+   "conf": 0.0,
+   "root": 4
+  },
+  {
+   "t": 133.0039,
+   "chord": "E",
+   "conf": 0.43,
+   "root": 4
+  },
+  {
+   "t": 133.6773,
+   "chord": "D#m7",
+   "conf": 0.0,
+   "root": 3
+  },
+  {
+   "t": 134.3507,
+   "chord": "D#m7/F#",
+   "conf": 0.08,
+   "root": 3
+  },
+  {
+   "t": 135.0473,
+   "chord": "D#m7",
+   "conf": 0.01,
+   "root": 3
+  },
+  {
+   "t": 135.7206,
+   "chord": "D#m7",
+   "conf": 0.1,
+   "root": 3
+  },
+  {
+   "t": 136.394,
+   "chord": "D#m7",
+   "conf": 0.04,
+   "root": 3
+  },
+  {
+   "t": 137.0442,
+   "chord": "D#m7",
+   "conf": 0.1,
+   "root": 3
+  },
+  {
+   "t": 137.7408,
+   "chord": "G#m7",
+   "conf": 0.04,
+   "root": 8
+  },
+  {
+   "t": 138.4141,
+   "chord": "G#m7",
+   "conf": 0.49,
+   "root": 8
+  },
+  {
+   "t": 139.0875,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 139.7609,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 140.4343,
+   "chord": "G#m7",
+   "conf": 0.15,
+   "root": 8
+  },
+  {
+   "t": 141.1077,
+   "chord": "G#m7",
+   "conf": 0.4,
+   "root": 8
+  },
+  {
+   "t": 141.781,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 142.4544,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 143.1278,
+   "chord": "G#m7",
+   "conf": 0.31,
+   "root": 8
+  },
+  {
+   "t": 143.8012,
+   "chord": "G#m7",
+   "conf": 0.4,
+   "root": 8
+  },
+  {
+   "t": 144.4746,
+   "chord": "F#maj7",
+   "conf": 0.06,
+   "root": 6
+  },
+  {
+   "t": 145.1479,
+   "chord": "F#maj7",
+   "conf": 0.63,
+   "root": 6
+  },
+  {
+   "t": 145.8445,
+   "chord": "G#m",
+   "conf": 0.33,
+   "root": 8
+  },
+  {
+   "t": 146.4947,
+   "chord": "G#m",
+   "conf": 0.46,
+   "root": 8
+  },
+  {
+   "t": 147.1681,
+   "chord": "G#m",
+   "conf": 0.59,
+   "root": 8
+  },
+  {
+   "t": 147.8415,
+   "chord": "G#m",
+   "conf": 0.51,
+   "root": 8
+  },
+  {
+   "t": 148.5148,
+   "chord": "G#m",
+   "conf": 0.08,
+   "root": 8
+  },
+  {
+   "t": 149.1882,
+   "chord": "G#m",
+   "conf": 0.23,
+   "root": 8
+  },
+  {
+   "t": 149.8616,
+   "chord": "F#",
+   "conf": 0.16,
+   "root": 6
+  },
+  {
+   "t": 150.535,
+   "chord": "F#",
+   "conf": 0.44,
+   "root": 6
+  },
+  {
+   "t": 151.2316,
+   "chord": "G#m",
+   "conf": 0.2,
+   "root": 8
+  },
+  {
+   "t": 151.9049,
+   "chord": "G#m",
+   "conf": 0.43,
+   "root": 8
+  },
+  {
+   "t": 152.5783,
+   "chord": "F#maj7",
+   "conf": 0.5,
+   "root": 6
+  },
+  {
+   "t": 153.2517,
+   "chord": "F#maj7",
+   "conf": 0.38,
+   "root": 6
+  },
+  {
+   "t": 153.9251,
+   "chord": "Emaj7",
+   "conf": 0.15,
+   "root": 4
+  },
+  {
+   "t": 154.5985,
+   "chord": "Emaj7",
+   "conf": 0.47,
+   "root": 4
+  },
+  {
+   "t": 155.2718,
+   "chord": "F#maj7",
+   "conf": 0.25,
+   "root": 6
+  },
+  {
+   "t": 155.9452,
+   "chord": "F#maj7",
+   "conf": 0.48,
+   "root": 6
+  },
+  {
+   "t": 156.6186,
+   "chord": "G#m",
+   "conf": 0.21,
+   "root": 8
+  },
+  {
+   "t": 157.292,
+   "chord": "G#m",
+   "conf": 0.38,
+   "root": 8
+  },
+  {
+   "t": 157.9654,
+   "chord": "A#m7",
+   "conf": 0.07,
+   "root": 10
+  },
+  {
+   "t": 158.6387,
+   "chord": "A#m7",
+   "conf": 0.25,
+   "root": 10
+  },
+  {
+   "t": 159.3121,
+   "chord": "G#m7",
+   "conf": 0.12,
+   "root": 8
+  },
+  {
+   "t": 159.9855,
+   "chord": "G#m7",
+   "conf": 0.21,
+   "root": 8
+  },
+  {
+   "t": 160.6589,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 161.3322,
+   "chord": "G#m7/F#",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 162.0056,
+   "chord": "G#m7",
+   "conf": 0.11,
+   "root": 8
+  },
+  {
+   "t": 162.679,
+   "chord": "G#m7",
+   "conf": 0.12,
+   "root": 8
+  },
+  {
+   "t": 163.3524,
+   "chord": "G#m7",
+   "conf": 0.09,
+   "root": 8
+  },
+  {
+   "t": 164.0258,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 164.6991,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 165.3725,
+   "chord": "G#m7",
+   "conf": 0.64,
+   "root": 8
+  },
+  {
+   "t": 166.0459,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 166.7193,
+   "chord": "F#maj7",
+   "conf": 0.58,
+   "root": 6
+  },
+  {
+   "t": 167.3927,
+   "chord": "G#m",
+   "conf": 0.32,
+   "root": 8
+  },
+  {
+   "t": 168.066,
+   "chord": "G#m",
+   "conf": 0.58,
+   "root": 8
+  },
+  {
+   "t": 168.7394,
+   "chord": "C#7/G#",
+   "conf": 0.3,
+   "root": 1
+  },
+  {
+   "t": 169.4128,
+   "chord": "C#7/G#",
+   "conf": 0.2,
+   "root": 1
+  },
+  {
+   "t": 170.0862,
+   "chord": "C#7",
+   "conf": 0.2,
+   "root": 1
+  },
+  {
+   "t": 170.7828,
+   "chord": "C#7",
+   "conf": 0.0,
+   "root": 1
+  },
+  {
+   "t": 171.4329,
+   "chord": "C#7",
+   "conf": 0.56,
+   "root": 1
+  },
+  {
+   "t": 172.1063,
+   "chord": "C#7",
+   "conf": 0.0,
+   "root": 1
+  },
+  {
+   "t": 172.8029,
+   "chord": "C#7",
+   "conf": 0.12,
+   "root": 1
+  },
+  {
+   "t": 173.4763,
+   "chord": "C#7",
+   "conf": 0.02,
+   "root": 1
+  },
+  {
+   "t": 174.1497,
+   "chord": "C#7",
+   "conf": 0.22,
+   "root": 1
+  },
+  {
+   "t": 174.823,
+   "chord": "G#m",
+   "conf": 0.08,
+   "root": 8
+  },
+  {
+   "t": 175.4732,
+   "chord": "G#m",
+   "conf": 0.14,
+   "root": 8
+  },
+  {
+   "t": 176.1466,
+   "chord": "G#m",
+   "conf": 0.14,
+   "root": 8
+  },
+  {
+   "t": 176.82,
+   "chord": "G#m",
+   "conf": 0.12,
+   "root": 8
+  },
+  {
+   "t": 177.4933,
+   "chord": "G#m",
+   "conf": 0.13,
+   "root": 8
+  },
+  {
+   "t": 178.1667,
+   "chord": "G#m",
+   "conf": 0.05,
+   "root": 8
+  },
+  {
+   "t": 178.8401,
+   "chord": "G#m",
+   "conf": 0.33,
+   "root": 8
+  },
+  {
+   "t": 179.5135,
+   "chord": "G#m",
+   "conf": 0.3,
+   "root": 8
+  },
+  {
+   "t": 180.2101,
+   "chord": "Emaj7",
+   "conf": 0.43,
+   "root": 4
+  },
+  {
+   "t": 180.8602,
+   "chord": "Emaj7",
+   "conf": 0.63,
+   "root": 4
+  },
+  {
+   "t": 181.5336,
+   "chord": "Emaj7",
+   "conf": 0.33,
+   "root": 4
+  },
+  {
+   "t": 182.207,
+   "chord": "Emaj7",
+   "conf": 0.18,
+   "root": 4
+  },
+  {
+   "t": 182.8804,
+   "chord": "Emaj7",
+   "conf": 0.08,
+   "root": 4
+  },
+  {
+   "t": 183.577,
+   "chord": "Emaj7",
+   "conf": 0.37,
+   "root": 4
+  },
+  {
+   "t": 184.2503,
+   "chord": "Emaj7",
+   "conf": 0.47,
+   "root": 4
+  },
+  {
+   "t": 184.9237,
+   "chord": "Emaj7",
+   "conf": 0.07,
+   "root": 4
+  },
+  {
+   "t": 185.5971,
+   "chord": "Emaj7",
+   "conf": 0.13,
+   "root": 4
+  },
+  {
+   "t": 186.2473,
+   "chord": "F#maj7",
+   "conf": 0.15,
+   "root": 6
+  },
+  {
+   "t": 186.9206,
+   "chord": "F#maj7",
+   "conf": 0.02,
+   "root": 6
+  },
+  {
+   "t": 187.6172,
+   "chord": "F#maj7",
+   "conf": 0.34,
+   "root": 6
+  },
+  {
+   "t": 188.2906,
+   "chord": "F#maj7",
+   "conf": 0.0,
+   "root": 6
+  },
+  {
+   "t": 188.964,
+   "chord": "D#maj7",
+   "conf": 0.03,
+   "root": 3
+  },
+  {
+   "t": 189.6141,
+   "chord": "D#maj7",
+   "conf": 0.19,
+   "root": 3
+  },
+  {
+   "t": 190.2643,
+   "chord": "D#maj7",
+   "conf": 0.0,
+   "root": 3
+  },
+  {
+   "t": 190.868,
+   "chord": "D#maj7/G",
+   "conf": 0.43,
+   "root": 3
+  },
+  {
+   "t": 191.4717,
+   "chord": "G#m/G",
+   "conf": 0.24,
+   "root": 8
+  },
+  {
+   "t": 192.029,
+   "chord": "G#m",
+   "conf": 0.32,
+   "root": 8
+  },
+  {
+   "t": 192.6792,
+   "chord": "G#m",
+   "conf": 0.28,
+   "root": 8
+  },
+  {
+   "t": 193.3758,
+   "chord": "G#m",
+   "conf": 0.27,
+   "root": 8
+  },
+  {
+   "t": 194.0259,
+   "chord": "G#m",
+   "conf": 0.29,
+   "root": 8
+  },
+  {
+   "t": 194.7225,
+   "chord": "C#",
+   "conf": 0.22,
+   "root": 1
+  },
+  {
+   "t": 195.3959,
+   "chord": "C#",
+   "conf": 0.3,
+   "root": 1
+  },
+  {
+   "t": 196.0925,
+   "chord": "C#",
+   "conf": 0.11,
+   "root": 1
+  },
+  {
+   "t": 196.7195,
+   "chord": "C#",
+   "conf": 0.0,
+   "root": 1
+  },
+  {
+   "t": 197.3696,
+   "chord": "E",
+   "conf": 0.35,
+   "root": 4
+  },
+  {
+   "t": 198.0662,
+   "chord": "E",
+   "conf": 0.52,
+   "root": 4
+  },
+  {
+   "t": 198.7628,
+   "chord": "E",
+   "conf": 0.44,
+   "root": 4
+  },
+  {
+   "t": 199.413,
+   "chord": "E",
+   "conf": 0.35,
+   "root": 4
+  },
+  {
+   "t": 200.0863,
+   "chord": "C#maj7",
+   "conf": 0.2,
+   "root": 1
+  },
+  {
+   "t": 200.7829,
+   "chord": "C#maj7",
+   "conf": 0.07,
+   "root": 1
+  },
+  {
+   "t": 201.4563,
+   "chord": "D#m",
+   "conf": 0.52,
+   "root": 3
+  },
+  {
+   "t": 202.1297,
+   "chord": "D#m",
+   "conf": 0.64,
+   "root": 3
+  },
+  {
+   "t": 202.8031,
+   "chord": "D#m",
+   "conf": 0.26,
+   "root": 3
+  },
+  {
+   "t": 203.4765,
+   "chord": "G#m7",
+   "conf": 0.11,
+   "root": 8
+  },
+  {
+   "t": 204.1498,
+   "chord": "G#m7",
+   "conf": 0.18,
+   "root": 8
+  },
+  {
+   "t": 204.8929,
+   "chord": "G#m7",
+   "conf": 0.09,
+   "root": 8
+  },
+  {
+   "t": 205.6824,
+   "chord": "G#m7/F#",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 206.4951,
+   "chord": "G#m7",
+   "conf": 0.09,
+   "root": 8
+  },
+  {
+   "t": 207.1917,
+   "chord": "G#m7",
+   "conf": 0.19,
+   "root": 8
+  },
+  {
+   "t": 207.8418,
+   "chord": "F#maj7",
+   "conf": 0.08,
+   "root": 6
+  },
+  {
+   "t": 208.5152,
+   "chord": "F#maj7",
+   "conf": 0.33,
+   "root": 6
+  },
+  {
+   "t": 209.1886,
+   "chord": "E",
+   "conf": 0.51,
+   "root": 4
+  },
+  {
+   "t": 209.862,
+   "chord": "E",
+   "conf": 0.5,
+   "root": 4
+  },
+  {
+   "t": 210.5353,
+   "chord": "F#",
+   "conf": 0.23,
+   "root": 6
+  },
+  {
+   "t": 211.2319,
+   "chord": "F#",
+   "conf": 0.49,
+   "root": 6
+  },
+  {
+   "t": 211.9053,
+   "chord": "G#m",
+   "conf": 0.39,
+   "root": 8
+  },
+  {
+   "t": 212.5787,
+   "chord": "G#m",
+   "conf": 0.48,
+   "root": 8
+  },
+  {
+   "t": 213.2521,
+   "chord": "C#",
+   "conf": 0.13,
+   "root": 1
+  },
+  {
+   "t": 213.9022,
+   "chord": "C#",
+   "conf": 0.17,
+   "root": 1
+  },
+  {
+   "t": 214.5292,
+   "chord": "E",
+   "conf": 0.23,
+   "root": 4
+  },
+  {
+   "t": 215.249,
+   "chord": "E",
+   "conf": 0.36,
+   "root": 4
+  },
+  {
+   "t": 215.9224,
+   "chord": "F#",
+   "conf": 0.23,
+   "root": 6
+  },
+  {
+   "t": 216.619,
+   "chord": "F#",
+   "conf": 0.42,
+   "root": 6
+  },
+  {
+   "t": 217.2691,
+   "chord": "G#m7",
+   "conf": 0.11,
+   "root": 8
+  },
+  {
+   "t": 217.9425,
+   "chord": "G#m7",
+   "conf": 0.23,
+   "root": 8
+  },
+  {
+   "t": 218.6159,
+   "chord": "G#m7",
+   "conf": 0.36,
+   "root": 8
+  },
+  {
+   "t": 219.2893,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 219.9626,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 220.6592,
+   "chord": "G#m7",
+   "conf": 0.33,
+   "root": 8
+  },
+  {
+   "t": 221.3326,
+   "chord": "A#m7",
+   "conf": 0.19,
+   "root": 10
+  },
+  {
+   "t": 222.006,
+   "chord": "A#m7",
+   "conf": 0.33,
+   "root": 10
+  },
+  {
+   "t": 222.6794,
+   "chord": "G#m7",
+   "conf": 0.22,
+   "root": 8
+  },
+  {
+   "t": 223.3527,
+   "chord": "G#m7",
+   "conf": 0.38,
+   "root": 8
+  },
+  {
+   "t": 224.0493,
+   "chord": "G#m7",
+   "conf": 0.44,
+   "root": 8
+  },
+  {
+   "t": 224.6995,
+   "chord": "G#m7",
+   "conf": 0.52,
+   "root": 8
+  },
+  {
+   "t": 225.3497,
+   "chord": "G#m7",
+   "conf": 0.49,
+   "root": 8
+  },
+  {
+   "t": 226.023,
+   "chord": "G#m7",
+   "conf": 0.29,
+   "root": 8
+  },
+  {
+   "t": 226.7196,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 227.393,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 228.0896,
+   "chord": "G#m7",
+   "conf": 0.12,
+   "root": 8
+  },
+  {
+   "t": 228.763,
+   "chord": "G#m7",
+   "conf": 0.33,
+   "root": 8
+  },
+  {
+   "t": 229.4364,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 230.1098,
+   "chord": "G#m7/F#",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 230.7831,
+   "chord": "G#m7",
+   "conf": 0.17,
+   "root": 8
+  },
+  {
+   "t": 231.4333,
+   "chord": "G#m7",
+   "conf": 0.26,
+   "root": 8
+  },
+  {
+   "t": 232.1067,
+   "chord": "F#",
+   "conf": 0.06,
+   "root": 6
+  },
+  {
+   "t": 232.78,
+   "chord": "F#",
+   "conf": 0.63,
+   "root": 6
+  },
+  {
+   "t": 233.4766,
+   "chord": "G#m7",
+   "conf": 0.13,
+   "root": 8
+  },
+  {
+   "t": 234.15,
+   "chord": "G#m7",
+   "conf": 0.26,
+   "root": 8
+  },
+  {
+   "t": 234.8234,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 235.4736,
+   "chord": "G#m7/F#",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 236.1702,
+   "chord": "G#m7",
+   "conf": 0.15,
+   "root": 8
+  },
+  {
+   "t": 236.8435,
+   "chord": "G#m7",
+   "conf": 0.23,
+   "root": 8
+  },
+  {
+   "t": 237.5169,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 238.1903,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 238.8637,
+   "chord": "G#m7",
+   "conf": 0.02,
+   "root": 8
+  },
+  {
+   "t": 239.5371,
+   "chord": "G#m7/F#",
+   "conf": 0.17,
+   "root": 8
+  },
+  {
+   "t": 240.2104,
+   "chord": "G#m7",
+   "conf": 0.14,
+   "root": 8
+  },
+  {
+   "t": 240.8838,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 241.5572,
+   "chord": "G#m7",
+   "conf": 0.09,
+   "root": 8
+  },
+  {
+   "t": 242.2306,
+   "chord": "G#m7",
+   "conf": 0.38,
+   "root": 8
+  },
+  {
+   "t": 242.9039,
+   "chord": "A#m7",
+   "conf": 0.23,
+   "root": 10
+  },
+  {
+   "t": 243.5773,
+   "chord": "A#m7",
+   "conf": 0.53,
+   "root": 10
+  },
+  {
+   "t": 244.2507,
+   "chord": "G#m7",
+   "conf": 0.09,
+   "root": 8
+  },
+  {
+   "t": 244.9241,
+   "chord": "G#m7",
+   "conf": 0.63,
+   "root": 8
+  },
+  {
+   "t": 245.5975,
+   "chord": "G#m7",
+   "conf": 0.32,
+   "root": 8
+  },
+  {
+   "t": 246.2476,
+   "chord": "G#m7",
+   "conf": 0.39,
+   "root": 8
+  },
+  {
+   "t": 246.9442,
+   "chord": "G#m7",
+   "conf": 0.15,
+   "root": 8
+  },
+  {
+   "t": 247.6176,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 248.291,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 248.9644,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 249.6377,
+   "chord": "G#m7",
+   "conf": 0.12,
+   "root": 8
+  },
+  {
+   "t": 250.3111,
+   "chord": "G#m7",
+   "conf": 0.18,
+   "root": 8
+  },
+  {
+   "t": 251.0077,
+   "chord": "G#m7",
+   "conf": 0.17,
+   "root": 8
+  },
+  {
+   "t": 251.6811,
+   "chord": "G#m7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 252.3545,
+   "chord": "Emaj7",
+   "conf": 0.15,
+   "root": 4
+  },
+  {
+   "t": 253.0278,
+   "chord": "Emaj7",
+   "conf": 0.68,
+   "root": 4
+  },
+  {
+   "t": 253.7012,
+   "chord": "F#maj7",
+   "conf": 0.1,
+   "root": 6
+  },
+  {
+   "t": 254.3746,
+   "chord": "F#maj7",
+   "conf": 0.41,
+   "root": 6
+  },
+  {
+   "t": 255.048,
+   "chord": "G#maj7",
+   "conf": 0.41,
+   "root": 8
+  },
+  {
+   "t": 255.7214,
+   "chord": "G#maj7",
+   "conf": 0.47,
+   "root": 8
+  },
+  {
+   "t": 256.3947,
+   "chord": "G#maj7",
+   "conf": 0.62,
+   "root": 8
+  },
+  {
+   "t": 257.0449,
+   "chord": "G#maj7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 257.7183,
+   "chord": "Emaj7",
+   "conf": 0.08,
+   "root": 4
+  },
+  {
+   "t": 258.3917,
+   "chord": "Emaj7",
+   "conf": 0.56,
+   "root": 4
+  },
+  {
+   "t": 259.065,
+   "chord": "F#maj7",
+   "conf": 0.07,
+   "root": 6
+  },
+  {
+   "t": 259.7384,
+   "chord": "F#maj7",
+   "conf": 0.56,
+   "root": 6
+  },
+  {
+   "t": 260.4118,
+   "chord": "G#maj7",
+   "conf": 0.33,
+   "root": 8
+  },
+  {
+   "t": 261.1084,
+   "chord": "G#maj7",
+   "conf": 0.67,
+   "root": 8
+  },
+  {
+   "t": 261.7585,
+   "chord": "G#maj7",
+   "conf": 0.68,
+   "root": 8
+  },
+  {
+   "t": 262.4551,
+   "chord": "G#maj7",
+   "conf": 0.0,
+   "root": 8
+  },
+  {
+   "t": 263.1285,
+   "chord": "Emaj7",
+   "conf": 0.07,
+   "root": 4
+  },
+  {
+   "t": 263.8019,
+   "chord": "Emaj7",
+   "conf": 0.65,
+   "root": 4
+  },
+  {
+   "t": 264.4753,
+   "chord": "F#maj7",
+   "conf": 0.42,
+   "root": 6
+  },
+  {
+   "t": 265.1487,
+   "chord": "F#maj7",
+   "conf": 0.45,
+   "root": 6
+  },
+  {
+   "t": 265.822,
+   "chord": "G#m",
+   "conf": 0.39,
+   "root": 8
+  },
+  {
+   "t": 266.4954,
+   "chord": "G#m",
+   "conf": 0.68,
+   "root": 8
+  },
+  {
+   "t": 267.1688,
+   "chord": "G#m",
+   "conf": 0.63,
+   "root": 8
+  },
+  {
+   "t": 267.8654,
+   "chord": "G#m",
+   "conf": 0.44,
+   "root": 8
+  },
+  {
+   "t": 268.562,
+   "chord": "G#m",
+   "conf": 0.4,
+   "root": 8
+  },
+  {
+   "t": 269.2354,
+   "chord": "G#m",
+   "conf": 0.42,
+   "root": 8
+  },
+  {
+   "t": 269.9088,
+   "chord": "G#m",
+   "conf": 0.29,
+   "root": 8
+  },
+  {
+   "t": 270.6054,
+   "chord": "G#m",
+   "conf": 0.4,
+   "root": 8
+  },
+  {
+   "t": 271.302,
+   "chord": "G#m",
+   "conf": 0.25,
+   "root": 8
+  },
+  {
+   "t": 271.9985,
+   "chord": "G#m",
+   "conf": 0.32,
+   "root": 8
+  },
+  {
+   "t": 272.6951,
+   "chord": "G#m",
+   "conf": 0.24,
+   "root": 8
+  },
+  {
+   "t": 273.3917,
+   "chord": "G#m",
+   "conf": 0.23,
+   "root": 8
+  },
+  {
+   "t": 274.0651,
+   "chord": "G#m",
+   "conf": 0.37,
+   "root": 8
+  },
+  {
+   "t": 274.7385,
+   "chord": "C#m/G#",
+   "conf": 0.31,
+   "root": 1
+  },
+  {
+   "t": 275.4351,
+   "chord": "C#m/G#",
+   "conf": 1.0,
+   "root": 1
+  },
+  {
+   "t": 276.1085,
+   "chord": "G#m",
+   "conf": 0.29,
+   "root": 8
+  },
+  {
+   "t": 276.7819,
+   "chord": "G#m",
+   "conf": 0.07,
+   "root": 8
+  },
+  {
+   "t": 277.4552,
+   "chord": "G#m",
+   "conf": 0.12,
+   "root": 8
+  },
+  {
+   "t": 278.1286,
+   "chord": "G#m",
+   "conf": 0.82,
+   "root": 8
+  },
+  {
+   "t": 278.802,
+   "chord": "G#m",
+   "conf": 0.59,
+   "root": 8
+  },
+  {
+   "t": 279.4754,
+   "chord": "G#m",
+   "conf": 0.22,
+   "root": 8
+  },
+  {
+   "t": 280.1488,
+   "chord": "C#m",
+   "conf": 0.0,
+   "root": 1
+  },
+  {
+   "t": 280.8221,
+   "chord": "C#m",
+   "conf": 0.51,
+   "root": 1
+  },
+  {
+   "t": 281.4955,
+   "chord": "D#m",
+   "conf": 0.0,
+   "root": 3
+  },
+  {
+   "t": 282.1689,
+   "chord": "D#m",
+   "conf": 0.43,
+   "root": 3
+  },
+  {
+   "t": 282.8423,
+   "chord": "D#m",
+   "conf": 0.02,
+   "root": 3
+  },
+  {
+   "t": 283.5156,
+   "chord": "G#m",
+   "conf": 0.35,
+   "root": 8
+  },
+  {
+   "t": 284.189,
+   "chord": "G#m",
+   "conf": 0.56,
+   "root": 8
+  },
+  {
+   "t": 284.8624,
+   "chord": "G#m",
+   "conf": 0.23,
+   "root": 8
+  },
+  {
+   "t": 285.5358,
+   "chord": "C#m",
+   "conf": 0.0,
+   "root": 1
+  },
+  {
+   "t": 286.2092,
+   "chord": "C#m",
+   "conf": 0.52,
+   "root": 1
+  },
+  {
+   "t": 286.8825,
+   "chord": "D#m",
+   "conf": 0.0,
+   "root": 3
+  },
+  {
+   "t": 287.5559,
+   "chord": "D#m",
+   "conf": 0.44,
+   "root": 3
+  },
+  {
+   "t": 288.2293,
+   "chord": "D#m",
+   "conf": 0.0,
+   "root": 3
+  },
+  {
+   "t": 288.9027,
+   "chord": "D#m",
+   "conf": 0.0,
+   "root": 3
+  }
+ ],
+ "bars": [
+  {
+   "t": 0.53,
+   "chord": "G#m",
+   "conf": 0.38,
+   "display": "G#m?"
+  },
+  {
+   "t": 3.23,
+   "chord": "F# Bmaj7",
+   "conf": 0.58,
+   "display": "F# Bmaj7"
+  },
+  {
+   "t": 5.94,
+   "chord": "G#m",
+   "conf": 0.31,
+   "display": "G#m?"
+  },
+  {
+   "t": 8.64,
+   "chord": "F# Bmaj7",
+   "conf": 0.53,
+   "display": "F# Bmaj7"
+  },
+  {
+   "t": 11.33,
+   "chord": "G#m7",
+   "conf": 0.12,
+   "display": "G#m7?"
+  },
+  {
+   "t": 13.7,
+   "chord": "G#m7",
+   "conf": 0.06,
+   "display": "G#m7?"
+  },
+  {
+   "t": 16.39,
+   "chord": "G#m7",
+   "conf": 0.07,
+   "display": "G#m7?"
+  },
+  {
+   "t": 19.09,
+   "chord": "G#m7 D#m7",
+   "conf": 0.12,
+   "display": "G#m7 D#m7?"
+  },
+  {
+   "t": 21.76,
+   "chord": "D#m7",
+   "conf": 0.16,
+   "display": "D#m7?"
+  },
+  {
+   "t": 24.45,
+   "chord": "G#maj7 F#7",
+   "conf": 0.28,
+   "display": "G#maj7 F#7?"
+  },
+  {
+   "t": 27.19,
+   "chord": "F#7",
+   "conf": 0.08,
+   "display": "F#7?"
+  },
+  {
+   "t": 30.07,
+   "chord": "G#m",
+   "conf": 0.79,
+   "display": "G#m"
+  },
+  {
+   "t": 32.9,
+   "chord": "G#m",
+   "conf": 0.55,
+   "display": "G#m"
+  },
+  {
+   "t": 35.6,
+   "chord": "G#m/F# N",
+   "conf": 0.31,
+   "display": "G#m/F# N?"
+  },
+  {
+   "t": 38.29,
+   "chord": "N",
+   "conf": 1.0,
+   "display": "N"
+  },
+  {
+   "t": 40.98,
+   "chord": "N",
+   "conf": 1.0,
+   "display": "N"
+  },
+  {
+   "t": 43.7,
+   "chord": "G#maj7",
+   "conf": 0.34,
+   "display": "G#maj7?"
+  },
+  {
+   "t": 46.37,
+   "chord": "F#7",
+   "conf": 0.1,
+   "display": "F#7?"
+  },
+  {
+   "t": 49.11,
+   "chord": "F#7",
+   "conf": 0.02,
+   "display": "F#7?"
+  },
+  {
+   "t": 51.78,
+   "chord": "E",
+   "conf": 0.11,
+   "display": "E?"
+  },
+  {
+   "t": 54.4,
+   "chord": "E F#maj7",
+   "conf": 0.4,
+   "display": "E F#maj7?"
+  },
+  {
+   "t": 56.87,
+   "chord": "G#m",
+   "conf": 0.36,
+   "display": "G#m?"
+  },
+  {
+   "t": 59.54,
+   "chord": "Emaj7 F#maj7",
+   "conf": 0.29,
+   "display": "Emaj7 F#maj7?"
+  },
+  {
+   "t": 62.23,
+   "chord": "D#maj7",
+   "conf": 0.14,
+   "display": "D#maj7?"
+  },
+  {
+   "t": 64.92,
+   "chord": "E A#m7",
+   "conf": 0.29,
+   "display": "E A#m7?"
+  },
+  {
+   "t": 67.64,
+   "chord": "G# F#",
+   "conf": 0.25,
+   "display": "G# F#?"
+  },
+  {
+   "t": 70.33,
+   "chord": "E F#",
+   "conf": 0.39,
+   "display": "E F#?"
+  },
+  {
+   "t": 73.03,
+   "chord": "G#7",
+   "conf": 0.08,
+   "display": "G#7?"
+  },
+  {
+   "t": 75.72,
+   "chord": "G#7 F#",
+   "conf": 0.15,
+   "display": "G#7 F#?"
+  },
+  {
+   "t": 78.41,
+   "chord": "G#m7",
+   "conf": 0.11,
+   "display": "G#m7?"
+  },
+  {
+   "t": 81.11,
+   "chord": "G#m7",
+   "conf": 0.08,
+   "display": "G#m7?"
+  },
+  {
+   "t": 83.82,
+   "chord": "G#m7",
+   "conf": 0.32,
+   "display": "G#m7?"
+  },
+  {
+   "t": 86.49,
+   "chord": "G#m7 F#maj7",
+   "conf": 0.17,
+   "display": "G#m7 F#maj7?"
+  },
+  {
+   "t": 89.19,
+   "chord": "G#maj7",
+   "conf": 0.4,
+   "display": "G#maj7?"
+  },
+  {
+   "t": 91.9,
+   "chord": "Emaj7 F#maj7",
+   "conf": 0.34,
+   "display": "Emaj7 F#maj7?"
+  },
+  {
+   "t": 94.57,
+   "chord": "G#m7",
+   "conf": 0.23,
+   "display": "G#m7?"
+  },
+  {
+   "t": 97.08,
+   "chord": "F#maj7",
+   "conf": 0.3,
+   "display": "F#maj7?"
+  },
+  {
+   "t": 99.66,
+   "chord": "Fmaj7",
+   "conf": 0.17,
+   "display": "Fmaj7?"
+  },
+  {
+   "t": 102.33,
+   "chord": "Bmaj7",
+   "conf": 0.1,
+   "display": "Bmaj7?"
+  },
+  {
+   "t": 105.05,
+   "chord": "G#maj7",
+   "conf": 0.4,
+   "display": "G#maj7?"
+  },
+  {
+   "t": 107.74,
+   "chord": "F#maj7",
+   "conf": 0.47,
+   "display": "F#maj7"
+  },
+  {
+   "t": 110.43,
+   "chord": "Fmaj7",
+   "conf": 0.37,
+   "display": "Fmaj7?"
+  },
+  {
+   "t": 112.94,
+   "chord": "Bmaj7",
+   "conf": 0.2,
+   "display": "Bmaj7?"
+  },
+  {
+   "t": 115.5,
+   "chord": "C#m7",
+   "conf": 0.09,
+   "display": "C#m7?"
+  },
+  {
+   "t": 118.19,
+   "chord": "G#m",
+   "conf": 0.37,
+   "display": "G#m?"
+  },
+  {
+   "t": 120.88,
+   "chord": "E",
+   "conf": 0.24,
+   "display": "E?"
+  },
+  {
+   "t": 123.6,
+   "chord": "D#maj7",
+   "conf": 0.17,
+   "display": "D#maj7?"
+  },
+  {
+   "t": 126.27,
+   "chord": "E",
+   "conf": 0.19,
+   "display": "E?"
+  },
+  {
+   "t": 128.99,
+   "chord": "G#",
+   "conf": 0.22,
+   "display": "G#?"
+  },
+  {
+   "t": 131.68,
+   "chord": "E",
+   "conf": 0.13,
+   "display": "E?"
+  },
+  {
+   "t": 134.35,
+   "chord": "D#m7",
+   "conf": 0.05,
+   "display": "D#m7?"
+  },
+  {
+   "t": 137.04,
+   "chord": "G#m7",
+   "conf": 0.14,
+   "display": "G#m7?"
+  },
+  {
+   "t": 139.76,
+   "chord": "G#m7",
+   "conf": 0.14,
+   "display": "G#m7?"
+  },
+  {
+   "t": 142.45,
+   "chord": "G#m7",
+   "conf": 0.17,
+   "display": "G#m7?"
+  },
+  {
+   "t": 145.15,
+   "chord": "G#m",
+   "conf": 0.44,
+   "display": "G#m?"
+  },
+  {
+   "t": 147.84,
+   "chord": "G#m",
+   "conf": 0.21,
+   "display": "G#m?"
+  },
+  {
+   "t": 150.53,
+   "chord": "G#m",
+   "conf": 0.29,
+   "display": "G#m?"
+  },
+  {
+   "t": 153.25,
+   "chord": "F#maj7",
+   "conf": 0.23,
+   "display": "F#maj7?"
+  },
+  {
+   "t": 155.95,
+   "chord": "G#m",
+   "conf": 0.21,
+   "display": "G#m?"
+  },
+  {
+   "t": 158.64,
+   "chord": "G#m7",
+   "conf": 0.13,
+   "display": "G#m7?"
+  },
+  {
+   "t": 161.33,
+   "chord": "G#m7",
+   "conf": 0.07,
+   "display": "G#m7?"
+  },
+  {
+   "t": 164.03,
+   "chord": "G#m7",
+   "conf": 0.16,
+   "display": "G#m7?"
+  },
+  {
+   "t": 166.72,
+   "chord": "G#m",
+   "conf": 0.33,
+   "display": "G#m?"
+  },
+  {
+   "t": 169.41,
+   "chord": "C#7",
+   "conf": 0.21,
+   "display": "C#7?"
+  },
+  {
+   "t": 172.11,
+   "chord": "C#7",
+   "conf": 0.09,
+   "display": "C#7?"
+  },
+  {
+   "t": 174.82,
+   "chord": "G#m",
+   "conf": 0.12,
+   "display": "G#m?"
+  },
+  {
+   "t": 177.49,
+   "chord": "G#m",
+   "conf": 0.2,
+   "display": "G#m?"
+  },
+  {
+   "t": 180.21,
+   "chord": "Emaj7",
+   "conf": 0.39,
+   "display": "Emaj7?"
+  },
+  {
+   "t": 182.88,
+   "chord": "Emaj7",
+   "conf": 0.25,
+   "display": "Emaj7?"
+  },
+  {
+   "t": 185.6,
+   "chord": "F#maj7",
+   "conf": 0.14,
+   "display": "F#maj7?"
+  },
+  {
+   "t": 188.29,
+   "chord": "D#maj7",
+   "conf": 0.05,
+   "display": "D#maj7?"
+  },
+  {
+   "t": 190.87,
+   "chord": "G#m",
+   "conf": 0.24,
+   "display": "G#m?"
+  },
+  {
+   "t": 193.38,
+   "chord": "G#m C#",
+   "conf": 0.27,
+   "display": "G#m C#?"
+  },
+  {
+   "t": 196.09,
+   "chord": "C# E",
+   "conf": 0.24,
+   "display": "C# E?"
+  },
+  {
+   "t": 198.76,
+   "chord": "E C#maj7",
+   "conf": 0.27,
+   "display": "E C#maj7?"
+  },
+  {
+   "t": 201.46,
+   "chord": "D#m",
+   "conf": 0.33,
+   "display": "D#m?"
+  },
+  {
+   "t": 204.15,
+   "chord": "G#m7",
+   "conf": 0.08,
+   "display": "G#m7?"
+  },
+  {
+   "t": 207.19,
+   "chord": "F#maj7",
+   "conf": 0.21,
+   "display": "F#maj7?"
+  },
+  {
+   "t": 209.86,
+   "chord": "F#",
+   "conf": 0.3,
+   "display": "F#?"
+  },
+  {
+   "t": 212.58,
+   "chord": "C#",
+   "conf": 0.19,
+   "display": "C#?"
+  },
+  {
+   "t": 215.25,
+   "chord": "F#",
+   "conf": 0.21,
+   "display": "F#?"
+  },
+  {
+   "t": 217.94,
+   "chord": "G#m7",
+   "conf": 0.15,
+   "display": "G#m7?"
+  },
+  {
+   "t": 220.66,
+   "chord": "G#m7",
+   "conf": 0.2,
+   "display": "G#m7?"
+  },
+  {
+   "t": 223.35,
+   "chord": "G#m7",
+   "conf": 0.46,
+   "display": "G#m7"
+  },
+  {
+   "t": 226.02,
+   "chord": "G#m7",
+   "conf": 0.1,
+   "display": "G#m7?"
+  },
+  {
+   "t": 228.76,
+   "chord": "G#m7",
+   "conf": 0.11,
+   "display": "G#m7?"
+  },
+  {
+   "t": 231.43,
+   "chord": "G#m7",
+   "conf": 0.2,
+   "display": "G#m7?"
+  },
+  {
+   "t": 234.15,
+   "chord": "G#m7",
+   "conf": 0.09,
+   "display": "G#m7?"
+  },
+  {
+   "t": 236.84,
+   "chord": "G#m7",
+   "conf": 0.06,
+   "display": "G#m7?"
+  },
+  {
+   "t": 239.54,
+   "chord": "G#m7",
+   "conf": 0.09,
+   "display": "G#m7?"
+  },
+  {
+   "t": 242.23,
+   "chord": "G#m7",
+   "conf": 0.23,
+   "display": "G#m7?"
+  },
+  {
+   "t": 244.92,
+   "chord": "G#m7",
+   "conf": 0.37,
+   "display": "G#m7?"
+  },
+  {
+   "t": 247.62,
+   "chord": "G#m7",
+   "conf": 0.03,
+   "display": "G#m7?"
+  },
+  {
+   "t": 250.31,
+   "chord": "G#m7",
+   "conf": 0.11,
+   "display": "G#m7?"
+  },
+  {
+   "t": 253.03,
+   "chord": "F#maj7",
+   "conf": 0.3,
+   "display": "F#maj7?"
+  },
+  {
+   "t": 255.72,
+   "chord": "G#maj7",
+   "conf": 0.26,
+   "display": "G#maj7?"
+  },
+  {
+   "t": 258.39,
+   "chord": "F#maj7",
+   "conf": 0.29,
+   "display": "F#maj7?"
+  },
+  {
+   "t": 261.11,
+   "chord": "G#maj7",
+   "conf": 0.31,
+   "display": "G#maj7?"
+  },
+  {
+   "t": 263.8,
+   "chord": "F#maj7",
+   "conf": 0.36,
+   "display": "F#maj7?"
+  },
+  {
+   "t": 266.5,
+   "chord": "G#m",
+   "conf": 0.54,
+   "display": "G#m"
+  },
+  {
+   "t": 269.24,
+   "chord": "G#m",
+   "conf": 0.34,
+   "display": "G#m?"
+  },
+  {
+   "t": 272.0,
+   "chord": "G#m",
+   "conf": 0.29,
+   "display": "G#m?"
+  },
+  {
+   "t": 274.74,
+   "chord": "C#m/G# G#m",
+   "conf": 0.42,
+   "display": "C#m/G# G#m?"
+  },
+  {
+   "t": 277.46,
+   "chord": "G#m",
+   "conf": 0.44,
+   "display": "G#m?"
+  },
+  {
+   "t": 280.15,
+   "chord": "C#m D#m",
+   "conf": 0.23,
+   "display": "C#m D#m?"
+  },
+  {
+   "t": 282.84,
+   "chord": "G#m",
+   "conf": 0.25,
+   "display": "G#m?"
+  },
+  {
+   "t": 285.54,
+   "chord": "C#m D#m",
+   "conf": 0.24,
+   "display": "C#m D#m?"
+  },
+  {
+   "t": 288.23,
+   "chord": "D#m",
+   "conf": 0.0,
+   "display": "D#m?"
+  }
+ ],
+ "sections": [
+  {
+   "start_bar": 0,
+   "end_bar": 4,
+   "group": "A",
+   "group_sim": null,
+   "start": 0.53,
+   "end": 11.33,
+   "bars": 4,
+   "energy_db": -40.3168,
+   "vocal": -60.1723,
+   "parts_db": {
+    "vocals": -60.1723,
+    "drums": -41.6297,
+    "bass": -52.8501,
+    "other": -37.0242
+   },
+   "name": "イントロ",
+   "energy_score": 18.0
+  },
+  {
+   "start_bar": 4,
+   "end_bar": 11,
+   "group": "B",
+   "group_sim": null,
+   "start": 11.33,
+   "end": 30.07,
+   "bars": 7,
+   "energy_db": -17.9265,
+   "vocal": -31.0306,
+   "parts_db": {
+    "vocals": -31.0306,
+    "drums": -26.4214,
+    "bass": -25.5318,
+    "other": -21.5268
+   },
+   "name": "Aメロ",
+   "energy_score": 94.0
+  },
+  {
+   "start_bar": 11,
+   "end_bar": 20,
+   "group": "C",
+   "group_sim": null,
+   "start": 30.07,
+   "end": 54.4,
+   "bars": 9,
+   "energy_db": -20.3536,
+   "vocal": -24.3309,
+   "parts_db": {
+    "vocals": -24.3309,
+    "drums": -28.5123,
+    "bass": -26.7535,
+    "other": -27.8077
+   },
+   "name": "その他",
+   "energy_score": 86.0
+  },
+  {
+   "start_bar": 20,
+   "end_bar": 31,
+   "group": "D",
+   "group_sim": null,
+   "start": 54.4,
+   "end": 83.82,
+   "bars": 11,
+   "energy_db": -17.6784,
+   "vocal": -20.7368,
+   "parts_db": {
+    "vocals": -20.7368,
+    "drums": -26.8386,
+    "bass": -25.8613,
+    "other": -27.9419
+   },
+   "name": "Bメロ",
+   "energy_score": 95.0
+  },
+  {
+   "start_bar": 31,
+   "end_bar": 36,
+   "group": "B",
+   "group_sim": 0.62,
+   "start": 83.82,
+   "end": 97.08,
+   "bars": 5,
+   "energy_db": -17.7108,
+   "vocal": -24.6263,
+   "parts_db": {
+    "vocals": -24.6263,
+    "drums": -26.368,
+    "bass": -26.3694,
+    "other": -22.5444
+   },
+   "name": "Aメロ",
+   "energy_score": 95.0
+  },
+  {
+   "start_bar": 36,
+   "end_bar": 43,
+   "group": "C",
+   "group_sim": 0.49,
+   "start": 97.08,
+   "end": 115.5,
+   "bars": 7,
+   "energy_db": -18.3547,
+   "vocal": -22.6693,
+   "parts_db": {
+    "vocals": -22.6693,
+    "drums": -28.3125,
+    "bass": -25.2394,
+    "other": -25.0755
+   },
+   "name": "その他",
+   "energy_score": 93.0
+  },
+  {
+   "start_bar": 43,
+   "end_bar": 55,
+   "group": "D",
+   "group_sim": 0.58,
+   "start": 115.5,
+   "end": 147.84,
+   "bars": 12,
+   "energy_db": -17.7834,
+   "vocal": -21.317,
+   "parts_db": {
+    "vocals": -21.317,
+    "drums": -26.673,
+    "bass": -25.6164,
+    "other": -27.4053
+   },
+   "name": "Bメロ",
+   "energy_score": 95.0
+  },
+  {
+   "start_bar": 55,
+   "end_bar": 63,
+   "group": "E",
+   "group_sim": null,
+   "start": 147.84,
+   "end": 169.41,
+   "bars": 8,
+   "energy_db": -17.41,
+   "vocal": -20.398,
+   "parts_db": {
+    "vocals": -20.398,
+    "drums": -26.8757,
+    "bass": -25.9404,
+    "other": -27.786
+   },
+   "name": "サビ",
+   "energy_score": 96.0
+  },
+  {
+   "start_bar": 63,
+   "end_bar": 75,
+   "group": "B",
+   "group_sim": 0.46,
+   "start": 169.41,
+   "end": 201.46,
+   "bars": 12,
+   "energy_db": -18.7439,
+   "vocal": -29.2743,
+   "parts_db": {
+    "vocals": -29.2743,
+    "drums": -27.157,
+    "bass": -25.5294,
+    "other": -22.7337
+   },
+   "name": "Aメロ",
+   "energy_score": 92.0
+  },
+  {
+   "start_bar": 75,
+   "end_bar": 93,
+   "group": "E",
+   "group_sim": 0.47,
+   "start": 201.46,
+   "end": 250.31,
+   "bars": 18,
+   "energy_db": -17.5043,
+   "vocal": -20.4965,
+   "parts_db": {
+    "vocals": -20.4965,
+    "drums": -27.1126,
+    "bass": -25.8962,
+    "other": -27.061
+   },
+   "name": "サビ",
+   "energy_score": 96.0
+  },
+  {
+   "start_bar": 93,
+   "end_bar": 99,
+   "group": "B",
+   "group_sim": 0.69,
+   "start": 250.31,
+   "end": 266.5,
+   "bars": 6,
+   "energy_db": -17.7294,
+   "vocal": -30.5655,
+   "parts_db": {
+    "vocals": -30.5655,
+    "drums": -27.5863,
+    "bass": -26.419,
+    "other": -20.5328
+   },
+   "name": "Aメロ",
+   "energy_score": 95.0
+  },
+  {
+   "start_bar": 99,
+   "end_bar": 104,
+   "group": "A",
+   "group_sim": 0.59,
+   "start": 266.5,
+   "end": 280.15,
+   "bars": 5,
+   "energy_db": -33.0064,
+   "vocal": -55.8871,
+   "parts_db": {
+    "vocals": -55.8871,
+    "drums": -53.7522,
+    "bass": -33.6971,
+    "other": -25.3427
+   },
+   "name": "間奏",
+   "energy_score": 42.0
+  },
+  {
+   "start_bar": 104,
+   "end_bar": 108,
+   "group": "A",
+   "group_sim": 0.47,
+   "start": 280.15,
+   "end": 289.4,
+   "bars": 4,
+   "energy_db": -65.3673,
+   "vocal": -119.3605,
+   "parts_db": {
+    "vocals": -119.3605,
+    "drums": -119.4639,
+    "bass": -117.9169,
+    "other": -52.3603
+   },
+   "name": "アウトロ",
+   "energy_score": 0.0
+  }
+ ],
+ "balance": [
+  {
+   "vocals": 0.2,
+   "drums": 4.8,
+   "bass": 0.1,
+   "other": 94.8
+  },
+  {
+   "vocals": 8.8,
+   "drums": 13.4,
+   "bass": 13.4,
+   "other": 64.4
+  },
+  {
+   "vocals": 61.7,
+   "drums": 9.9,
+   "bass": 13.2,
+   "other": 15.2
+  },
+  {
+   "vocals": 72.2,
+   "drums": 8.7,
+   "bass": 8.2,
+   "other": 10.8
+  },
+  {
+   "vocals": 36.3,
+   "drums": 12.6,
+   "bass": 9.3,
+   "other": 41.8
+  },
+  {
+   "vocals": 60.2,
+   "drums": 9.3,
+   "bass": 12.8,
+   "other": 17.7
+  },
+  {
+   "vocals": 67.5,
+   "drums": 9.8,
+   "bass": 9.5,
+   "other": 13.2
+  },
+  {
+   "vocals": 73.3,
+   "drums": 7.9,
+   "bass": 7.4,
+   "other": 11.3
+  },
+  {
+   "vocals": 14.3,
+   "drums": 12.5,
+   "bass": 13.6,
+   "other": 59.7
+  },
+  {
+   "vocals": 71.9,
+   "drums": 7.7,
+   "bass": 7.6,
+   "other": 12.8
+  },
+  {
+   "vocals": 9.6,
+   "drums": 10.3,
+   "bass": 10.4,
+   "other": 69.7
+  },
+  {
+   "vocals": 0.2,
+   "drums": 0.2,
+   "bass": 4.0,
+   "other": 95.7
+  },
+  {
+   "vocals": 0.0,
+   "drums": 0.0,
+   "bass": 0.0,
+   "other": 100.0
+  }
+ ],
+ "overall_balance": {
+  "vocals": 54.8,
+  "drums": 9.5,
+  "bass": 9.7,
+  "other": 26.0
+ },
+ "timbre": {
+  "available": true,
+  "distortion_score": 0.8,
+  "distortion": "歪み寄り（ディストーション／オーバードライブ系の可能性が高い）",
+  "spectral_flatness": 0.5956,
+  "high_band_ratio": 1.177,
+  "crest_factor": 5.28,
+  "centroid_hz": 2365,
+  "brightness": "明るめ",
+  "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
+  "cutting_score": 0.18,
+  "hits_on_16th_offbeats": 0.16,
+  "hits_on_8th_offbeats": 0.2,
+  "hits_on_beats": 0.2,
+  "short_note_score": 0.0
+ },
+ "timbre_chorus": {
+  "available": true,
+  "distortion_score": 0.8,
+  "distortion": "歪み寄り（ディストーション／オーバードライブ系の可能性が高い）",
+  "spectral_flatness": 0.67,
+  "high_band_ratio": 1.213,
+  "crest_factor": 5.61,
+  "centroid_hz": 2516,
+  "brightness": "かなり明るい（シャリシャリ・ジャキジャキ）",
+  "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
+  "cutting_score": 0.04,
+  "hits_on_16th_offbeats": 0.03,
+  "hits_on_8th_offbeats": 0.13,
+  "hits_on_beats": 0.0,
+  "short_note_score": 0.0
+ },
+ "intro_detail": {
+  "whole": {
+   "available": true,
+   "distortion_score": 0.8,
+   "distortion": "歪み寄り（ディストーション／オーバードライブ系の可能性が高い）",
+   "spectral_flatness": 0.439,
+   "high_band_ratio": 1.964,
+   "crest_factor": 5.0,
+   "centroid_hz": 2271,
+   "brightness": "明るめ",
+   "cutting": "細かい刻みが少しある（8分音符中心、またはミュート気味の刻み）",
+   "cutting_score": 0.44,
+   "hits_on_16th_offbeats": 0.4,
+   "hits_on_8th_offbeats": 0.52,
+   "hits_on_beats": 0.52,
+   "short_note_score": 0.0
+  },
+  "windows": [
+   {
+    "available": true,
+    "distortion_score": 0.38,
+    "distortion": "中間（軽い歪み、またはシンセ・ブラスなどと混ざっている）",
+    "spectral_flatness": 0.1034,
+    "high_band_ratio": 0.003,
+    "crest_factor": 4.14,
+    "centroid_hz": 785,
+    "brightness": "こもった・暗め",
+    "cutting": "カッティングあり（16分音符で短く刻んでいる可能性が高い）",
+    "cutting_score": 1.0,
+    "hits_on_16th_offbeats": 0.92,
+    "hits_on_8th_offbeats": 1.0,
+    "hits_on_beats": 0.83,
+    "short_note_score": 0.1,
+    "start": 0.0,
+    "end": 5.0
+   },
+   {
+    "available": true,
+    "distortion_score": 0.42,
+    "distortion": "中間（軽い歪み、またはシンセ・ブラスなどと混ざっている）",
+    "spectral_flatness": 0.1123,
+    "high_band_ratio": 0.002,
+    "crest_factor": 4.28,
+    "centroid_hz": 720,
+    "brightness": "こもった・暗め",
+    "cutting": "カッティングあり（16分音符で短く刻んでいる可能性が高い）",
+    "cutting_score": 1.0,
+    "hits_on_16th_offbeats": 0.93,
+    "hits_on_8th_offbeats": 1.0,
+    "hits_on_beats": 0.86,
+    "short_note_score": 0.01,
+    "start": 5.0,
+    "end": 10.0
+   },
+   {
+    "available": true,
+    "distortion_score": 0.8,
+    "distortion": "歪み寄り（ディストーション／オーバードライブ系の可能性が高い）",
+    "spectral_flatness": 0.5657,
+    "high_band_ratio": 2.08,
+    "crest_factor": 5.06,
+    "centroid_hz": 2369,
+    "brightness": "明るめ",
+    "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
+    "cutting_score": 0.09,
+    "hits_on_16th_offbeats": 0.08,
+    "hits_on_8th_offbeats": 0.17,
+    "hits_on_beats": 0.33,
+    "short_note_score": 0.0,
+    "start": 10.0,
+    "end": 15.0
+   },
+   {
+    "available": true,
+    "distortion_score": 0.8,
+    "distortion": "歪み寄り（ディストーション／オーバードライブ系の可能性が高い）",
+    "spectral_flatness": 0.5849,
+    "high_band_ratio": 2.005,
+    "crest_factor": 4.9,
+    "centroid_hz": 2354,
+    "brightness": "明るめ",
+    "cutting": "カッティングはほぼなし（伸ばす音・コードを鳴らしっぱなしが中心）",
+    "cutting_score": 0.0,
+    "hits_on_16th_offbeats": 0.0,
+    "hits_on_8th_offbeats": 0.14,
+    "hits_on_beats": 0.14,
+    "short_note_score": 0.0,
+    "start": 15.0,
+    "end": 20.0
+   }
+  ]
+ },
+ "synth": {
+  "available": true,
+  "pad_score": 0.0,
+  "arpeggio_score": 0.79,
+  "tonal_sustain": 0.0,
+  "noisy_sustain": 0.34,
+  "sustain_ratio": 0.35,
+  "steadiness": 0.78,
+  "regular_onsets": 0.47,
+  "pitch_change_per_note": 0.65,
+  "kind": "シンセ・鍵盤らしい音は目立たない。のばしている音は歪んだギター（パワーコードなど）の可能性が高い"
+ },
+ "lineup": {
+  "band_only": true,
+  "has_synth": false,
+  "guitar": "歪んだエレキギター",
+  "text": "バンドだけの編成（歌・歪んだエレキギター・ベース・ドラム）の可能性が高い。シンセ・鍵盤は目立たない"
+ },
+ "details": {
+  "guitar_lr_corr": 0.39,
+  "guitar_width": "左右に大きく広がっている（2本のギターを左右に振り分けている可能性が高い）",
+  "bass_notes_per_beat": 4.25,
+  "bass_pitch_change": 0.48,
+  "bass_pitches": 16,
+  "bass": "16分音符で細かく刻む・メロディのように動き回る",
+  "bass_melodic": true,
+  "bass_eighths": false,
+  "kick_per_beat": 2.12,
+  "hat_per_beat": 2.4,
+  "drums": "バスドラを毎拍踏む、勢いのある刻み",
+  "kick_every_beat": true
+ },
+ "intro_entry": {
+  "entries_sec": {
+   "vocals": null,
+   "drums": null,
+   "bass": null,
+   "other": 10.75
+  },
+  "first": "other",
+  "riff": {
+   "notes_per_sec": 3.27,
+   "notes_per_bar": 8.8,
+   "pitch_change": 0.56,
+   "is_riff": true
+  },
+  "text": "ギターなど上物 から始まる、最初の11秒に歌は入らない、上物は音程の動くフレーズ（リフ）を弾いている可能性が高い",
+  "checked_until": 11.33
+ },
+ "vocal": {
+  "vibrato": {
+   "available": true,
+   "extent_semitones": 1.19,
+   "rate_hz": 6.0,
+   "notes_checked": 136,
+   "label": "幅が広く速いビブラート（ねっとり・ドラマチックな歌い方）"
+  },
+  "available": true,
+  "range": {
+   "lowest": "F3",
+   "highest": "D♯5",
+   "median": "C♯4",
+   "lowest_hz": 178,
+   "highest_hz": 618,
+   "median_hz": 277,
+   "span_semitones": 21,
+   "voiced_ratio": 0.55,
+   "high_tone": "ハイトーン寄り（男性ボーカルならかなり高い。女性ならふつう〜やや高め）"
+  },
+  "per_section": [
+   {
+    "name": "イントロ",
+    "start": 0.53,
+    "vocal_db": null,
+    "singing_ratio": 0.02
+   },
+   {
+    "name": "Aメロ",
+    "start": 11.33,
+    "vocal_db": -12.2,
+    "singing_ratio": 0.48
+   },
+   {
+    "name": "その他",
+    "start": 30.07,
+    "vocal_db": -9.1,
+    "singing_ratio": 0.88
+   },
+   {
+    "name": "Bメロ",
+    "start": 54.4,
+    "vocal_db": -5.2,
+    "singing_ratio": 0.97
+   },
+   {
+    "name": "Aメロ",
+    "start": 83.82,
+    "vocal_db": -10.1,
+    "singing_ratio": 1.0
+   },
+   {
+    "name": "その他",
+    "start": 97.08,
+    "vocal_db": -7.6,
+    "singing_ratio": 0.96
+   },
+   {
+    "name": "Bメロ",
+    "start": 115.5,
+    "vocal_db": -5.8,
+    "singing_ratio": 0.97
+   },
+   {
+    "name": "サビ",
+    "start": 147.84,
+    "vocal_db": -4.8,
+    "singing_ratio": 0.99
+   },
+   {
+    "name": "Aメロ",
+    "start": 169.41,
+    "vocal_db": -9.1,
+    "singing_ratio": 0.3
+   },
+   {
+    "name": "サビ",
+    "start": 201.46,
+    "vocal_db": -5.1,
+    "singing_ratio": 0.97
+   },
+   {
+    "name": "Aメロ",
+    "start": 250.31,
+    "vocal_db": -12.9,
+    "singing_ratio": 0.61
+   },
+   {
+    "name": "間奏",
+    "start": 266.5,
+    "vocal_db": null,
+    "singing_ratio": 0.01
+   },
+   {
+    "name": "アウトロ",
+    "start": 280.15,
+    "vocal_db": null,
+    "singing_ratio": 0.0
+   }
+  ],
+  "a_vs_chorus_db": 6.1,
+  "dynamic_spread_db": 8.1,
+  "steadiness": "はっきり強弱をつけている（Aメロは抑えめ→サビで張る、など）",
+  "shouts": {
+   "count": 0,
+   "times": [],
+   "note": "短く強い、前後が静かな声を数えた推定です。ドラムの音が混ざると誤検出することがあります。"
+  }
+ },
+ "energy_per_sec": {
+  "time": [
+   0.0,
+   1.0,
+   2.0,
+   3.0,
+   4.0,
+   5.0,
+   6.0,
+   7.0,
+   8.0,
+   9.0,
+   10.0,
+   11.0,
+   12.0,
+   13.0,
+   14.0,
+   15.0,
+   16.0,
+   17.0,
+   18.0,
+   19.0,
+   20.0,
+   21.0,
+   22.0,
+   23.0,
+   24.0,
+   25.0,
+   26.0,
+   27.0,
+   28.0,
+   29.0,
+   30.0,
+   31.0,
+   32.0,
+   33.0,
+   34.0,
+   35.0,
+   36.0,
+   37.0,
+   38.0,
+   39.0,
+   40.0,
+   41.0,
+   42.0,
+   43.0,
+   44.0,
+   45.0,
+   46.0,
+   47.0,
+   48.0,
+   49.0,
+   50.0,
+   51.0,
+   52.0,
+   53.0,
+   54.0,
+   55.0,
+   56.0,
+   57.0,
+   58.0,
+   59.0,
+   60.0,
+   61.0,
+   62.0,
+   63.0,
+   64.0,
+   65.0,
+   66.0,
+   67.0,
+   68.0,
+   69.0,
+   70.0,
+   71.0,
+   72.0,
+   73.0,
+   74.0,
+   75.0,
+   76.0,
+   77.0,
+   78.0,
+   79.0,
+   80.0,
+   81.0,
+   82.0,
+   83.0,
+   84.0,
+   85.0,
+   86.0,
+   87.0,
+   88.0,
+   89.0,
+   90.0,
+   91.0,
+   92.0,
+   93.0,
+   94.0,
+   95.0,
+   96.0,
+   97.0,
+   98.0,
+   99.0,
+   100.0,
+   101.0,
+   102.0,
+   103.0,
+   104.0,
+   105.0,
+   106.0,
+   107.0,
+   108.0,
+   109.0,
+   110.0,
+   111.0,
+   112.0,
+   113.0,
+   114.0,
+   115.0,
+   116.0,
+   117.0,
+   118.0,
+   119.0,
+   120.0,
+   121.0,
+   122.0,
+   123.0,
+   124.0,
+   125.0,
+   126.0,
+   127.0,
+   128.0,
+   129.0,
+   130.0,
+   131.0,
+   132.0,
+   133.0,
+   134.0,
+   135.0,
+   136.0,
+   137.0,
+   138.0,
+   139.0,
+   140.0,
+   141.0,
+   142.0,
+   143.0,
+   144.0,
+   145.0,
+   146.0,
+   147.0,
+   148.0,
+   149.0,
+   150.0,
+   151.0,
+   152.0,
+   153.0,
+   154.0,
+   155.0,
+   156.0,
+   157.0,
+   158.0,
+   159.0,
+   160.0,
+   161.0,
+   162.0,
+   163.0,
+   164.0,
+   165.0,
+   166.0,
+   167.0,
+   168.0,
+   169.0,
+   170.0,
+   171.0,
+   172.0,
+   173.0,
+   174.0,
+   175.0,
+   176.0,
+   177.0,
+   178.0,
+   179.0,
+   180.0,
+   181.0,
+   182.0,
+   183.0,
+   184.0,
+   185.0,
+   186.0,
+   187.0,
+   188.0,
+   189.0,
+   190.0,
+   191.0,
+   192.0,
+   193.0,
+   194.0,
+   195.0,
+   196.0,
+   197.0,
+   198.0,
+   199.0,
+   200.0,
+   201.0,
+   202.0,
+   203.0,
+   204.0,
+   205.0,
+   206.0,
+   207.0,
+   208.0,
+   209.0,
+   210.0,
+   211.0,
+   212.0,
+   213.0,
+   214.0,
+   215.0,
+   216.0,
+   217.0,
+   218.0,
+   219.0,
+   220.0,
+   221.0,
+   222.0,
+   223.0,
+   224.0,
+   225.0,
+   226.0,
+   227.0,
+   228.0,
+   229.0,
+   230.0,
+   231.0,
+   232.0,
+   233.0,
+   234.0,
+   235.0,
+   236.0,
+   237.0,
+   238.0,
+   239.0,
+   240.0,
+   241.0,
+   242.0,
+   243.0,
+   244.0,
+   245.0,
+   246.0,
+   247.0,
+   248.0,
+   249.0,
+   250.0,
+   251.0,
+   252.0,
+   253.0,
+   254.0,
+   255.0,
+   256.0,
+   257.0,
+   258.0,
+   259.0,
+   260.0,
+   261.0,
+   262.0,
+   263.0,
+   264.0,
+   265.0,
+   266.0,
+   267.0,
+   268.0,
+   269.0,
+   270.0,
+   271.0,
+   272.0,
+   273.0,
+   274.0,
+   275.0,
+   276.0,
+   277.0,
+   278.0,
+   279.0,
+   280.0,
+   281.0,
+   282.0,
+   283.0,
+   284.0,
+   285.0,
+   286.0,
+   287.0,
+   288.0,
+   289.0,
+   290.0
+  ],
+  "score": [
+   0.0,
+   13.165,
+   9.3933,
+   14.8119,
+   12.317,
+   6.1005,
+   5.6688,
+   14.122,
+   9.2305,
+   11.5286,
+   28.609,
+   90.1036,
+   95.3035,
+   93.6218,
+   94.9271,
+   93.5846,
+   94.0223,
+   94.1631,
+   92.1682,
+   90.6308,
+   92.9235,
+   96.5203,
+   96.7408,
+   95.0469,
+   95.4023,
+   96.1918,
+   95.298,
+   95.5517,
+   96.0167,
+   94.9524,
+   89.1306,
+   83.3311,
+   79.1522,
+   77.1614,
+   83.849,
+   75.2825,
+   79.9336,
+   80.8657,
+   81.9361,
+   77.0146,
+   81.7877,
+   76.9554,
+   85.0136,
+   88.3932,
+   90.5775,
+   93.5856,
+   86.9481,
+   90.6923,
+   94.1687,
+   93.9298,
+   93.9921,
+   92.0168,
+   88.4711,
+   90.4069,
+   92.3493,
+   95.8444,
+   92.7625,
+   91.8665,
+   95.3417,
+   88.7208,
+   94.8259,
+   92.4794,
+   98.6478,
+   97.2319,
+   95.9262,
+   94.4977,
+   97.6624,
+   97.53,
+   98.897,
+   94.1239,
+   94.9891,
+   93.4553,
+   96.7195,
+   96.2772,
+   93.6331,
+   98.6662,
+   95.0736,
+   96.2064,
+   98.9735,
+   96.7545,
+   96.3847,
+   96.1843,
+   91.7546,
+   95.4399,
+   97.7202,
+   95.4784,
+   96.1625,
+   95.403,
+   94.855,
+   94.567,
+   95.6092,
+   96.1284,
+   94.3109,
+   94.6749,
+   98.3271,
+   93.876,
+   94.8428,
+   91.0654,
+   89.4325,
+   92.4281,
+   92.46,
+   95.368,
+   94.1371,
+   87.4059,
+   89.8522,
+   93.8851,
+   93.8178,
+   94.5629,
+   88.9012,
+   94.5945,
+   96.5037,
+   94.4488,
+   93.6074,
+   95.8897,
+   94.7382,
+   93.8229,
+   93.8652,
+   95.4944,
+   89.596,
+   91.8042,
+   95.4753,
+   87.6079,
+   93.6379,
+   96.0569,
+   97.3297,
+   96.2074,
+   96.9971,
+   95.3685,
+   98.0989,
+   97.5333,
+   99.0878,
+   94.396,
+   96.0745,
+   92.5925,
+   95.979,
+   97.6285,
+   94.8501,
+   97.1244,
+   93.5867,
+   97.024,
+   96.6212,
+   94.2895,
+   96.3691,
+   95.214,
+   93.5961,
+   95.7227,
+   95.0839,
+   92.4737,
+   97.2142,
+   96.3805,
+   96.4841,
+   97.49,
+   96.3885,
+   94.6283,
+   93.1319,
+   98.2718,
+   96.9778,
+   97.6462,
+   93.5454,
+   96.0939,
+   95.6049,
+   97.0807,
+   96.9939,
+   97.3028,
+   95.9938,
+   93.0386,
+   98.1711,
+   97.6219,
+   97.255,
+   97.5046,
+   95.8307,
+   94.1821,
+   91.4504,
+   91.148,
+   89.968,
+   92.7539,
+   91.2857,
+   90.7551,
+   90.2013,
+   92.2533,
+   92.8288,
+   93.0983,
+   93.9063,
+   93.4694,
+   93.8967,
+   93.038,
+   93.8415,
+   91.378,
+   92.5165,
+   91.8269,
+   92.486,
+   94.0979,
+   93.9125,
+   90.4548,
+   90.6102,
+   90.2848,
+   90.5822,
+   84.757,
+   86.4067,
+   87.3525,
+   94.6969,
+   82.3591,
+   77.2813,
+   87.6985,
+   92.8541,
+   98.4844,
+   98.0388,
+   100.0,
+   94.5267,
+   96.0484,
+   96.7229,
+   96.9088,
+   98.3405,
+   95.8491,
+   97.0957,
+   95.434,
+   97.2092,
+   96.6336,
+   93.8283,
+   95.5372,
+   95.4448,
+   94.5044,
+   95.2432,
+   96.5268,
+   94.5011,
+   98.0253,
+   96.4684,
+   96.2994,
+   98.0745,
+   95.3464,
+   94.9121,
+   92.8859,
+   97.0784,
+   98.0728,
+   98.6682,
+   97.365,
+   97.3082,
+   97.9941,
+   97.5734,
+   96.4313,
+   96.8846,
+   94.4368,
+   93.2058,
+   97.0797,
+   97.3406,
+   98.5879,
+   98.3083,
+   100.0,
+   100.0,
+   99.9366,
+   95.9209,
+   95.3588,
+   95.1174,
+   94.2816,
+   94.5785,
+   94.3092,
+   95.1196,
+   96.0113,
+   97.2331,
+   95.3343,
+   96.4828,
+   96.8587,
+   95.764,
+   95.2831,
+   95.6201,
+   95.225,
+   91.2462,
+   86.3988,
+   85.1784,
+   79.6948,
+   81.8952,
+   76.202,
+   62.3965,
+   40.6723,
+   15.7509,
+   4.9526,
+   3.3222,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "db": [
+   -83.5375,
+   -41.3042,
+   -42.384,
+   -40.8327,
+   -41.5469,
+   -43.3267,
+   -43.4503,
+   -41.0302,
+   -42.4306,
+   -41.7727,
+   -36.8825,
+   -19.2766,
+   -17.7879,
+   -18.2693,
+   -17.8956,
+   -18.28,
+   -18.1547,
+   -18.1144,
+   -18.6855,
+   -19.1257,
+   -18.4693,
+   -17.4395,
+   -17.3764,
+   -17.8613,
+   -17.7596,
+   -17.5336,
+   -17.7894,
+   -17.7168,
+   -17.5837,
+   -17.8884,
+   -19.5552,
+   -21.2156,
+   -22.412,
+   -22.982,
+   -21.0673,
+   -23.5199,
+   -22.1883,
+   -21.9214,
+   -21.615,
+   -23.024,
+   -21.6574,
+   -23.0409,
+   -20.7339,
+   -19.7663,
+   -19.1409,
+   -18.2797,
+   -20.18,
+   -19.1081,
+   -18.1128,
+   -18.1812,
+   -18.1633,
+   -18.7289,
+   -19.744,
+   -19.1898,
+   -18.6337,
+   -17.633,
+   -18.5154,
+   -18.7719,
+   -17.7769,
+   -19.6725,
+   -17.9246,
+   -18.5964,
+   -16.8304,
+   -17.2358,
+   -17.6096,
+   -18.0186,
+   -17.1125,
+   -17.1504,
+   -16.7591,
+   -18.1256,
+   -17.8779,
+   -18.317,
+   -17.3825,
+   -17.5091,
+   -18.2661,
+   -16.8251,
+   -17.8537,
+   -17.5294,
+   -16.7371,
+   -17.3725,
+   -17.4783,
+   -17.5357,
+   -18.8039,
+   -17.7488,
+   -17.096,
+   -17.7378,
+   -17.542,
+   -17.7594,
+   -17.9163,
+   -17.9987,
+   -17.7004,
+   -17.5517,
+   -18.0721,
+   -17.9678,
+   -16.9222,
+   -18.1966,
+   -17.9198,
+   -19.0012,
+   -19.4688,
+   -18.6111,
+   -18.602,
+   -17.7694,
+   -18.1218,
+   -20.0489,
+   -19.3486,
+   -18.194,
+   -18.2132,
+   -17.9999,
+   -19.6208,
+   -17.9909,
+   -17.4443,
+   -18.0326,
+   -18.2735,
+   -17.62,
+   -17.9497,
+   -18.2118,
+   -18.1997,
+   -17.7332,
+   -19.4219,
+   -18.7897,
+   -17.7387,
+   -19.9911,
+   -18.2647,
+   -17.5722,
+   -17.2078,
+   -17.5291,
+   -17.303,
+   -17.7693,
+   -16.9876,
+   -17.1495,
+   -16.7044,
+   -18.0477,
+   -17.5671,
+   -18.564,
+   -17.5945,
+   -17.1222,
+   -17.9177,
+   -17.2665,
+   -18.2794,
+   -17.2953,
+   -17.4106,
+   -18.0782,
+   -17.4828,
+   -17.8135,
+   -18.2767,
+   -17.6679,
+   -17.8507,
+   -18.598,
+   -17.2408,
+   -17.4795,
+   -17.4499,
+   -17.1619,
+   -17.4772,
+   -17.9812,
+   -18.4096,
+   -16.938,
+   -17.3085,
+   -17.1171,
+   -18.2912,
+   -17.5616,
+   -17.7016,
+   -17.2791,
+   -17.3039,
+   -17.2155,
+   -17.5902,
+   -18.4363,
+   -16.9669,
+   -17.1241,
+   -17.2292,
+   -17.1577,
+   -17.6369,
+   -18.1089,
+   -18.891,
+   -18.9776,
+   -19.3154,
+   -18.5178,
+   -18.9382,
+   -19.0901,
+   -19.2486,
+   -18.6612,
+   -18.4964,
+   -18.4192,
+   -18.1879,
+   -18.313,
+   -18.1907,
+   -18.4365,
+   -18.2064,
+   -18.9118,
+   -18.5858,
+   -18.7832,
+   -18.5945,
+   -18.133,
+   -18.1861,
+   -19.1761,
+   -19.1316,
+   -19.2247,
+   -19.1396,
+   -20.8074,
+   -20.335,
+   -20.0643,
+   -17.9615,
+   -21.4939,
+   -22.9476,
+   -19.9652,
+   -18.4891,
+   -16.8772,
+   -17.0047,
+   -16.2799,
+   -18.0103,
+   -17.5746,
+   -17.3815,
+   -17.3283,
+   -16.9184,
+   -17.6317,
+   -17.2748,
+   -17.7505,
+   -17.2423,
+   -17.4071,
+   -18.2102,
+   -17.721,
+   -17.7474,
+   -18.0167,
+   -17.8051,
+   -17.4376,
+   -18.0176,
+   -17.0086,
+   -17.4544,
+   -17.5028,
+   -16.9945,
+   -17.7756,
+   -17.8999,
+   -18.48,
+   -17.2797,
+   -16.995,
+   -16.8246,
+   -17.1977,
+   -17.2139,
+   -17.0176,
+   -17.138,
+   -17.465,
+   -17.3352,
+   -18.036,
+   -18.3885,
+   -17.2793,
+   -17.2047,
+   -16.8475,
+   -16.9276,
+   -16.0028,
+   -15.74,
+   -16.4614,
+   -17.6111,
+   -17.772,
+   -17.8412,
+   -18.0805,
+   -17.9954,
+   -18.0726,
+   -17.8405,
+   -17.5852,
+   -17.2354,
+   -17.7791,
+   -17.4502,
+   -17.3426,
+   -17.656,
+   -17.7937,
+   -17.6972,
+   -17.8104,
+   -18.9495,
+   -20.3373,
+   -20.6867,
+   -22.2567,
+   -21.6267,
+   -23.2566,
+   -27.2092,
+   -33.4288,
+   -40.5638,
+   -43.6554,
+   -44.1222,
+   -49.3147,
+   -47.4674,
+   -48.4251,
+   -46.0244,
+   -50.3962,
+   -54.884,
+   -54.021,
+   -54.753,
+   -57.4749,
+   -64.3045,
+   -72.0607,
+   -90.4814,
+   -95.0197,
+   -95.0197
+  ]
+ },
+ "mood": {
+  "tone": "暗め・シリアス（短調で、マイナーの和音が多い）",
+  "color": "minor key, dark and serious",
+  "minor_chord_ratio": 0.55,
+  "darkness": 0.64,
+  "peaks": [
+   "2:27〜（サビ）",
+   "3:21〜（サビ）",
+   "0:54〜（Bメロ）"
+  ],
+  "intro_to_chorus": "最初のサビは 2:27 から（曲の始まりから約147秒）。直前の4秒と比べてエネルギーが +1 点 → なだらかに入る（前から盛り上がっている）"
+ },
+ "suno": {
+  "style": "raw live band sound, overdriven electric guitars, twin guitars panned wide left and right, melodic moving bass, driving drums with kick on every beat, 89 BPM, minor key, dark and serious, opens with a guitar riff, high-pitched powerful vocal with wide fast vibrato, dramatic emotional delivery",
+  "axes": [
+   "raw live band sound, overdriven electric guitars, twin guitars panned wide left and right, melodic moving bass, driving drums with kick on every beat",
+   "89 BPM, minor key, dark and serious",
+   "opens with a guitar riff",
+   "high-pitched powerful vocal with wide fast vibrato, dramatic emotional delivery"
+  ],
+  "reasons": [
+   "編成: バンドだけの編成（歌・歪んだエレキギター・ベース・ドラム）の可能性が高い。シンセ・鍵盤は目立たない",
+   "テンポ 89.1 BPM（推定）、響き: 暗め・シリアス（短調で、マイナーの和音が多い）",
+   "組み立て: ギターなど上物 から始まる、最初の11秒に歌は入らない、上物は音程の動くフレーズ（リフ）を弾いている可能性が高い",
+   "ボーカル: 音域 F3〜D♯5、はっきり強弱をつけている（Aメロは抑えめ→サビで張る、など）"
+  ],
+  "exclude": "synth, synthesizer, keyboard, piano, strings, brass, orchestral, electronic, EDM, cheerful, idol pop, acoustic, lo-fi, autotune",
+  "note": "ジャンル名（アニソン・J-POP など）はわざと入れていません。入れると Suno がそのジャンルのありがちな音に寄せるためです。男性か女性かは自動で判定していないので、Style の先頭に male vocal / female vocal を足してください。"
+ },
+ "plot": "/home/user/hanakyo/reports/yume_energy.png"
+}
